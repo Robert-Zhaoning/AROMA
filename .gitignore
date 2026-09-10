@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Conda / env artifacts
+.env
+*.token
+*.key
+secrets/
+
+# Hugging Face / model cache
+.cache/
+hf_cache/
+models/
+checkpoints/
+
+# Experimental data
+data/
+outputs/
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
