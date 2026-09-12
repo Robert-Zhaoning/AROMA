@@ -1,0 +1,33 @@
+{
+  "protocol_name": "AROMA TallyQA Natural-OOD Multi-Action Oracle Forensics",
+  "analysis_status": "post_hoc_forensic_only",
+  "confirmatory_claim_allowed": false,
+  "reason": "Frozen zero-shot TallyQA evaluation showed significant negative transfer. This diagnostic separates actuator repair opportunity from controller action-selection failure.",
+  "frozen_zero_shot_result_commit": "bdc740bda8482b5a8dfa25e9e110ac2c819359a8",
+  "frozen_final_results_path": "outputs/tallyqa_natural_ood_v1/final_frozen_controller/tallyqa_final_results.csv",
+  "frozen_final_results_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "runner_path": "scripts/run_tallyqa_natural_ood_action_oracle.py",
+  "runner_source_sha256": "2a17667d61fed7720afdc7de0d09ee2a02a673367577c69dac50263298932ff3",
+  "dataset": "TallyQA",
+  "split": "official_test",
+  "samples": 4000,
+  "head": "L18H13",
+  "layer": 18,
+  "head_index": 13,
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "oracle_definition": "For each baseline-wrong sample, repairable iff at least one frozen non-NOOP action produces the correct numeral. Baseline-correct samples retain NOOP. This is an oracle upper bound and is not deployable.",
+  "gt_policy": "GT is read only after baseline and all five fixed action states have been produced.",
+  "retuning_allowed": false,
+  "purpose": [
+    "measure fixed-action natural-domain effects",
+    "estimate natural-domain actuator oracle ceiling",
+    "quantify controller repair capture fraction",
+    "separate actuator failure from routing failure"
+  ]
+}
