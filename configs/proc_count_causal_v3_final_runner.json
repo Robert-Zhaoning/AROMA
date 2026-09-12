@@ -1,0 +1,61 @@
+{
+  "protocol_name": "AROMA Proc-Count-Causal v3 Frozen Final Evaluation Runner",
+
+  "controller_freeze_commit": "c8c5ede1601b1ada4087e141d61247903a4458a7",
+  "v3_dataset_protocol_freeze_commit": "582bb53fe51d8b8bbeb45b90b7d073253d4df2a1",
+
+  "dataset": "proc_count_causal_v3",
+  "generation_version": "3.0_unique",
+  "n_samples": 2000,
+
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+
+  "primary_measurement": {
+    "type": "expanded_next_token_numeral_proxy",
+    "numeral_min": 0,
+    "numeral_max": 15,
+    "prediction": "argmax conditional probability over single-token numerals 0..15",
+    "reason": "Exact measurement used for v2 controller development; changing measurement at final confirmation is prohibited."
+  },
+
+  "controller": {
+    "head_name": "L18H13",
+    "layer": 18,
+    "head": 13,
+    "actions": [0.0, 1.0, 1.5, 2.0, 4.0],
+    "noop_alpha": 1.0,
+    "feature_family": "full_geometry",
+    "feature_count": 39,
+    "ridge_alpha": 0.01,
+    "utility_threshold": 0.1
+  },
+
+  "ground_truth_policy": {
+    "allowed_for_action_selection": false,
+    "allowed_for_feature_construction": false,
+    "allowed_for_posthoc_correctness_evaluation": true,
+    "score_state_dummy_gt": 1
+  },
+
+  "primary_endpoint": {
+    "metric": "paired_accuracy_change",
+    "paired_test": "two-sided exact McNemar",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+
+  "confidence_interval": {
+    "type": "paired_nonparametric_bootstrap",
+    "bootstrap_replicates": 20000,
+    "random_seed": 20260912,
+    "confidence_level": 0.95
+  },
+
+  "run_policy": {
+    "overwrite_existing_final_results": false,
+    "resume_allowed_only_for_infrastructure_failure": true,
+    "outcome_based_retuning": false
+  },
+
+  "frozen_before_v3_model_inference": true
+}
