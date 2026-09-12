@@ -1,0 +1,42 @@
+{
+  "protocol_name": "AROMA TallyQA Natural-OOD Frozen Zero-Shot Final Runner",
+  "runner_path": "scripts/run_tallyqa_natural_ood_v1_final.py",
+  "runner_source_sha256": "844bff1786048a0e204b8d121df7e22c2f743164c5896529dde644e70bba587d",
+  "manifest_sha256": "068a489a02d499da6eb0b837a81c8817583b64b51c23f944c77645420fe2c32c",
+  "image_inventory_sha256": "976a4f209d13d32ba5a412f7a943b4c798797a2c5cb45d561f7c182812a7f635",
+  "controller_bundle_sha256": "16a57993540eb9598e3305f079447679f1a72777847d8f9b3fe7558c9290d606",
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+  "frozen_head": "L18H13",
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "feature_count": 39,
+  "ridge_alpha": 0.01,
+  "utility_threshold": 0.1,
+  "prompt_policy": {
+    "use_original_tallyqa_question": true,
+    "append_instruction": "Return the number only.",
+    "question_rewriting": false
+  },
+  "primary_endpoint": {
+    "population": "all_4000",
+    "metric": "paired_accuracy_change",
+    "paired_test": "two-sided exact McNemar",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+  "bootstrap": {
+    "repetitions": 20000,
+    "seed": 20260912
+  },
+  "gt_read_after_action_execution": true,
+  "controller_retuning_allowed": false,
+  "sample_reselection_allowed": false,
+  "prompt_retuning_allowed": false,
+  "natural_ood_zero_shot": true,
+  "frozen_before_tallyqa_model_inference": true
+}
