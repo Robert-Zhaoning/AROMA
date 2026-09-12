@@ -1,0 +1,3 @@
+scope,n,baseline_correct,baseline_wrong,baseline_accuracy,post_correct,post_accuracy,accuracy_change,accuracy_change_ci95_low,accuracy_change_ci95_high,repairs,breaks,net_repairs,repair_rate_among_wrong,break_rate_among_correct,intervention_rate,mcnemar_exact_p
+simple,2000,1573,427,0.7865,1485,0.7425,-0.04399999999999993,-0.055,-0.033,20,108,-88,0.0468384074941452,0.06865861411315957,0.5925,8.588622955874907e-16
+complex,2000,1021,979,0.5105,990,0.495,-0.015499999999999958,-0.025,-0.006,31,62,-31,0.031664964249233915,0.06072477962781587,0.713,0.0017127644224002388

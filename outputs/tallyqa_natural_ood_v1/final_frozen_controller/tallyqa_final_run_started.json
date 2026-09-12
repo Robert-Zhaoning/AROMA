@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-09-12T22:29:26.521610+00:00",
+  "git_head": "6f04635c2aa53bfdf0867fc1d6ac35c39c03c3d4",
+  "manifest_sha256": "068a489a02d499da6eb0b837a81c8817583b64b51c23f944c77645420fe2c32c",
+  "image_inventory_sha256": "976a4f209d13d32ba5a412f7a943b4c798797a2c5cb45d561f7c182812a7f635",
+  "controller_bundle_sha256": "16a57993540eb9598e3305f079447679f1a72777847d8f9b3fe7558c9290d606",
+  "runner_source_sha256": "844bff1786048a0e204b8d121df7e22c2f743164c5896529dde644e70bba587d",
+  "samples": 4000,
+  "natural_ood_zero_shot": true,
+  "retuning_after_start": false
+}
