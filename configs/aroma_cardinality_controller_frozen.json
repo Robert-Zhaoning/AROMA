@@ -1,0 +1,141 @@
+{
+  "protocol_name": "AROMA Adaptive Cardinality Controller \u2014 Frozen Before v3 Confirmation",
+  "development_dataset": "proc_count_causal_v2",
+  "development_generation_version": "2.1_unique",
+  "development_n": 1000,
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+  "actuator": {
+    "type": "cross_attention_head_output_gain",
+    "layer": 18,
+    "head": 13,
+    "head_name": "L18H13",
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "noop_alpha": 1.0
+  },
+  "controller": {
+    "type": "per-action ridge utility estimator",
+    "feature_family": "full_geometry",
+    "feature_count": 39,
+    "feature_names": [
+      "baseline_best_numeral",
+      "baseline_entropy",
+      "baseline_entropy_norm",
+      "baseline_expected_numeral",
+      "baseline_top1_prob",
+      "baseline_conditional_margin",
+      "baseline_vocab_numeral_mass",
+      "baseline_numprob_0",
+      "baseline_numprob_1",
+      "baseline_numprob_2",
+      "baseline_numprob_3",
+      "baseline_numprob_4",
+      "baseline_numprob_5",
+      "baseline_numprob_6",
+      "baseline_numprob_7",
+      "baseline_numprob_8",
+      "baseline_numprob_9",
+      "baseline_numprob_10",
+      "baseline_numprob_11",
+      "baseline_numprob_12",
+      "baseline_numprob_13",
+      "baseline_numprob_14",
+      "baseline_numprob_15",
+      "geom_top2_prob",
+      "geom_expected_minus_pred",
+      "geom_p_down1",
+      "geom_p_up1",
+      "geom_p_down2",
+      "geom_p_up2",
+      "geom_local_asymmetry",
+      "geom_up_mass",
+      "geom_down_mass",
+      "geom_signed_tail_mass",
+      "geom_up_distance_mass",
+      "geom_down_distance_mass",
+      "geom_signed_distance_mass",
+      "geom_up_boundary_gap",
+      "geom_down_boundary_gap",
+      "geom_up_down_logratio"
+    ],
+    "ridge_alpha": 0.01,
+    "threshold": 0.1,
+    "action_rule": "Choose the non-NOOP action with highest predicted utility only if its score is strictly greater than the frozen threshold; otherwise choose alpha=1.0 NOOP."
+  },
+  "hyperparameter_selection": {
+    "dataset": "proc_count_causal_v2",
+    "group_variable": "replicate",
+    "n_groups": 20,
+    "cv": "5-fold GroupKFold",
+    "ridge_alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "threshold_grid": [
+      0.0,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "primary_selection_metric": "OOF net repairs",
+    "tie_breaking": [
+      "fewer breaks",
+      "fewer interventions",
+      "higher threshold",
+      "larger ridge regularization"
+    ]
+  },
+  "development_cv_selected_result": {
+    "ridge_alpha": 0.01,
+    "threshold": 0.1,
+    "repairs": 91,
+    "breaks": 8,
+    "net_repairs": 83,
+    "post_accuracy": 0.586,
+    "interventions": 333,
+    "intervention_rate": 0.333,
+    "mcnemar_exact_p": 5.90963701961033e-19
+  },
+  "final_confirmation_policy": {
+    "allow_head_retuning": false,
+    "allow_action_retuning": false,
+    "allow_feature_family_retuning": false,
+    "allow_feature_retuning": false,
+    "allow_ridge_retuning": false,
+    "allow_threshold_retuning": false,
+    "allow_primary_endpoint_change": false,
+    "allow_subgroup_redefinition": false
+  },
+  "planned_v3_primary_endpoint": {
+    "metric": "paired accuracy change",
+    "definition": "controller post-accuracy minus baseline accuracy",
+    "paired_test": "exact McNemar",
+    "direction": "controller > baseline"
+  },
+  "planned_v3_secondary_endpoints": [
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "repair_rate_among_baseline_wrong",
+    "break_rate_among_baseline_correct",
+    "intervention_rate",
+    "condition-wise accuracy change"
+  ],
+  "input_hashes": {
+    "confirmation_results_sha256": "b8bc0dad87a845a0b9e7da52255d72e0a6e415d24643962b1f0aaa0e91ab4f89",
+    "compressed_action_matrix_sha256": "25c0039bdc2cfc0c27d4c9bd1d042053a873f9b20f07e870f1a7d5b1fe6756e0"
+  },
+  "bundle_path": "outputs/proc_count_causal_v2/controller/final_frozen_controller/aroma_cardinality_controller.joblib",
+  "frozen_before_v3_evaluation": true
+}
