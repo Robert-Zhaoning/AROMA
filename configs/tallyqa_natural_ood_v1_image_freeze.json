@@ -1,0 +1,35 @@
+{
+  "protocol_name": "AROMA TallyQA Natural-OOD Image Inventory Freeze",
+
+  "manifest": {
+    "path": "data/tallyqa_natural_ood_v1/manifest.jsonl",
+    "sha256": "068a489a02d499da6eb0b837a81c8817583b64b51c23f944c77645420fe2c32c",
+    "n_questions": 4000,
+    "n_unique_image_paths": 4000
+  },
+
+  "image_inventory": {
+    "path": "outputs/tallyqa_natural_ood_v1/image_inventory/image_inventory.csv",
+    "sha256": "976a4f209d13d32ba5a412f7a943b4c798797a2c5cb45d561f7c182812a7f635",
+    "n_images": 4000,
+    "valid_images": 4000,
+    "missing_images": 0,
+    "unexpected_images": 0,
+    "corrupt_images": 0,
+    "unique_file_sha256": 4000,
+    "byte_duplicate_groups": 0,
+    "unique_pixel_sha256": 4000,
+    "pixel_duplicate_groups": 0,
+    "vg_100k": 2398,
+    "vg_100k_2": 1602,
+    "total_bytes": 538636227
+  },
+
+  "data_integrity_policy": {
+    "resampling_after_image_audit": false,
+    "duplicate_removal_after_freeze": false,
+    "image_replacement_after_freeze": false
+  },
+
+  "natural_model_inference_started": false
+}
