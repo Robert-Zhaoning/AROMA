@@ -1,0 +1,99 @@
+{
+  "protocol_name": "AROMA Proc-Count-Causal v3 Untouched Final Confirmation",
+
+  "development_dataset": "proc_count_causal_v2",
+  "development_generation_version": "2.1_unique",
+
+  "final_dataset": "proc_count_causal_v3",
+  "final_generation_version": "3.0_unique",
+  "n_samples": 2000,
+
+  "design": {
+    "counts": [1,2,3,4,5,6,7,8,9,10],
+    "conditions": [
+      "row",
+      "grid",
+      "random_sparse",
+      "dense",
+      "distractors"
+    ],
+    "replicates_per_count_condition": 40,
+    "balanced": true,
+    "pixel_unique_within_v3": true,
+    "pixel_unique_against_v1": true,
+    "pixel_unique_against_v2": true
+  },
+
+  "generation": {
+    "base_seed": 314159265,
+    "reuse_v2_scene_family": true,
+    "allow_post_generation_filtering_by_model_outcome": false,
+    "allow_sample_replacement_based_on_model_outcome": false
+  },
+
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+
+  "frozen_controller": {
+    "controller_freeze_commit": "c8c5ede1601b1ada4087e141d61247903a4458a7",
+    "head": {
+      "layer": 18,
+      "head": 13,
+      "head_name": "L18H13"
+    },
+    "actions": [0.0, 1.0, 1.5, 2.0, 4.0],
+    "feature_family": "full_geometry",
+    "feature_count": 39,
+    "ridge_alpha": 0.01,
+    "utility_threshold": 0.1,
+    "retuning_allowed": false
+  },
+
+  "primary_endpoint": {
+    "metric": "paired_accuracy_change",
+    "definition": "controller post-accuracy minus baseline accuracy",
+    "paired_test": "two-sided exact McNemar",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+
+  "secondary_endpoints": [
+    "baseline_accuracy",
+    "controller_post_accuracy",
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "repair_rate_among_baseline_wrong",
+    "break_rate_among_baseline_correct",
+    "intervention_rate",
+    "condition_wise_accuracy_change"
+  ],
+
+  "exploratory_endpoints": [
+    "controller_action_distribution",
+    "count_wise_accuracy_change",
+    "distance_to_v2_development_effect",
+    "oracle_ceiling_after_primary_analysis"
+  ],
+
+  "prohibited_after_v3_outcomes_are_seen": [
+    "head_retuning",
+    "action_set_retuning",
+    "feature_family_retuning",
+    "feature_selection",
+    "ridge_retuning",
+    "threshold_retuning",
+    "decision_rule_changes",
+    "primary_endpoint_changes",
+    "subgroup_redefinition"
+  ],
+
+  "analysis_order": [
+    "dataset_integrity_audit",
+    "baseline_and_frozen_controller_evaluation",
+    "primary_endpoint_and_exact_McNemar_test",
+    "prespecified_secondary_endpoints",
+    "exploratory_analyses"
+  ],
+
+  "final_confirmation_is_untouched": true
+}
