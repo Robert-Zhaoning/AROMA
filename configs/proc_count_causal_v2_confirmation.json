@@ -1,0 +1,52 @@
+{
+  "protocol_name": "AROMA Proc-Count-Causal v2.1 Frozen Confirmation",
+  "dataset": "proc_count_causal_v2",
+  "generation_version": "2.1_unique",
+  "n_samples": 1000,
+
+  "development_dataset": "proc_count_causal_v1",
+  "confirmation_dataset": "proc_count_causal_v2",
+
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+
+  "intervention": {
+    "type": "cross_attention_head_output_gain",
+    "layer": 18,
+    "head": 13,
+    "head_name": "L18H13",
+    "alpha": 1.5
+  },
+
+  "primary_endpoint": {
+    "metric": "paired_net_repairs",
+    "definition": "repairs - breaks",
+    "comparison": "baseline versus frozen L18H13 alpha=1.5"
+  },
+
+  "secondary_endpoints": [
+    "post_accuracy",
+    "accuracy_change",
+    "repair_rate_among_baseline_wrong",
+    "break_rate_among_baseline_correct",
+    "paired_exact_McNemar_p"
+  ],
+
+  "prespecified_primary_subgroup": "distractors",
+
+  "prespecified_control_conditions": [
+    "dense",
+    "random_sparse",
+    "grid",
+    "row"
+  ],
+
+  "retuning_policy": {
+    "allow_head_retuning_on_v2": false,
+    "allow_alpha_retuning_on_v2": false,
+    "allow_subgroup_redefinition_on_v2": false,
+    "allow_primary_endpoint_change_on_v2": false
+  },
+
+  "frozen_before_confirmation_inference": true
+}
