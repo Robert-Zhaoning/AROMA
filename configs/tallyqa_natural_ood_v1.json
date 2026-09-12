@@ -1,0 +1,98 @@
+{
+  "protocol_name": "AROMA TallyQA Natural Counting OOD Zero-Shot Confirmation",
+  "source_dataset": "TallyQA",
+  "evaluation_split": "official_test",
+  "sampling": {
+    "total_samples": 4000,
+    "simple_samples": 2000,
+    "complex_samples": 2000,
+    "one_question_per_image": true,
+    "random_seed": 20260912,
+    "preserve_natural_answer_distribution": true,
+    "model_outcome_based_filtering": false,
+    "image_uniqueness_scope": "global_across_simple_and_complex",
+    "selection_order": [
+      "complex",
+      "simple"
+    ],
+    "selection_algorithm": "Deterministic SHA256 ranking using the frozen random_seed. Complex images are selected first because the complex unique-image pool is smaller. Simple candidates sharing an image with a selected complex sample are excluded. Within each image, one question of the required subset is selected by deterministic SHA256 ranking. No answer-stratified sampling is used.",
+    "answer_stratification": false
+  },
+  "eligibility": {
+    "answer_type": "integer",
+    "minimum_answer": 0,
+    "maximum_answer": 15,
+    "reason": "Frozen AROMA controller and primary numeral proxy are defined over single-token numerals 0..15."
+  },
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+  "prompt_policy": {
+    "use_original_tallyqa_question": true,
+    "append_instruction": "Return the number only.",
+    "question_rewriting": false
+  },
+  "frozen_controller": {
+    "source": "AROMA v2 development",
+    "head": "L18H13",
+    "layer": 18,
+    "head_index": 13,
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "feature_family": "full_geometry",
+    "feature_count": 39,
+    "ridge_alpha": 0.01,
+    "utility_threshold": 0.1,
+    "retuning_allowed": false
+  },
+  "freeze_chain": {
+    "controller_freeze_commit": "c8c5ede1601b1ada4087e141d61247903a4458a7",
+    "synthetic_v3_protocol_freeze_commit": "582bb53fe51d8b8bbeb45b90b7d073253d4df2a1",
+    "synthetic_v3_runner_freeze_commit": "9085d093a5d2a46993e5dc8576de9e50a9c21c55",
+    "synthetic_v3_result_archive_commit": "9bc192e7cc70cf754b0446672bb64b016490a746"
+  },
+  "primary_endpoint": {
+    "population": "all_4000",
+    "metric": "paired_accuracy_change",
+    "paired_test": "two-sided exact McNemar",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+  "prespecified_secondary_endpoints": [
+    "simple_accuracy_change",
+    "complex_accuracy_change",
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "repair_rate_among_baseline_wrong",
+    "break_rate_among_baseline_correct",
+    "intervention_rate"
+  ],
+  "exploratory_endpoints": [
+    "accuracy_change_by_ground_truth_count",
+    "action_distribution",
+    "baseline_confidence_stratification",
+    "repair_examples",
+    "failure_examples"
+  ],
+  "prohibited_after_outcomes_are_seen": [
+    "controller_retraining",
+    "head_retuning",
+    "action_set_retuning",
+    "feature_retuning",
+    "ridge_retuning",
+    "threshold_retuning",
+    "prompt_rewriting",
+    "sample_reselection",
+    "primary_endpoint_change"
+  ],
+  "natural_ood_zero_shot": true,
+  "source_metadata": {
+    "path": "external/tallyqa/qa/test.json",
+    "sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2",
+    "rows": 38589
+  }
+}
