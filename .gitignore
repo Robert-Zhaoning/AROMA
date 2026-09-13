@@ -42,3 +42,6 @@ Thumbs.db
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Third-party datasets / repositories
+external/
