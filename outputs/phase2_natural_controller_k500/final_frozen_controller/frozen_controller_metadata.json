@@ -1,0 +1,21 @@
+{
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+  "calibration_manifest_sha256": "67dfdafa36c66a1299be7adea0d1232269e1b557607314972ed2b298312dc49a",
+  "calibration_n": 500,
+  "development_dataset": "TallyQA natural-OOD v1 4000-sample development set",
+  "feature_count": 39,
+  "independent_confirmation_results_seen": false,
+  "ridge_alpha": 0.01,
+  "selection_rule": "250 Simple + 250 Complex; lowest SHA256 ranks under fixed salt; selection independent of outcomes",
+  "source_action_matrix_sha256": "98dfac0fe1ed4bd86ad2fd4ffaf9aca66bbb56ee3a63cd4e9f28cc5f37fb9016",
+  "source_tallyqa_results_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "status": "FROZEN_BEFORE_NEW_NATURAL_CONFIRMATION",
+  "threshold": 0.1
+}

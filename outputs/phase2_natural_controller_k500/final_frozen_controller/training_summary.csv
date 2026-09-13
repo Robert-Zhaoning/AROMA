@@ -1,0 +1,5 @@
+alpha,n,utility_mean,utility_positive,utility_negative,utility_zero
+0.0,500,0.024,20,8,472
+1.5,500,-0.018,2,11,487
+2.0,500,-0.02,8,18,474
+4.0,500,-0.068,11,45,444
