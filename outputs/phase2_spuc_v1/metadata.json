@@ -1,0 +1,24 @@
+{
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "bundle_sha256": "16a57993540eb9598e3305f079447679f1a72777847d8f9b3fe7558c9290d606",
+  "controller_fitting_performed": false,
+  "development_status": "post-hoc development only; TallyQA-4000 is not an untouched confirmation set for SPUC-v1",
+  "feature_count": 39,
+  "frozen_artifacts_modified": false,
+  "method": "SPUC-v1 empirical min-max support projection",
+  "model_inference_performed": false,
+  "support_definition": "per-feature empirical min/max standardized z observed in exact reconstructed v2 controller training matrix",
+  "support_parameter_tuning_performed": false,
+  "support_sha256": "04625dbc658d4804d80d1529673b3564c7259d00601f686ac378c7188de12749",
+  "tallyqa_action_matrix_sha256": "98dfac0fe1ed4bd86ad2fd4ffaf9aca66bbb56ee3a63cd4e9f28cc5f37fb9016",
+  "tallyqa_final_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "threshold": 0.1,
+  "threshold_tuning_performed": false,
+  "v3_sha256": "15bd3fb0c7b64f528aa8da7f70f95e9d6c0c64ad63920fdcad0d60b9efa6476e"
+}
