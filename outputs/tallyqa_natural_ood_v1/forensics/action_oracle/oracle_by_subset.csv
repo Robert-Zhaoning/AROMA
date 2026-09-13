@@ -1,0 +1,3 @@
+subset,n,baseline_correct,baseline_wrong,baseline_accuracy,oracle_repairable_wrong,repairable_fraction_of_wrong,oracle_accuracy,oracle_accuracy_gain
+simple,2000,1573,427,0.7865,119,0.2786885245901639,0.846,0.0595
+complex,2000,1021,979,0.5105,150,0.15321756894790603,0.5855,0.07500000000000007

@@ -1,0 +1,18 @@
+{
+  "action_matrix_path": "outputs/tallyqa_natural_ood_v1/forensics/action_oracle/action_matrix.csv",
+  "action_matrix_rows": 20000,
+  "action_matrix_sha256": "98dfac0fe1ed4bd86ad2fd4ffaf9aca66bbb56ee3a63cd4e9f28cc5f37fb9016",
+  "action_space_modified": false,
+  "archived_results_path": "outputs/tallyqa_natural_ood_v1/final_frozen_controller/tallyqa_final_results.csv",
+  "archived_results_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "baseline_prediction_mismatches": 0,
+  "bug_fixed": "Pandas merge suffix renamed overlapping baseline_prediction columns to baseline_prediction_fresh and baseline_prediction_archived; original summary code referenced the unsuffixed column.",
+  "controller_modified": false,
+  "model_inference_performed": false,
+  "noop_internal_mismatches": 0,
+  "oracle_definition_modified": false,
+  "patch_type": "deterministic_summary_only",
+  "selected_action_post_mismatches": 0,
+  "stored_baseline_mismatches": 0,
+  "unique_questions": 4000
+}

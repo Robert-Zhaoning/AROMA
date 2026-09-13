@@ -1,0 +1,2 @@
+n,baseline_correct,baseline_wrong,baseline_accuracy,unique_oracle_repairable_wrong,repairable_fraction_of_wrong,oracle_correct,oracle_accuracy,oracle_accuracy_gain,controller_accuracy,controller_accuracy_change,controller_repairs,controller_captured_oracle_repairs,controller_repair_capture_fraction,oracle_minus_controller_accuracy
+4000,2594,1406,0.6485,269,0.19132290184921763,2863,0.71575,0.06725000000000003,0.61875,-0.029749999999999943,51,51,0.1895910780669145,0.09699999999999998
