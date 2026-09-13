@@ -1,0 +1,2 @@
+n,baseline_accuracy,oof_post_accuracy,accuracy_change,repairs,breaks,net_repairs,intervention_rate,ridge_alpha,threshold,n_splits,random_state
+4000,0.6485,0.6715,0.02300000000000002,126,34,92,0.1645,0.01,0.1,5,20260912

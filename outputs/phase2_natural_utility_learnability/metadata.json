@@ -1,0 +1,19 @@
+{
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "analysis_type": "post_hoc_natural_conditional_utility_learnability_probe",
+  "cv": "5-fold StratifiedKFold by Simple/Complex subset",
+  "feature_count": 39,
+  "feature_family": "full_geometry",
+  "hyperparameter_search": false,
+  "independent_confirmation": false,
+  "model_inference_performed": false,
+  "random_state": 20260912,
+  "ridge_alpha": 0.01,
+  "threshold": 0.1
+}
