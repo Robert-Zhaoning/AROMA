@@ -1,0 +1,103 @@
+{
+  "answer_distribution": {
+    "all": {
+      "0": 627,
+      "1": 1990,
+      "11": 6,
+      "12": 5,
+      "13": 2,
+      "14": 1,
+      "15": 1,
+      "2": 768,
+      "3": 296,
+      "4": 144,
+      "5": 67,
+      "6": 42,
+      "7": 22,
+      "8": 20,
+      "9": 9
+    },
+    "complex": {
+      "0": 567,
+      "1": 891,
+      "11": 1,
+      "12": 2,
+      "13": 1,
+      "14": 1,
+      "2": 304,
+      "3": 122,
+      "4": 53,
+      "5": 25,
+      "6": 16,
+      "7": 6,
+      "8": 8,
+      "9": 3
+    },
+    "simple": {
+      "0": 60,
+      "1": 1099,
+      "11": 5,
+      "12": 3,
+      "13": 1,
+      "15": 1,
+      "2": 464,
+      "3": 174,
+      "4": 91,
+      "5": 42,
+      "6": 26,
+      "7": 16,
+      "8": 12,
+      "9": 6
+    }
+  },
+  "answer_used_for_selection": false,
+  "calibration_manifest_sha256": "67dfdafa36c66a1299be7adea0d1232269e1b557607314972ed2b298312dc49a",
+  "candidate_rows_after_old_exclusion": 32063,
+  "confirmation_status": "MANIFEST_FROZEN_BEFORE_ANY_V2_PREDICTIONS",
+  "data_source_distribution": {
+    "all": {
+      "amt": 2000,
+      "imported_genome": 2000
+    },
+    "complex": {
+      "amt": 2000
+    },
+    "simple": {
+      "imported_genome": 2000
+    }
+  },
+  "frozen_controller_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+  "image_prefix_distribution": {
+    "VG_100K": 2341,
+    "VG_100K_2": 1659
+  },
+  "manifest_sha256": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d",
+  "old_evaluated_rows": 4000,
+  "old_tallyqa_results_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "overlap_audit": {
+    "calibration_new_question_overlap": 0,
+    "old_new_image_id_overlap": 0,
+    "old_new_image_overlap": 0,
+    "old_new_question_id_overlap": 0
+  },
+  "protocol": "AROMA TallyQA Natural Confirmation v2 for frozen K=500 natural-adapted controller",
+  "selected": {
+    "complex": 2000,
+    "simple": 2000,
+    "total": 4000,
+    "unique_image_ids": 4000,
+    "unique_images": 4000,
+    "unique_question_ids": 4000
+  },
+  "selection_rejections": {
+    "new_duplicate_image": 237,
+    "new_duplicate_image_id": 0,
+    "old_image": 2526,
+    "old_image_id": 0,
+    "old_question": 4000
+  },
+  "selection_rule": "Global SHA256 order over metadata only; greedy selection with Simple/Complex quotas and global image/image_id uniqueness",
+  "selection_salt": "AROMA_TALLYQA_NATURAL_CONFIRMATION_V2_20260912",
+  "source_rows": 38589,
+  "source_test_json_sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2"
+}

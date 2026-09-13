@@ -1,0 +1,9 @@
+check,value,expected,pass
+selected_rows,4000,4000,True
+simple_rows,2000,2000,True
+complex_rows,2000,2000,True
+unique_images,4000,4000,True
+old_new_question_overlap,0,0,True
+old_new_image_overlap,0,0,True
+old_new_image_id_overlap,0,0,True
+calibration_new_question_overlap,0,0,True
