@@ -1,0 +1,23 @@
+{
+  "manifest_sha256": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d",
+  "manifest_images": 4000,
+  "local_images": 4000,
+  "missing_images": 0,
+  "unexpected_images": 0,
+  "corrupt_images": 0,
+  "prefix_counts": {
+    "VG_100K": 2341,
+    "VG_100K_2": 1659
+  },
+  "total_bytes": 539268555,
+  "unique_file_hashes": 4000,
+  "byte_duplicate_group_count": 0,
+  "byte_duplicate_image_count": 0,
+  "unique_pixel_hashes": 4000,
+  "pixel_duplicate_group_count": 0,
+  "pixel_duplicate_image_count": 0,
+  "unique_dimension_pairs": 405,
+  "inventory_sha256": "475e28e0ebb7934d49d2062734b164ff04f4f04461d61de9ee4315f96182f0b2",
+  "byte_duplicate_groups": {},
+  "pixel_duplicate_groups": {}
+}
