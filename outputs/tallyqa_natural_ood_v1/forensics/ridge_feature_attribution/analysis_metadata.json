@@ -1,0 +1,21 @@
+{
+  "actions": [
+    0.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "analysis_type": "post_hoc_exact_ridge_feature_attribution",
+  "bundle_sha256": "16a57993540eb9598e3305f079447679f1a72777847d8f9b3fe7558c9290d606",
+  "controller_fitting_performed": false,
+  "feature_count": 39,
+  "frozen_artifacts_modified": false,
+  "hyperparameter_tuning_performed": false,
+  "model_inference_performed": false,
+  "score_tolerance": 1e-06,
+  "tallyqa_results_sha256": "5164b98030c531a521b15cebaea9de9d792a4d722922791ddc2db7c4154ac831",
+  "threshold": 0.1,
+  "top_k_contribution_features": 10,
+  "top_k_extreme_samples": 20,
+  "v3_results_sha256": "15bd3fb0c7b64f528aa8da7f70f95e9d6c0c64ad63920fdcad0d60b9efa6476e"
+}
