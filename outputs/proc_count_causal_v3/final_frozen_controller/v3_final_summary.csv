@@ -1,0 +1,2 @@
+scope,n,baseline_correct,baseline_wrong,baseline_accuracy,post_correct,post_accuracy,accuracy_change,accuracy_change_ci95_low,accuracy_change_ci95_high,repairs,breaks,net_repairs,repair_rate_among_wrong,break_rate_among_correct,intervention_rate,mcnemar_exact_p,primary_success
+ALL2000,2000,999,1001,0.4995,1161,0.5805,0.08100000000000002,0.0685,0.094,173,11,162,0.17282717282717283,0.011011011011011011,0.3265,1.315730753366195e-38,True

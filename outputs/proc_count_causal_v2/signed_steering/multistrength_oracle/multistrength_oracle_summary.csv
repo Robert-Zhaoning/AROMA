@@ -1,0 +1,2 @@
+n,baseline_correct,baseline_wrong,baseline_accuracy,unique_repaired_wrong,repair_fraction_wrong,oracle_correct,oracle_accuracy,oracle_accuracy_gain
+1000,503,497,0.503,139,0.2796780684104628,642,0.642,0.139

@@ -1,0 +1,2 @@
+n_pairs,mean_specificity_logp,specificity_logp_ci_low,specificity_logp_ci_high,mean_specificity_margin,specificity_margin_ci_low,specificity_margin_ci_high,wrong_oracle_better_fraction
+27,0.0805975420366007,0.04573965495478158,0.11633354996533675,0.03009259259259259,-0.02546296296296296,0.08564814814814815,0.7777777777777778

@@ -1,0 +1,65 @@
+{
+  "selection_status": "frozen_before_validation",
+  "selection_source": "Calibration-50 discovery",
+  "random_control_seed": 20260910,
+  "candidate_heads": [
+    {
+      "layer": 33,
+      "head": 1
+    },
+    {
+      "layer": 3,
+      "head": 4
+    },
+    {
+      "layer": 18,
+      "head": 13
+    },
+    {
+      "layer": 8,
+      "head": 30
+    },
+    {
+      "layer": 3,
+      "head": 11
+    },
+    {
+      "layer": 13,
+      "head": 11
+    },
+    {
+      "layer": 33,
+      "head": 21
+    }
+  ],
+  "random_control_heads": [
+    {
+      "layer": 38,
+      "head": 8
+    },
+    {
+      "layer": 8,
+      "head": 0
+    },
+    {
+      "layer": 13,
+      "head": 3
+    },
+    {
+      "layer": 3,
+      "head": 21
+    },
+    {
+      "layer": 8,
+      "head": 11
+    },
+    {
+      "layer": 38,
+      "head": 7
+    },
+    {
+      "layer": 28,
+      "head": 18
+    }
+  ]
+}
