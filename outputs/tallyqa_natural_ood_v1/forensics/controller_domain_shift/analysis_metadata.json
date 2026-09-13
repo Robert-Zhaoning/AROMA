@@ -1,0 +1,13 @@
+{
+  "analysis_type": "post_hoc_controller_domain_shift_forensics",
+  "controller_fitting_performed": false,
+  "feature_count": 39,
+  "frozen_artifacts_modified": false,
+  "hyperparameter_tuning_performed": false,
+  "model_inference_performed": false,
+  "scipy_available": true,
+  "tallyqa_rows": 4000,
+  "threshold": 0.1,
+  "v2_rows": 1000,
+  "v3_rows": 2000
+}

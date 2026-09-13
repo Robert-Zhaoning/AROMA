@@ -1,0 +1,16 @@
+domain,alpha,count,fraction
+v2_oof,0.0,21,0.021
+v2_oof,1.0,667,0.667
+v2_oof,1.5,20,0.02
+v2_oof,2.0,22,0.022
+v2_oof,4.0,270,0.27
+v3_confirmation,0.0,24,0.012
+v3_confirmation,1.0,1347,0.6735
+v3_confirmation,1.5,32,0.016
+v3_confirmation,2.0,63,0.0315
+v3_confirmation,4.0,534,0.267
+tallyqa_natural,0.0,782,0.1955
+tallyqa_natural,1.0,1389,0.34725
+tallyqa_natural,1.5,526,0.1315
+tallyqa_natural,2.0,44,0.011
+tallyqa_natural,4.0,1259,0.31475
