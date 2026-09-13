@@ -1,0 +1,37 @@
+{
+  "protocol_name": "AROMA TallyQA Natural-OOD Frozen Zero-Shot Final Evaluation",
+  "completed_utc": "2026-09-13T04:13:17.986117+00:00",
+  "git_head": "ca0fb4274d147b8e70e641fecfdd9961ba9da3db",
+  "dataset": "TallyQA",
+  "split": "official_test",
+  "samples": 4000,
+  "simple_samples": 2000,
+  "complex_samples": 2000,
+  "unique_images": 4000,
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "attention_implementation": "eager",
+  "head": "L18H13",
+  "actions": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "feature_count": 39,
+  "ridge_alpha": 0.01,
+  "utility_threshold": 0.1,
+  "prompt_policy": {
+    "original_question": true,
+    "suffix": "Return the number only.",
+    "question_rewriting": false
+  },
+  "manifest_sha256": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d",
+  "image_inventory_sha256": "475e28e0ebb7934d49d2062734b164ff04f4f04461d61de9ee4315f96182f0b2",
+  "controller_bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+  "runner_source_sha256": "0b14deb9cbf0fe73ecacd1f0584a94df8abd4949ae657b1b38f2ed4a15018d5d",
+  "gt_read_after_action_execution": true,
+  "retuned_on_tallyqa": false,
+  "natural_ood_zero_shot": false,
+  "primary_success": true
+}
