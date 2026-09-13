@@ -1,0 +1,22 @@
+{
+  "analysis_type": "post_hoc_natural_adaptation_sample_efficiency",
+  "calibration_sampling": "balanced Simple/Complex random subsample of outer training fold",
+  "calibration_sizes": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    3200
+  ],
+  "feature_count": 39,
+  "hyperparameter_search": false,
+  "independent_confirmation": false,
+  "model_inference_performed": false,
+  "outer_folds": 5,
+  "outer_split": "5-fold StratifiedKFold by Simple/Complex",
+  "repeats_per_subsample_size": 5,
+  "ridge_alpha": 0.01,
+  "threshold": 0.1
+}
