@@ -1,0 +1,16 @@
+{
+  "feature_names_exact_match": true,
+  "frozen_bundle_path": "outputs/proc_count_causal_v2/controller/final_frozen_controller/aroma_cardinality_controller.joblib",
+  "frozen_bundle_sha256": "16a57993540eb9598e3305f079447679f1a72777847d8f9b3fe7558c9290d606",
+  "max_mean_abs_diff": 0.0,
+  "max_scale_abs_diff": 0.0,
+  "n_features": 39,
+  "n_samples": 1000,
+  "reconstructed_matrix_path": "outputs/proc_count_causal_v2/controller/training_support_reconstruction/v2_controller_training_features_39.csv",
+  "reconstruction_pass": true,
+  "source_confirmation_path": "outputs/proc_count_causal_v2/confirmation_l18h13_a1p5_expanded_0_15/confirmation_results.csv",
+  "source_confirmation_sha256": "b8bc0dad87a845a0b9e7da52255d72e0a6e415d24643962b1f0aaa0e91ab4f89",
+  "source_feature_code_path": "scripts/run_v2_baseline_utility_controller.py",
+  "source_feature_code_sha256": "f96ca84d4743732f54c90c95b22575a34176a4fd9f66241f6fe75ca781b31b09",
+  "support_table_path": "outputs/proc_count_causal_v2/controller/training_support_reconstruction/v2_controller_training_support.csv"
+}
