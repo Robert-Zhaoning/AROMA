@@ -1,0 +1,87 @@
+{
+  "attention_implementation": "eager",
+  "bootstrap": {
+    "repetitions": 20000,
+    "seed": 20260912
+  },
+  "controller": {
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "feature_count": 39,
+    "feature_family": "full_geometry",
+    "head": "L18H13",
+    "natural_calibration_n": 500,
+    "retuning_allowed": false,
+    "ridge_alpha": 0.01,
+    "type": "natural_adapted_k500",
+    "utility_threshold": 0.1
+  },
+  "evaluation_split": "official_test",
+  "freeze_chain": {
+    "confirmation_image_freeze_commit": "9dfd1e8ce62b745227aade37edb980e34016318d",
+    "confirmation_manifest_freeze_commit": "9fc7822beb9e224291591a89b46a182c7c1ffe01",
+    "controller_freeze_commit": "9bbd337a979029da1bc46396c8e266da5c9e6193"
+  },
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "natural_adapted_k500": true,
+  "natural_ood_zero_shot": false,
+  "prespecified_secondary_endpoints": [
+    "simple_accuracy_change",
+    "complex_accuracy_change",
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "repair_rate_among_baseline_wrong",
+    "break_rate_among_baseline_correct",
+    "intervention_rate"
+  ],
+  "primary_endpoint": {
+    "metric": "paired_accuracy_change",
+    "paired_test": "two-sided exact McNemar",
+    "population": "all_4000",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+  "prohibited_after_outcomes_are_seen": [
+    "controller_retraining",
+    "calibration_set_change",
+    "head_retuning",
+    "action_set_retuning",
+    "feature_retuning",
+    "ridge_retuning",
+    "threshold_retuning",
+    "prompt_rewriting",
+    "sample_reselection",
+    "primary_endpoint_change"
+  ],
+  "prompt_policy": {
+    "append_instruction": "Return the number only.",
+    "question_rewriting": false,
+    "use_original_tallyqa_question": true
+  },
+  "protocol_name": "AROMA TallyQA Natural Confirmation v2",
+  "sampling": {
+    "calibration_new_question_overlap": 0,
+    "complex_samples": 2000,
+    "global_image_uniqueness": true,
+    "old_new_image_id_overlap": 0,
+    "old_new_image_overlap": 0,
+    "old_new_question_overlap": 0,
+    "one_question_per_image": true,
+    "selection_rule": "Global SHA256 order over metadata only; greedy selection with Simple/Complex quotas and global image/image_id uniqueness",
+    "selection_uses_answer": false,
+    "selection_uses_model_outcomes": false,
+    "simple_samples": 2000,
+    "total_samples": 4000
+  },
+  "source_dataset": "TallyQA",
+  "source_metadata": {
+    "path": "external/tallyqa/qa/test.json",
+    "rows": 38589,
+    "sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2"
+  }
+}
