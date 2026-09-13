@@ -1,0 +1,7 @@
+subset,error_direction,baseline_wrong_n,oracle_repairable,repairable_fraction
+overall,undercount,297,99,0.3333333333333333
+overall,overcount,1109,170,0.1532912533814247
+simple,undercount,130,53,0.4076923076923077
+simple,overcount,297,66,0.2222222222222222
+complex,undercount,167,46,0.2754491017964072
+complex,overcount,812,104,0.12807881773399016
