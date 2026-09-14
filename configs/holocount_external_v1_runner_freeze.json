@@ -1,0 +1,48 @@
+{
+  "actuator": {
+    "head": "L18H13",
+    "head_index": 13,
+    "layer": 18
+  },
+  "controller": {
+    "bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+    "bundle_version": "AROMA-natural-k500-v1",
+    "feature_count": 39,
+    "threshold": 0.1
+  },
+  "created_utc": "2026-09-14T02:16:21.921147+00:00",
+  "dataset": {
+    "manifest_sha256": "07e9672295230dfdad9e356102165b0190117101f865418efd1d3a6be9d403cd",
+    "primary_n": 2480,
+    "repo_id": "MM-MVR/HoloCount",
+    "revision": "f44cfe591e8f7e64b63a2fb080b98bffa10b45aa"
+  },
+  "experiment": "AROMA HoloCount external transfer v1",
+  "inference_state_at_freeze": {
+    "holocount_accuracy_seen": false,
+    "holocount_forward_passes": 0,
+    "holocount_model_loaded": false,
+    "holocount_predictions_seen": false,
+    "holocount_processor_loaded": false
+  },
+  "model": {
+    "attention_implementation": "eager",
+    "model_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5"
+  },
+  "pre_inference_parent_git_head": "48f206d859a34463a0d4c23a29f84dc4fdd91d13",
+  "runner": {
+    "ast_parse_passed": true,
+    "audit_only_passed": true,
+    "free_text_generation": false,
+    "ground_truth_first_access": "after post_prediction",
+    "path": "scripts/run_holocount_external_v1.py",
+    "sanity_mode_ground_truth_access": false,
+    "sha256": "64dab3fd50ff788ce70becbb8167beca10b6996051b846ae51d09985414a03ed"
+  },
+  "runtime_contract": {
+    "path": "configs/holocount_external_v1.json",
+    "sha256": "fecae12571c7aa5587a52371beef0494d9a6ba719be7c071fd35af947b6666cd"
+  },
+  "status": "RUNNER_FROZEN_BEFORE_FIRST_HOLOCOUNT_MODEL_INFERENCE"
+}
