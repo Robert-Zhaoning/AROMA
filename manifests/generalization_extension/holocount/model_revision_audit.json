@@ -1,0 +1,12 @@
+{
+  "cached_ref_main": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "cached_snapshots": [
+    "9eb2daaa8597bf192a8b0e73f848f3a102794df5"
+  ],
+  "freeze_policy": "cached ref/main if available; otherwise remote main observed before first HoloCount inference",
+  "frozen_revision_sha": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "hf_hub_cache": "/workspace/.cache/huggingface/hub",
+  "local_config_commit_hash": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "model_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "remote_main_sha": "9eb2daaa8597bf192a8b0e73f848f3a102794df5"
+}

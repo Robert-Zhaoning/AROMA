@@ -1,0 +1,163 @@
+{
+  "actuator": {
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "head": "L18H13",
+    "head_index": 13,
+    "layer": 18
+  },
+  "controller": {
+    "bundle_path": "outputs/phase2_natural_controller_k500/final_frozen_controller/aroma_natural_utility_controller_k500.joblib",
+    "bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+    "bundle_version": "AROMA-natural-k500-v1",
+    "decision_rule": "best predicted non-NOOP utility strictly > 0.1 else alpha=1",
+    "feature_count": 39,
+    "feature_family": "full_geometry",
+    "feature_names": [
+      "baseline_best_numeral",
+      "baseline_entropy",
+      "baseline_entropy_norm",
+      "baseline_expected_numeral",
+      "baseline_top1_prob",
+      "baseline_conditional_margin",
+      "baseline_vocab_numeral_mass",
+      "baseline_numprob_0",
+      "baseline_numprob_1",
+      "baseline_numprob_2",
+      "baseline_numprob_3",
+      "baseline_numprob_4",
+      "baseline_numprob_5",
+      "baseline_numprob_6",
+      "baseline_numprob_7",
+      "baseline_numprob_8",
+      "baseline_numprob_9",
+      "baseline_numprob_10",
+      "baseline_numprob_11",
+      "baseline_numprob_12",
+      "baseline_numprob_13",
+      "baseline_numprob_14",
+      "baseline_numprob_15",
+      "geom_top2_prob",
+      "geom_expected_minus_pred",
+      "geom_p_down1",
+      "geom_p_up1",
+      "geom_p_down2",
+      "geom_p_up2",
+      "geom_local_asymmetry",
+      "geom_up_mass",
+      "geom_down_mass",
+      "geom_signed_tail_mass",
+      "geom_up_distance_mass",
+      "geom_down_distance_mass",
+      "geom_signed_distance_mass",
+      "geom_up_boundary_gap",
+      "geom_down_boundary_gap",
+      "geom_up_down_logratio"
+    ],
+    "nonnoop_actions": [
+      0.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "ridge_alpha": 0.01,
+    "threshold": 0.1
+  },
+  "dataset": {
+    "manifest_path": "manifests/generalization_extension/holocount/holocount_manifest.csv",
+    "manifest_sha256": "07e9672295230dfdad9e356102165b0190117101f865418efd1d3a6be9d403cd",
+    "primary_filter": null,
+    "primary_population_n": 2480,
+    "repo_id": "MM-MVR/HoloCount",
+    "revision": "f44cfe591e8f7e64b63a2fb080b98bffa10b45aa",
+    "secondary_gt_gt_15_n": 188,
+    "secondary_gt_le_15_n": 2292,
+    "unique_image_hash_clusters": 2056
+  },
+  "experiment": "AROMA HoloCount external transfer v1",
+  "gt_leakage_policy": {
+    "controller_path_reads_ground_truth": false,
+    "ground_truth_first_read": "after baseline prediction, feature extraction, controller decision, and post prediction",
+    "score_state_dummy_gt": 1,
+    "state_to_features_excludes_gt_logp": true,
+    "state_to_features_excludes_gt_margin": true
+  },
+  "model": {
+    "attention_implementation": "eager",
+    "device_map": "auto",
+    "from_pretrained_contract": {
+      "model": {
+        "attn_implementation": "eager",
+        "device_map": "auto",
+        "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+        "torch_dtype": "bfloat16"
+      },
+      "processor": {
+        "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5"
+      }
+    },
+    "model_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "processor_revision_sha": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "revision_policy": "Exact Hugging Face commit frozen before first HoloCount model inference.",
+    "revision_sha": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "torch_dtype": "bfloat16"
+  },
+  "prediction": {
+    "candidate_numerals": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "free_text_generation": false,
+    "score_state_dummy_gt": 1,
+    "type": "next-token conditional numeral argmax"
+  },
+  "prompt": {
+    "chat_template": "processor.apply_chat_template(..., add_generation_prompt=True)",
+    "processor_add_special_tokens": false,
+    "question_policy": "preserve original HoloCount question verbatim after strip",
+    "suffix": "Return the number only."
+  },
+  "sanity_run": {
+    "accuracy_reporting_permitted": false,
+    "controller_tuning_permitted": false,
+    "ground_truth_in_manifest": false,
+    "manifest_path": "manifests/generalization_extension/holocount/sanity10_manifest.csv",
+    "n": 10,
+    "purpose": "engineering compatibility only",
+    "salt": "AROMA_HOLOCOUNT_EXTERNAL_V1_SANITY10",
+    "selection": "SHA256 fixed-salt rank over sample_id"
+  },
+  "source_sha256": {
+    "scripts/expanded_numeral_metrics.py": "c554f2ea1364e9c82f60d802d69bc3e79b115b02164f1b6a27e206ebb7d809be",
+    "scripts/run_l18h13_gain_all300.py": "436cc0842f8f79298c268efdb5efa3c3525f2d273405791aadbccb0d01868983",
+    "scripts/run_proc_count_causal_v3_final.py": "fb12d02c12560c001c62442032868e812c15145245ee81529f3c74de97ab20ea",
+    "scripts/run_tallyqa_natural_confirmation_v2_final.py": "0b14deb9cbf0fe73ecacd1f0584a94df8abd4949ae657b1b38f2ed4a15018d5d"
+  },
+  "statistics": {
+    "cluster_bootstrap_seed": 20260914,
+    "image_cluster_bootstrap_replicates": 20000,
+    "image_cluster_key": "image_sha256",
+    "primary_question_level_test": "exact McNemar",
+    "question_level_bootstrap_replicates": 20000
+  },
+  "status": "FROZEN_BEFORE_HOLOCOUNT_MODEL_INFERENCE"
+}
