@@ -1,0 +1,58 @@
+{
+  "dataset_revision": "f44cfe591e8f7e64b63a2fb080b98bffa10b45aa",
+  "metadata_path": "data/metadata.jsonl",
+  "row_count": 2480,
+  "fields": {
+    "answer": {
+      "type_counts": {
+        "str": 2480
+      },
+      "missing_count": 0,
+      "null_count": 0
+    },
+    "file_name": {
+      "type_counts": {
+        "str": 2480
+      },
+      "missing_count": 0,
+      "null_count": 0
+    },
+    "image_height": {
+      "type_counts": {
+        "int": 2280,
+        "NoneType": 200
+      },
+      "missing_count": 0,
+      "null_count": 200
+    },
+    "image_width": {
+      "type_counts": {
+        "int": 2280,
+        "NoneType": 200
+      },
+      "missing_count": 0,
+      "null_count": 200
+    },
+    "question": {
+      "type_counts": {
+        "str": 2480
+      },
+      "missing_count": 0,
+      "null_count": 0
+    },
+    "sample_id": {
+      "type_counts": {
+        "str": 2480
+      },
+      "missing_count": 0,
+      "null_count": 0
+    },
+    "split": {
+      "type_counts": {
+        "str": 2480
+      },
+      "missing_count": 0,
+      "null_count": 0
+    }
+  }
+}
