@@ -619,11 +619,14 @@ handle = o_proj.register_forward_pre_hook(
 )
 
 try:
-    hooked_out = model(
-        **test_inputs,
-        use_cache=False,
-        return_dict=True,
-    )
+    # Identity test is purely numerical.
+    # Do not retain an autograd graph here.
+    with torch.no_grad():
+        hooked_out = model(
+            **test_inputs,
+            use_cache=False,
+            return_dict=True,
+        )
 finally:
     handle.remove()
 
@@ -657,11 +660,54 @@ print("PASS: exact identity")
 
 
 # ============================================================
+# RELEASE IDENTITY/PREFLIGHT TEMPORARIES
+# ============================================================
+
+# These objects can otherwise retain large multimodal tensors.
+for _name in [
+    "baseline_out",
+    "hooked_out",
+    "baseline_logits",
+    "hooked_logits",
+    "test_inputs",
+    "saved",
+    "out",
+    "diff_mu",
+]:
+    if _name in globals():
+        del globals()[_name]
+
+gc.collect()
+
+if torch.cuda.is_available():
+    torch.cuda.empty_cache()
+
+print(
+    "CUDA allocated after identity cleanup (GiB):",
+    torch.cuda.memory_allocated() / (1024 ** 3)
+    if torch.cuda.is_available()
+    else 0.0
+)
+
+print(
+    "CUDA reserved after identity cleanup (GiB):",
+    torch.cuda.memory_reserved() / (1024 ** 3)
+    if torch.cuda.is_available()
+    else 0.0
+)
+
+
+# ============================================================
 # FREEZE PARAMETERS
 # ============================================================
 
 for parameter in model.parameters():
     parameter.requires_grad_(False)
+
+gc.collect()
+
+if torch.cuda.is_available():
+    torch.cuda.empty_cache()
 
 
 # ============================================================
