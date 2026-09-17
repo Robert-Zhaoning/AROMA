@@ -1,0 +1,17 @@
+changelog:
+  categories:
+    - title: Research
+      labels:
+        - research
+
+    - title: Reproducibility
+      labels:
+        - reproducibility
+
+    - title: Fixes
+      labels:
+        - bug
+
+    - title: Other Changes
+      labels:
+        - "*"

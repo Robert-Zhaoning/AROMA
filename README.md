@@ -1,42 +1,203 @@
 # AROMA
 
-## Adaptive Routing of Mechanistic Actuators for Vision-Language Counting
+## Adaptive Routing of Mechanistic Actuators with Causal Subspace Control for Vision-Language Counting
 
-**AROMA** studies whether vision-language counting can be **causally controlled
-and selectively repaired** through internal mechanistic interventions.
+**AROMA** is a mechanistic-control framework for studying and repairing
+vision-language counting errors in frozen multimodal language models.
 
-We identify a bidirectional cardinality-sensitive cross-attention actuator,
-build an adaptive controller that chooses intervention strengths per example,
-confirm substantial gains on an untouched procedural benchmark, observe a
-frozen zero-shot failure on natural images, diagnose that failure as a
-controller/utility-transfer problem rather than disappearance of the actuator,
-and show that lightweight natural-domain calibration restores significant gains
-on a new image-disjoint TallyQA confirmation sample.
+Rather than treating counting repair as a single prompting problem, AROMA
+separates three questions:
 
-> **AROMA = Adaptive Routing of Mechanistic Actuators**
+```text
+Actuator Capacity
+       ↓
+Actuation Geometry
+       ↓
+Routing Policy
+````
+
+- **Actuator capacity:** where can counting behavior be causally changed?
+- **Actuation geometry:** along which internal directions should the intervention
+  be applied, and with what finite magnitude?
+- **Routing policy:** when is an intervention useful for a particular example?
+
+The current experiments use:
+
+```text
+meta-llama/Llama-3.2-11B-Vision-Instruct
+revision:
+9eb2daaa8597bf192a8b0e73f848f3a102794df5
+```
+
+The repository preserves development experiments, frozen protocols, negative
+results, confirmation studies, and reproducibility artifacts.
 
 ---
 
-## Key Results
+# Key Results
 
-| Experiment | Baseline | Post / Oracle | Change |
-|---|---:|---:|---:|
-| Frozen Proc-Count-Causal v3 confirmation | 49.95% | 58.05% | **+8.10 pp** |
-| Frozen zero-shot TallyQA transfer | 64.85% | 61.875% | **-2.975 pp** |
-| Natural action oracle | 64.85% | 71.575% | **+6.725 pp** |
-| Natural-domain OOF utility learning | 64.85% | 67.15% | **+2.30 pp** |
-| Untouched TallyQA natural confirmation v2 | 64.925% | 67.050% | **+2.125 pp** |
+| StudyResult                                       |                            |
+| ------------------------------------------------- | -------------------------- |
+| L18H13 attenuation (`α = 0.5`)                    | **91.33% downward shifts** |
+| L18H13 amplification (`α = 1.5`)                  | **90.67% upward shifts**   |
+| Strict `0.5 < 1 < 1.5` ordering                   | **88.67%**                 |
+| Frozen Proc-Count-Causal v3 controller            | **+8.10 pp**               |
+| Frozen zero-shot TallyQA transfer                 | **−2.975 pp**              |
+| TallyQA natural action oracle                     | **+6.725 pp**              |
+| Frozen K=500 TallyQA confirmation                 | **+2.125 pp**              |
+| HoloCount transferred router                      | **−0.0403 pp**             |
+| HoloCount action oracle                           | **+12.2581 pp**            |
+| Top-4 total cardinality-sensitivity second moment | **89.82%**                 |
+| Median activation energy in Top-4 subspace        | **9.52%**                  |
+| Untouched v4 whole-head AROMA                     | **+7.00 pp**               |
+| Untouched v4 MN-CSA AROMA                         | **+8.00 pp**               |
+| MN-CSA vs. whole-head on v4                       | **+1.00 pp, p = 0.0078**   |
 
-Final natural confirmation:
+These numbers come from different evidence classes. Development results,
+post-hoc diagnostics, frozen confirmations, and external stress tests are kept
+separate throughout the repository.
 
-~~~text
-N = 4000
+---
 
+# 1. Actuator Capacity
+
+AROMA identifies **Layer 18, Head 13 (L18H13)** as a bidirectional
+cardinality-sensitive cross-attention actuator.
+
+On the original 300-example directional characterization:
+
+```text
+alpha = 0.5
+274 / 300 = 91.33% downward shift
+
+alpha = 1.5
+272 / 300 = 90.67% upward shift
+
+strict ordering:
+266 / 300 = 88.67%
+
+down/up response-magnitude Spearman:
+rho = 0.951442127
+```
+
+The identity intervention reproduces the baseline.
+
+The original directional characterization used numeral support:
+
+```text
+1 ... 10
+```
+
+Later controller and CSA stages used a separately audited expanded numeral
+proxy:
+
+```text
+0 ... 15
+```
+
+These stages are intentionally kept distinct.
+
+---
+
+# 2. Adaptive Routing
+
+A fixed intervention strength repairs some examples but breaks others.
+
+AROMA therefore uses a lightweight per-example utility controller with:
+
+```text
+39 ground-truth-free features
+
+per-action predictor:
+StandardScaler -> Ridge
+
+ridge alpha:
+0.01
+
+action set:
+{0, 1, 1.5, 2, 4}
+
+decision threshold:
+0.1
+```
+
+## Frozen procedural confirmation
+
+On Proc-Count-Causal v3:
+
+```text
 baseline:
-2597 / 4000 = 64.925%
+49.95%
 
 post-controller:
-2682 / 4000 = 67.050%
+58.05%
+
+gain:
++8.10 pp
+
+repairs:
+173
+
+breaks:
+11
+```
+
+This confirms adaptive repair within the procedural distribution.
+
+---
+
+# 3. Natural Transfer Boundary
+
+The frozen synthetic controller does **not** transfer zero-shot to TallyQA.
+
+```text
+baseline:
+64.85%
+
+post-controller:
+61.875%
+
+change:
+-2.975 pp
+```
+
+This failure is retained as a primary scientific result.
+
+However, the natural action oracle reaches:
+
+```text
+71.575%
+
+oracle gain:
++6.725 pp
+```
+
+Therefore actuator capacity remains present even though the learned deployment
+policy fails.
+
+This motivates one of AROMA's main distinctions:
+
+> **An actuator is not a policy.**
+
+---
+
+# 4. Natural-Domain Recalibration
+
+The actuator, feature family, action set, Ridge model class, regularization,
+and decision threshold were retained while the utility mapping was
+re-estimated on natural examples.
+
+A controller calibrated with `K = 500` natural examples was frozen before a
+new confirmation evaluation.
+
+On the new 4,000-example TallyQA confirmation sample:
+
+```text
+baseline:
+64.925%
+
+post-controller:
+67.050%
 
 gain:
 +2.125 pp
@@ -50,743 +211,375 @@ repairs:
 breaks:
 45
 
-net repairs:
-+85
-
-intervention rate:
-20.0%
-
 exact McNemar:
 p = 9.176009e-11
-~~~
+```
 
-The confirmation sample is question-, image-, and image-ID-disjoint from the
-earlier TallyQA development/evaluation sample, but it comes from the same
-official TallyQA benchmark distribution.
+The confirmation sample is disjoint from the earlier TallyQA sample in
+question IDs, image paths, and image IDs, while remaining within the same
+benchmark distribution.
 
-It is **not** claimed as cross-dataset generalization.
-
----
-
-## Scientific Story
-
-AROMA's central experimental sequence is:
-
-~~~text
-causal mechanism discovery
-        |
-        v
-bidirectional cardinality steering
-        |
-        v
-adaptive procedural repair
-        |
-        v
-frozen procedural confirmation
-        |
-        |  +8.10 pp
-        v
-frozen zero-shot natural transfer
-        |
-        |  -2.975 pp
-        v
-actuator-vs-router separation
-        |
-        v
-domain / utility shift diagnosis
-        |
-        v
-sample-efficient natural adaptation
-        |
-        v
-untouched natural confirmation
-           +2.125 pp
-~~~
-
-The negative zero-shot result is part of the main scientific story rather than
-an experiment that is hidden or discarded.
-
-The evidence supports a more specific conclusion than universal mechanistic
-transfer:
-
-> A causal cardinality actuator can remain useful across domains even when the
-> policy that decides when and how to use it does not.
+This is **not** claimed as cross-dataset generalization.
 
 ---
 
-## 1. Causal Cardinality Actuator
+# 5. External HoloCount Stress Test
 
-The primary actuator identified in the study is:
+The TallyQA-adapted controller was evaluated on HoloCount as an independent
+natural-domain stress test.
 
-~~~text
-Layer 18, Head 13
-L18H13
-~~~
-
-Scaling this cross-attention head changes the model's expected numeral in both
-directions.
-
-On the 300-sample directional characterization:
-
-~~~text
-alpha = 0.5:
-274 / 300 = 91.33% shift downward
-
-alpha = 1.5:
-272 / 300 = 90.67% shift upward
-
-strict ordering:
-266 / 300 = 88.67%
-
-down/up response magnitude Spearman:
-rho = 0.951442127
-~~~
-
-This supports interpreting L18H13 as a **bidirectional, dose-responsive causal
-cardinality actuator**.
-
-### Numeral-proxy provenance
-
-The original 300-sample directional experiment used the earlier proxy:
-
-~~~text
-1, ..., 10
-~~~
-
-Later controller development used the separately audited expanded proxy:
-
-~~~text
-0, ..., 15
-~~~
-
-These stages are kept distinct in the experimental record.
-
----
-
-## 2. Adaptive Routing
-
-The final intervention action set is:
-
-~~~text
-{0, 1, 1.5, 2, 4}
-~~~
-
-where:
-
-~~~text
-alpha = 1
-~~~
-
-is the identity / NOOP action.
-
-The synthetic controller uses:
-
-~~~text
-39 GT-free baseline / numeral-geometry features
-
-per-action model:
-StandardScaler -> Ridge
-
-ridge alpha:
-0.01
-
-decision threshold:
-0.1
-
-actuator:
-L18H13
-~~~
-
-Proc-Count-Causal v2 OOF development:
-
-~~~text
-50.3% -> 58.6%
-
-gain:
-+8.3 pp
-
-repairs:
-91
-
-breaks:
-8
-
-net repairs:
-+83
-
-intervention rate:
-33.3%
-~~~
-
-A compressed five-action oracle reached:
-
-~~~text
-64.1%
-+13.8 pp over baseline
-
-138 / 497 baseline-wrong samples repairable
-~~~
-
-showing substantial remaining routing headroom.
-
----
-
-## 3. Frozen Procedural Confirmation
-
-The synthetic controller was frozen before evaluation on a newly generated
-Proc-Count-Causal v3 set.
-
-~~~text
-N = 2000
-
+```text
 baseline:
-49.95%
+46.6935%
 
-post-controller:
-58.05%
-
-gain:
-+8.10 pp
-
-95% CI:
-[+6.85, +9.40] pp
-
-repairs:
-173
-
-breaks:
-11
-
-net repairs:
-+162
-
-intervention rate:
-32.65%
-~~~
-
-By condition:
-
-| Condition | Gain |
-|---|---:|
-| dense | +10.25 pp |
-| distractors | +7.25 pp |
-| grid | +12.00 pp |
-| random_sparse | +7.00 pp |
-| row | +4.00 pp |
-
-Canonical tag:
-
-~~~text
-aroma-v3-final-confirmation
-~~~
-
----
-
-## 4. Frozen Zero-Shot Natural Failure
-
-The same frozen synthetic controller was evaluated without natural adaptation on
-4,000 TallyQA examples.
-
-~~~text
-baseline:
-64.85%
-
-post-controller:
-61.875%
+transferred router:
+46.6532%
 
 change:
--2.975 pp
+-0.0403 pp
+```
+
+The transferred router is therefore effectively null.
+
+However, the same actuator/action family retains substantial conditional
+headroom:
+
+```text
+action oracle:
+58.9516%
+
+oracle gain:
++12.2581 pp
+```
+
+The same 39-feature linear Ridge utility family did not recover this headroom.
+
+The supported conclusion is therefore narrow:
+
+> L18H13 retains substantial repair capacity on HoloCount, but that capacity is
+> not recoverable by the existing 39-dimensional numeral-geometry
+> representation with the same linear utility family.
+
+---
+
+# 6. Causal Subspace Actuation
+
+Whole-head AROMA scales all 128 dimensions of L18H13.
+
+CSA asks whether cardinality-relevant sensitivity is concentrated in a
+lower-dimensional geometry.
+
+For pooled head state `h(x)`:
+
+```text
+g(x) = grad_h mu(x)
+
+G = (1/N) sum_i g_i g_i^T
+```
+
+where `mu(x)` is the expected numeral.
+
+The primary rank-4 eigenspace explains:
+
+```text
+uncentered total second moment:
+89.82%
+
+centered:
+86.78%
+```
+
+The rank-4 spectrum exceeds the 10,000-sample norm-matched random null.
+
+The pre-specified Gate-A rule additionally required at least 5× enrichment over
+the null median.
+
+Observed enrichment was:
+
+```text
+uncentered:
+4.2486x
+
+centered:
+4.1031x
+```
+
+Therefore the formal frozen result remains:
+
+```text
+GATE_A_NO_GO
+```
+
+This means **NO-GO for promotion under the frozen criterion**. The threshold
+was not changed after observing the result.
+
+---
+
+# 7. Sensitivity Is Not Activation Energy
+
+Naively applying the same intervention coefficient only inside the learned
+rank-4 subspace performs poorly.
+
+A strength audit showed:
+
+```text
+Top-4 sensitivity second moment:
+89.82%
+
+median Top-4 activation energy:
+9.52%
+```
+
+The learned subspace therefore contains most local cardinality sensitivity but
+only a small fraction of pooled activation energy.
+
+This motivates the second central distinction:
+
+> **Sensitivity is not activation energy.**
+
+---
+
+# 8. Magnitude-Normalized CSA
+
+Let
+
+```text
+p = U U^T h
+
+d_U = p / ||p||
+```
+
+AROMA uses:
+
+```text
+Delta h_MN = (alpha - 1) ||h|| d_U
+```
+
+so that:
+
+```text
+||Delta h_MN||
+=
+|alpha - 1| ||h||
+```
+
+The intervention remains inside the learned sensitivity subspace while
+matching the pooled displacement magnitude of whole-head scaling.
+
+## Development evidence
+
+On the frozen v3 intervention subset:
+
+```text
+whole-head:
+50.995%
+
+naive rank-4 CSA:
+33.23%
+
+MN-CSA:
+52.53%
+```
+
+Rank-matched specificity controls:
+
+```text
+Bottom-4:
+26.80%
+
+20 random rank-4 controls:
+mean = 27.18%
+best = 30.78%
+
+random controls matching Top-4:
+0 / 20
+```
+
+---
+
+# 9. Final Untouched v4 Confirmation
+
+Proc-Count-Causal v4 was generated only after the CSA rank, basis, formula,
+action policy, and endpoint were closed.
+
+The audit verified:
+
+```text
+N = 2000
+
+unique seeds = 2000
+unique rendered-image hashes = 2000
+
+seed overlap with v1/v2/v3 = 0
+rendered-image-hash overlap with v1/v2/v3 = 0
+```
+
+Final results:
+
+| MethodAccuracyGain vs. baseline |            |              |
+| ------------------------------- | ---------- | ------------ |
+| Baseline                        | 50.25%     | —            |
+| Whole-head AROMA                | 57.25%     | +7.00 pp     |
+| MN-CSA AROMA                    | **58.25%** | **+8.00 pp** |
+
+MN-CSA versus whole-head:
+
+```text
+difference:
++1.00 pp
 
 95% CI:
-[-3.70, -2.25] pp
-
-repairs:
-51
-
-breaks:
-170
-
-net repairs:
--119
-
-intervention rate:
-65.275%
+[+0.3, +1.7] pp
 
 exact McNemar:
-p ≈ 3.78e-16
-~~~
+p = 0.0077877
+```
 
-This is a frozen negative-transfer result.
-
-Canonical tag:
-
-~~~text
-aroma-tallyqa-ood-zero-shot-result
-~~~
+No rank, basis, formula, action policy, or condition-specific tuning was
+performed on v4 after observing these results.
 
 ---
 
-## 5. Mechanism Transfer vs. Routing Transfer
+# Scientific Scope
 
-The zero-shot failure does **not** imply that the cardinality actuator becomes
-useless on natural images.
+AROMA currently supports evidence for:
 
-### Natural action oracle
+```text
+causal actuator discovery
+        ↓
+bidirectional cardinality control
+        ↓
+adaptive per-example routing
+        ↓
+low-rank sensitivity geometry
+        ↓
+magnitude-normalized subspace actuation
+        ↓
+untouched procedural confirmation
+```
 
-~~~text
-baseline:
-64.85%
+The current evidence does **not** establish:
 
-oracle:
-71.575%
+```text
+universal counting repair
 
-gain:
-+6.725 pp
+successful zero-shot natural routing
 
-repairable baseline-wrong samples:
-269 / 1406 = 19.13%
-~~~
+cross-model mechanistic generalization
 
-A single suppressive action (`alpha = 0`) already produced:
+HoloCount router transfer
 
-~~~text
-64.85% -> 67.20%
-+2.35 pp
-~~~
+universal utility learnability from the 39-feature representation
 
-This shows that natural-domain repair opportunity remains.
+natural-image confirmation of MN-CSA
+```
 
-### Error-direction shift
-
-Among natural baseline errors:
-
-~~~text
-undercount:
-297 / 1406 = 21.12%
-
-overcount:
-1109 / 1406 = 78.88%
-
-absolute error = 1:
-1017 / 1406 = 72.33%
-~~~
-
-The natural error mixture therefore differs strongly from the synthetic
-controller-development distribution.
-
-### Controller calibration shift
-
-Approximate selected-score / realized-utility Spearman:
-
-~~~text
-synthetic v2 / v3:
-~ +0.41
-
-natural TallyQA:
-~ -0.067
-~~~
-
-Exact Ridge attribution also revealed severe OOD score extrapolation under
-`StandardScaler -> Ridge`.
-
-Support projection removed the numerical explosion but did not recover useful
-routing, indicating a deeper conditional-utility shift.
+These boundaries are intentional parts of the research record.
 
 ---
 
-## 6. Natural-Domain Utility Learning
+# Repository Guide
 
-Using the **same 39-dimensional GT-free representation** and the same Ridge
-model family, natural-domain action utility becomes learnable again.
+```text
+configs/      frozen experiment and controller configuration
+data/         local/generated data; new data are ignored by default
+docs/         protocols, freeze records, result records, and provenance
+environment/  environment metadata
+external/     third-party resources; ignored by default
+manifests/    dataset and experiment manifests
+outputs/      selected tracked research artifacts plus local outputs
+scripts/      canonical experiment and analysis runners
+src/          reusable AROMA package code
+tests/        lightweight automated tests
+archive/      historical and superseded research code
+```
 
-Five-fold OOF development:
+Start here:
 
-~~~text
-64.85% -> 67.15%
-
-gain:
-+2.30 pp
-
-repairs:
-126
-
-breaks:
-34
-
-net repairs:
-+92
-
-intervention rate:
-16.45%
-~~~
-
-This result is **post-hoc development**, not an independent confirmation.
-
----
-
-## 7. Sample-Efficient Adaptation
-
-Natural calibration sizes:
-
-| K | Mean gain |
-|---:|---:|
-| 50 | +0.330 pp |
-| 100 | +1.180 pp |
-| 250 | +1.870 pp |
-| 500 | **+2.120 pp** |
-| 1000 | +2.240 pp |
-| 2000 | +2.325 pp |
-| 3200 | +2.300 pp |
-
-`K=500` was selected as a **sample-efficiency elbow**, not because it produced
-the maximum observed development gain.
-
-The selected calibration set contains:
-
-~~~text
-500 examples
-250 Simple
-250 Complex
-~~~
-
-selected deterministically by metadata-only SHA256 ranking.
-
-No final-confirmation outcomes were used for selection.
+- [`docs/README.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/README.md) — documentation map
+- [`docs/PROJECT_STATUS.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/PROJECT_STATUS.md) — current scientific status
+- [`docs/EXPERIMENT_LEDGER.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/EXPERIMENT_LEDGER.md) — experiment history
+- [`docs/RESULTS_CANONICAL.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/RESULTS_CANONICAL.md) — canonical registry
+- [`docs/ARTIFACT_MANIFEST.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/ARTIFACT_MANIFEST.md) — artifact inventory
+- [`docs/REPRODUCIBILITY.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/REPRODUCIBILITY.md) — reproduction notes
+- [`docs/AROMA2_CSA_PROTOCOL_v1_1.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/AROMA2_CSA_PROTOCOL_v1_1.md) — CSA protocol
+- [`docs/AROMA2_CSA_V4_FINAL_RESULT_v1.md`](https://chatgpt.com/g/g-p-69f2ff8daf748191a12f33965728c1be/c/docs/AROMA2_CSA_V4_FINAL_RESULT_v1.md) — final v4 confirmation
 
 ---
 
-## 8. Untouched Natural Confirmation
+# Installation
 
-The frozen K=500 controller was evaluated on a new TallyQA sample with:
+The lightweight package can be installed with:
 
-~~~text
-4000 total questions
+```bash
+python -m pip install -e .
+```
 
-2000 Simple
-2000 Complex
+Model-facing experiments additionally require the frozen research environment
+documented in:
 
-4000 unique question IDs
-4000 unique image paths
-4000 unique image IDs
-~~~
+```text
+docs/ENVIRONMENT.md
+```
 
-There is zero question/image/image-ID overlap with the earlier TallyQA sample.
-
-Final result:
-
-~~~text
-64.925% -> 67.050%
-
-gain:
-+2.125 pp
-
-95% CI:
-[+1.50, +2.775] pp
-
-130 repairs
-45 breaks
-
-exact McNemar:
-p = 9.176009e-11
-~~~
-
-Prespecified subset results:
-
-| Subset | Baseline | Post | Gain |
-|---|---:|---:|---:|
-| Simple | 78.05% | 79.15% | +1.10 pp |
-| Complex | 51.80% | 54.95% | **+3.15 pp** |
-
-The prespecified primary criterion was:
-
-~~~text
-accuracy change > 0
-AND
-exact McNemar p < 0.05
-~~~
-
-and was satisfied.
+Large model weights and third-party datasets are not distributed through this
+repository.
 
 ---
 
-## Quick Start
+# Repository Integrity
 
-### Clone the publication branch
+Run:
 
-~~~bash
-mkdir -p /workspace
-cd /workspace
+```bash
+make check
+```
 
-git clone \
-  --branch publication-v1 \
-  --single-branch \
-  https://github.com/Robert-Zhaoning/AROMA.git \
-  AromaExperiments
+This performs repository-integrity and source-compilation checks without
+loading the 11B vision-language model.
 
-cd AromaExperiments
-~~~
-
-### Create the environment
-
-~~~bash
-conda create -n aroma python=3.11
-conda activate aroma
-
-pip install -e .
-~~~
-
-Full VLM inference additionally requires compatible installations of:
-
-~~~text
-torch
-transformers
-accelerate
-~~~
-
-The successful reference environment is recorded in:
-
-[`environment/reference_environment.txt`](environment/reference_environment.txt)
+Full model experiments require the appropriate GPU environment and dataset
+access.
 
 ---
 
-## Reproduce the Main Frozen Evaluations
+# Research Status
 
-### Proc-Count-Causal v3
+The current single-model scientific milestone is frozen.
 
-Audit first:
+Further work should be treated as a new experimental phase rather than as
+post-hoc tuning of the completed Llama-3.2-Vision experiments.
 
-~~~bash
-python scripts/run_proc_count_causal_v3_final.py --protocol-only
-~~~
+The highest-priority open direction is cross-model mechanistic replication.
 
-Then execute:
+See:
 
-~~~bash
-python scripts/run_proc_count_causal_v3_final.py
-~~~
+```text
+docs/PROJECT_STATUS.md
+```
 
-### Frozen TallyQA zero-shot evaluation
-
-Audit first:
-
-~~~bash
-python scripts/run_tallyqa_natural_ood_v1_final.py --protocol-only
-~~~
-
-Then execute:
-
-~~~bash
-python scripts/run_tallyqa_natural_ood_v1_final.py
-~~~
-
-### Natural Confirmation v2
-
-Audit first:
-
-~~~bash
-python scripts/run_tallyqa_natural_confirmation_v2_final.py --protocol-only
-~~~
-
-Then execute:
-
-~~~bash
-python scripts/run_tallyqa_natural_confirmation_v2_final.py
-~~~
-
-`--resume` is reserved for technical or infrastructure interruption and must
-not be used for outcome-dependent reruns.
-
-For complete setup, prerequisites, data layout, and dependency ordering, see:
-
-**[docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)**
+for the exact boundary between closed and open research questions.
 
 ---
 
-## Data
+# Citation
 
-Third-party raw data is not redistributed.
+A manuscript is currently in preparation.
 
-Local third-party material is expected under:
+Repository citation metadata are provided in:
 
-~~~text
-external/
-~~~
+```text
+CITATION.cff
+```
 
-TallyQA metadata used in the experiments was stored as:
-
-~~~text
-external/tallyqa/qa/train.json
-external/tallyqa/qa/test.json
-~~~
-
-Visual Genome images for the frozen natural evaluations can be downloaded with:
-
-~~~bash
-python scripts/download_tallyqa_frozen_vg_images.py --workers 8
-
-python scripts/download_tallyqa_natural_confirmation_v2_images.py --workers 8
-~~~
-
-See the reproducibility guide for the complete data workflow.
+Please use the accompanying manuscript citation once the final author list and
+venue information are available.
 
 ---
 
-## Repository Structure
+# License
 
-~~~text
-AROMA/
-|
-|-- README.md
-|-- pyproject.toml
-|
-|-- src/aroma/
-|   `-- core package code
-|
-|-- scripts/
-|   `-- formal publication / reproduction scripts
-|
-|-- configs/
-|   `-- frozen experiment configurations
-|
-|-- outputs/
-|   `-- selectively tracked canonical artifacts
-|
-|-- docs/
-|   |-- EXPERIMENT_LEDGER.md
-|   |-- RESULTS_CANONICAL.md
-|   |-- ARTIFACT_MANIFEST.md
-|   |-- REPRODUCIBILITY.md
-|   `-- HISTORICAL_CODE.md
-|
-|-- environment/
-|   `-- reference_environment.txt
-|
-|-- archive/historical_scripts/
-|   |-- historical research scripts
-|   `-- MANIFEST.tsv
-|
-`-- tests/
-~~~
+A public reuse license has **not yet been finalized**.
 
----
-
-## Canonical Documentation
-
-**[Experiment Ledger](docs/EXPERIMENT_LEDGER.md)**  
-Full scientific record: protocol, evidence class, interpretation, allowed claim,
-and provenance.
-
-**[Canonical Results](docs/RESULTS_CANONICAL.md)**  
-Authoritative source for paper-level numerical values.
-
-**[Artifact Manifest](docs/ARTIFACT_MANIFEST.md)**  
-Publication-critical paths, evidence roles, sizes, and SHA256 hashes.
-
-**[Reproducibility Guide](docs/REPRODUCIBILITY.md)**  
-Complete environment, dataset, dependency, protocol, and execution guide.
-
-**[Historical Code](docs/HISTORICAL_CODE.md)**  
-Explains the archive of exploratory and superseded research scripts.
-
----
-
-## Frozen Provenance
-
-Important milestones include:
-
-~~~text
-c8c5ede  freeze synthetic cardinality controller
-
-582bb53  freeze Proc-Count-Causal v3 generation protocol
-9085d09  freeze v3 final evaluator
-9bc192e  archive v3 confirmation result
-
-6f04635  freeze natural zero-shot evaluator
-bdc740b  archive frozen zero-shot negative result
-
-9bbd337  freeze K=500 natural-adapted controller
-9fc7822  freeze natural confirmation v2 manifest
-9dfd1e8  freeze confirmation image inventory
-ca0fb42  freeze final natural evaluator
-ae6e08c  archive final confirmation result
-~~~
-
-Completed experimental milestone:
-
-~~~text
-aroma-experiments-v1-complete
-~~~
-
-Publication consolidation branch:
-
-~~~text
-publication-v1
-~~~
-
----
-
-## Limitations
-
-Current AROMA v1 evidence does **not** establish:
-
-- universal VLM counting repair;
-- complete implementation of all originally proposed P/R/M repair modules;
-- cross-model generalization;
-- cross-dataset natural generalization;
-- successful zero-shot natural transfer;
-- that observational attention alone identifies the causal mechanism.
-
-The final natural confirmation is held out at the question and image level, but
-remains within the same official TallyQA benchmark distribution.
-
-Natural next steps include:
-
-- replication on a second VLM;
-- evaluation on an independent natural counting benchmark;
-- broader mechanistic actuator discovery;
-- uncertainty-aware routing;
-- additional stage-specific repair mechanisms.
-
----
-
-## Research Integrity
-
-AROMA intentionally preserves:
-
-- the frozen natural zero-shot failure;
-- post-hoc vs. confirmatory distinctions;
-- controller freeze chronology;
-- confirmation-set disjointness;
-- artifact SHA256 hashes;
-- historical exploratory code.
-
-Frozen experimental history should not be rewritten to make later outcomes
-appear prespecified.
-
----
-
-## Citation
-
-Manuscript in preparation:
-
-~~~text
-AROMA: Adaptive Routing of Mechanistic Actuators
-for Vision-Language Counting
-~~~
-
-Formal citation information will be added when the manuscript is released.
-
----
-
-## Status
-
-**AROMA v1 experimental development is complete.**
-
-Current work focuses on:
-
-~~~text
-publication documentation
-figures and tables
-manuscript preparation
-reproducibility packaging
-~~~
+Until a license is selected, please contact the authors before redistributing
+or reusing substantial portions of the code.

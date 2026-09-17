@@ -5,18 +5,26 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aroma"
 version = "0.1.0"
-description = "AROMA: Adaptive Routing of Mechanistic Actuators for Vision-Language Counting"
+description = "AROMA: Adaptive Routing of Mechanistic Actuators with Causal Subspace Control for Vision-Language Counting"
+readme = "README.md"
 requires-python = ">=3.11"
-dependencies = [
-    "numpy",
-    "pandas",
-    "scipy",
-    "scikit-learn",
-    "pillow",
-    "pyyaml",
-    "tqdm",
-    "matplotlib",
+authors = [
+{ name = "Zhaoning Zhang" },
 ]
+dependencies = [
+"numpy",
+"pandas",
+"scipy",
+"scikit-learn",
+"pillow",
+"pyyaml",
+"tqdm",
+"matplotlib",
+]
+
+[project.urls]
+Repository = "https://github.com/Robert-Zhaoning/AROMA"
+Issues = "https://github.com/Robert-Zhaoning/AROMA/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
