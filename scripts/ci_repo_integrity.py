@@ -36,7 +36,7 @@ REQUIRED_FILES = [
 SECRET_PATTERNS = [
     (
         "OpenSSH private key",
-        re.compile(r"-----BEGIN OPENSSH PRIVATE KEY-----"),
+        re.compile(r"-----BEGIN " r"OPENSSH PRIVATE KEY-----"),
     ),
     (
         "generic private key",
