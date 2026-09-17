@@ -1,0 +1,64 @@
+{
+  "protocol_name": "AROMA Natural-Domain MN-CSA Validation v1",
+  "status": "FROZEN_BEFORE_NATURAL_MNCSA_INFERENCE",
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "attention_implementation": "eager",
+  "actuator": {
+    "layer": 18,
+    "head": 13,
+    "head_dim": 128,
+    "hidden_slice": [
+      1664,
+      1792
+    ]
+  },
+  "csa": {
+    "rank": 4,
+    "basis_path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+    "basis_sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14",
+    "operator": "magnitude_normalized_causal_subspace_actuation",
+    "formula": "delta_h=(alpha-1)*||h||*(UUT_h/||UUT_h||)"
+  },
+  "controller": {
+    "type": "natural_adapted_k500",
+    "bundle_path": "outputs/phase2_natural_controller_k500/final_frozen_controller/aroma_natural_utility_controller_k500.joblib",
+    "bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "feature_count": 39,
+    "ridge_alpha": 0.01,
+    "threshold": 0.1,
+    "calibration_n": 500
+  },
+  "evaluation": {
+    "dataset": "TallyQA",
+    "population": "pre-existing natural confirmation v2 cohort",
+    "n": 4000,
+    "manifest_path": "outputs/tallyqa_natural_confirmation_v2/manifest.jsonl",
+    "manifest_sha256": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d",
+    "image_inventory_sha256": "475e28e0ebb7934d49d2062734b164ff04f4f04461d61de9ee4315f96182f0b2"
+  },
+  "primary_endpoint": {
+    "metric": "paired_accuracy_difference",
+    "comparison": "MN-CSA minus same-run whole-head",
+    "population": "all_4000",
+    "confidence_interval": "paired bootstrap, 20000 repetitions",
+    "paired_test": "two-sided exact McNemar"
+  },
+  "bootstrap": {
+    "repetitions": 20000,
+    "seed": 20260917
+  },
+  "same_router_action_for_both_actuators": true,
+  "retuning_allowed": false,
+  "protocol_path": "docs/AROMA2_NATURAL_MNCSA_PROTOCOL_v1.md",
+  "protocol_sha256": "2bf3a5f09a22568f9c72fe915942c3444d3e0a7cb9ab5c149da9d36e2212421e",
+  "runner_path": "scripts/run_tallyqa_natural_mncsa_v1.py",
+  "runner_source_sha256": "6082077044b4249ee5501e51c40ae81358db0f81e55a2e2f3ae9bac8413a5c51"
+}
