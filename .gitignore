@@ -45,3 +45,21 @@ Thumbs.db
 
 # Third-party datasets / repositories
 external/
+
+# Build / test outputs
+
+build/
+dist/
+.coverage
+htmlcov/
+
+# Additional credential formats
+
+*.pem
+*.p12
+
+# Large model artifacts
+
+*.safetensors
+*.ckpt
+*.pth

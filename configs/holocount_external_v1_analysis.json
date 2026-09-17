@@ -1,0 +1,65 @@
+{
+  "experiment": "AROMA HoloCount external transfer v1",
+  "status": "FROZEN_BEFORE_FULL_HOLOCOUNT_EVALUATION",
+  "primary_population_n": 2480,
+  "unique_image_clusters": 2056,
+
+  "primary_metrics": [
+    "baseline_accuracy",
+    "post_accuracy",
+    "absolute_percentage_point_change",
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "intervention_rate",
+    "exact_mcnemar_p"
+  ],
+
+  "primary_success_rule": {
+    "positive_accuracy_change": true,
+    "exact_mcnemar_p_less_than": 0.05
+  },
+
+  "question_bootstrap": {
+    "replicates": 20000,
+    "seed": 20260914,
+    "confidence_level": 0.95,
+    "statistic": "paired post_accuracy_minus_baseline_accuracy"
+  },
+
+  "image_cluster_bootstrap": {
+    "cluster_key": "image_sha256",
+    "clusters": 2056,
+    "replicates": 20000,
+    "seed": 20260914,
+    "confidence_level": 0.95,
+    "sampling": "sample image clusters with replacement and include every question record in each sampled cluster",
+    "statistic": "paired post_accuracy_minus_baseline_accuracy"
+  },
+
+  "strong_external_generalization_rule": {
+    "requires_primary_success_rule": true,
+    "requires_image_cluster_bootstrap_lower_95_ci_greater_than_zero": true
+  },
+
+  "prespecified_secondary_analyses": [
+    "ground_truth <= 15",
+    "ground_truth > 15",
+    "20 official HoloCount subsets",
+    "ground-truth count",
+    "controller action distribution"
+  ],
+
+  "prediction_support": [
+    0, 1, 2, 3, 4, 5, 6, 7,
+    8, 9, 10, 11, 12, 13, 14, 15
+  ],
+
+  "interpretation_policy": {
+    "primary_result": "all 2480 records",
+    "gt_le_15_is_secondary_only": true,
+    "gt_gt_15_is_secondary_only": true,
+    "no_outcome_dependent_filtering": true,
+    "no_controller_tuning_after_results": true
+  }
+}

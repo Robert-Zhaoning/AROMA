@@ -1,0 +1,6 @@
+{
+  "scripts/expanded_numeral_metrics.py": "c554f2ea1364e9c82f60d802d69bc3e79b115b02164f1b6a27e206ebb7d809be",
+  "scripts/run_l18h13_gain_all300.py": "436cc0842f8f79298c268efdb5efa3c3525f2d273405791aadbccb0d01868983",
+  "scripts/run_proc_count_causal_v3_final.py": "fb12d02c12560c001c62442032868e812c15145245ee81529f3c74de97ab20ea",
+  "scripts/run_tallyqa_natural_confirmation_v2_final.py": "0b14deb9cbf0fe73ecacd1f0584a94df8abd4949ae657b1b38f2ed4a15018d5d"
+}

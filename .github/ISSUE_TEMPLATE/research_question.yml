@@ -1,0 +1,18 @@
+name: Research question
+description: Discuss a scientific extension or interpretation.
+title: "[Research] "
+labels:
+  - research
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevant existing AROMA evidence
+      description: Reference protocols, result records, or artifacts when possible.

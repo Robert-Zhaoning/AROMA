@@ -1,0 +1,69 @@
+{
+  "protocol_name": "AROMA 2.0 CSA Proc-Count-Causal v4 Final Untouched Confirmation",
+
+  "dataset": "proc_count_causal_v4",
+  "generation_version": "4.0_unique",
+  "n_samples": 2000,
+
+  "design": {
+    "counts": [1,2,3,4,5,6,7,8,9,10],
+    "conditions": [
+      "row",
+      "grid",
+      "random_sparse",
+      "dense",
+      "distractors"
+    ],
+    "replicates_per_count_condition": 40,
+    "balanced": true,
+    "reuse_v3_rendering_functions": true
+  },
+
+  "generation": {
+    "base_seed": 271828182,
+    "collision_retry_stride": 1000000000,
+    "pixel_unique_within_v4": true,
+    "seed_unique_within_v4": true,
+    "pixel_unique_against": ["v1", "v2", "v3"],
+    "seed_unique_against": ["v1", "v2", "v3"],
+    "allow_model_outcome_filtering": false,
+    "allow_model_outcome_replacement": false
+  },
+
+  "model": {
+    "name": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "attention_implementation": "eager"
+  },
+
+  "csa": {
+    "layer": 18,
+    "head": 13,
+    "head_dimension": 128,
+    "rank": 4,
+    "basis_path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+    "intervention": "delta_h=(alpha-1)*||h||*normalize(UU^T h)",
+    "retuning_allowed": false
+  },
+
+  "actions": [0.0, 1.0, 1.5, 2.0, 4.0],
+
+  "primary_endpoint": {
+    "metric": "mn_csa_accuracy_minus_baseline",
+    "paired_test": "two-sided exact McNemar",
+    "success_rule": "accuracy_change > 0 and exact_McNemar_p < 0.05"
+  },
+
+  "secondary_endpoints": [
+    "whole_head_accuracy_minus_baseline",
+    "mn_csa_minus_whole_head_accuracy",
+    "paired_bootstrap_95ci",
+    "repairs",
+    "breaks",
+    "net_repairs",
+    "condition_wise_results",
+    "action_distribution"
+  ],
+
+  "final_confirmation_is_untouched": true
+}

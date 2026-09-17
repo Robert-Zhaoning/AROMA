@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite the accompanying AROMA manuscript.
+  The final manuscript author list and venue metadata will be updated before
+  publication.
+title: >-
+  AROMA: Adaptive Routing of Mechanistic Actuators with Causal Subspace
+  Control for Vision-Language Counting
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Zhaoning
+repository-code: https://github.com/Robert-Zhaoning/AROMA
+license: proprietary

@@ -1,0 +1,22 @@
+{
+  "experiment": "AROMA HoloCount external transfer v1",
+  "stage": "engineering sanity completed before full evaluation",
+  "sanity_n": 10,
+  "ground_truth_accessed": false,
+  "accuracy_computed": false,
+  "controller_tuned": false,
+  "runner_changed_after_sanity": false,
+  "engineering_checks": {
+    "rows": 10,
+    "feature_count": 39,
+    "controller_decisions": "PASS",
+    "nonnoop_hook_audit": "PASS",
+    "noop_hook_audit": "PASS",
+    "prediction_support": "0..15"
+  },
+  "artifacts": {
+    "sanity10_raw_results_sha256": "741f1a0e097ca01b7022bd839c05256eff678d3ded98ce87a7cefdf0f2826c3a",
+    "sanity10_run_metadata_sha256": "d716af7f27042ccc8ed27dfd4cc326f52c4f4e11aaafa6370e0cef4a862130c7",
+    "sanity10_console_log_sha256": "fc26c746a691ea4ba88d45afaaa5ae64d61cc08861c38ba935ec8c760409869c"
+  }
+}

@@ -1,0 +1,1236 @@
+{
+  "02ee8efafcdc60eb36dc0385ae8bbd1cc4aac2472fa126f7911e35750a41ef53": [
+    "holocount_material_attribution_00069",
+    "holocount_scale_attribution_00096",
+    "holocount_action_and_state_attribution_00094",
+    "holocount_joint_set_aggregation_00069"
+  ],
+  "030a509a4e74b0fc56052cab4735a2b257ca5cb0d6f8bb9d7cecd4af07228af9": [
+    "holocount_atomic_counting_00006",
+    "holocount_relative_canonical_orientation_00061"
+  ],
+  "0489cec3e74ce99bd166b5cb5b621f6249bf726b1755e728385d85f0f468269b": [
+    "holocount_chromatic_attribution_00122",
+    "holocount_action_and_state_attribution_00039"
+  ],
+  "04e0018c707e9fb3189e90ce3f84acda8bea25c4e79ce0acd0c99f9aa154d74f": [
+    "holocount_action_and_state_attribution_00012",
+    "holocount_complementary_exclusion_00048"
+  ],
+  "05abd0b63f51ca9c9e7df05c2b06022ea154b684e65fe0c044c8e3af2706fa92": [
+    "holocount_scale_attribution_00090",
+    "holocount_general_semantic_attribution_00006",
+    "holocount_categorical_cardinality_00038"
+  ],
+  "06ab7fe80e09012ac11236134d08db3a0aa7848d1e963aa4d723eeda46858d82": [
+    "holocount_scale_attribution_00070",
+    "holocount_action_and_state_attribution_00076"
+  ],
+  "0a91d80f5116e7a65684a6e31a1ada98b20d9fd870f2ad4ee94fbfb7438387ba": [
+    "holocount_action_and_state_attribution_00013",
+    "holocount_complementary_exclusion_00054"
+  ],
+  "0ae9a74c4836b9f127d47fea035b9267cbee8017c1df7c82f54a6c5ea297b65a": [
+    "holocount_relative_canonical_orientation_00072",
+    "holocount_null_target_prompting_00055"
+  ],
+  "0d1b104c08152f1dd4434adbbed034c7032673a10b28462be8b0c559a1e4b953": [
+    "holocount_action_and_state_attribution_00071",
+    "holocount_differential_comparison_00076"
+  ],
+  "0f5a2c71eeae3c17e173c342293ca2e6aedcdad88042284377659fa285e399a2": [
+    "holocount_material_attribution_00014",
+    "holocount_general_semantic_attribution_00053"
+  ],
+  "10c9c245c722efe6ad5034ffb175e3134dbe6e49529db99e9eccd7590fe17c21": [
+    "holocount_chromatic_attribution_00147",
+    "holocount_joint_set_aggregation_00033"
+  ],
+  "112969d024c373995e07e32a51f2c5525321542a7d2fe7b0b72f4b33a73cdd73": [
+    "holocount_scale_attribution_00064",
+    "holocount_joint_set_aggregation_00026"
+  ],
+  "12279e69ec22150c83e07872150111bc28fee08db99ed8306bb774d73b8bff01": [
+    "holocount_chromatic_attribution_00093",
+    "holocount_material_attribution_00078",
+    "holocount_scale_attribution_00031",
+    "holocount_differential_comparison_00009",
+    "holocount_categorical_cardinality_00007"
+  ],
+  "12b0323f0c8fb208421796d8e60492ad02666bbd7a9f99392f9471898e44d1b0": [
+    "holocount_action_and_state_attribution_00064",
+    "holocount_differential_comparison_00047"
+  ],
+  "12b50d5b3e9bb3fef07ab51a9b6bc5d96ce961183c461870a34c01e2890e652f": [
+    "holocount_action_and_state_attribution_00057",
+    "holocount_complementary_exclusion_00015"
+  ],
+  "132750613623f8796699dc0e4c6f70aea6c9e0fa09dadd37d72b9df729a01a1f": [
+    "holocount_coordinate_prompt_region_grounding_00057",
+    "holocount_null_target_prompting_00089"
+  ],
+  "138bc8067cf926c18ea81fe3dcb0f191739ec5b92a45e1669696b75414f53679": [
+    "holocount_chromatic_attribution_00014",
+    "holocount_material_attribution_00008",
+    "holocount_general_semantic_attribution_00007",
+    "holocount_differential_comparison_00084",
+    "holocount_joint_set_aggregation_00009",
+    "holocount_complementary_exclusion_00025"
+  ],
+  "145c5bc140ccb98498b870eeef27ab30aca15acbc60b283602508d19dea96349": [
+    "holocount_scale_attribution_00076",
+    "holocount_general_semantic_attribution_00055",
+    "holocount_complementary_exclusion_00099"
+  ],
+  "15b7deac84d5da71672c4a5e218d1dbba93cbab25dad3bdd0a9b516ef24079f8": [
+    "holocount_chromatic_attribution_00121",
+    "holocount_action_and_state_attribution_00035"
+  ],
+  "16a236b0f69233b3e2bf3ace8b7960f472db09a09bd78649d98e67ac68937f4b": [
+    "holocount_chromatic_attribution_00052",
+    "holocount_general_semantic_attribution_00022",
+    "holocount_differential_comparison_00035",
+    "holocount_complementary_exclusion_00053"
+  ],
+  "1a8a65c52dd513cdcad5a1239c46f7e7ae54cfffc6656802bfc1badaa53fb648": [
+    "holocount_general_semantic_attribution_00061",
+    "holocount_categorical_cardinality_00004"
+  ],
+  "1b264af96789c4f133adafcafec6460eb736156607329a1bcd9421b10907cd46": [
+    "holocount_chromatic_attribution_00032",
+    "holocount_material_attribution_00080"
+  ],
+  "1d096b10b88c17ac11959b8927d3d9d8a573e8a9115f10aafb3ee5a971254096": [
+    "holocount_chromatic_attribution_00140",
+    "holocount_chromatic_attribution_00159",
+    "holocount_material_attribution_00048",
+    "holocount_general_semantic_attribution_00042",
+    "holocount_categorical_cardinality_00009"
+  ],
+  "1d62dcb7df170e9b513bfba0d097023eaebcbf8177834969c0f2753f83b68217": [
+    "holocount_material_attribution_00075",
+    "holocount_general_semantic_attribution_00005",
+    "holocount_joint_set_aggregation_00067"
+  ],
+  "1da0b12fde61bb696a4732e715d91aa845d9cf326d374871f84d6f5262851ba6": [
+    "holocount_scale_attribution_00039",
+    "holocount_complementary_exclusion_00075",
+    "holocount_categorical_cardinality_00057"
+  ],
+  "1e5a5f909a2c4d1d81ccb02b6de50799d04b162e1702b9c7590fdb32cc69b6b0": [
+    "holocount_complementary_exclusion_00004",
+    "holocount_categorical_cardinality_00006"
+  ],
+  "1e94dd0c2b0ca99605890096f403d566d3b6f7fdfa4f27bf31127117b0b21602": [
+    "holocount_chromatic_attribution_00013",
+    "holocount_chromatic_attribution_00079",
+    "holocount_action_and_state_attribution_00026",
+    "holocount_general_semantic_attribution_00064"
+  ],
+  "1eef9b9a93516075f7a2c20f934d9e6e4ca7eaadb31aa0976b8e54c41ab13574": [
+    "holocount_chromatic_attribution_00103",
+    "holocount_action_and_state_attribution_00072",
+    "holocount_differential_comparison_00038"
+  ],
+  "1f2abb4b8cfe1445d39f3c2eb8a8b9cbb9761544158b0d52400236746223fb6e": [
+    "holocount_action_and_state_attribution_00018",
+    "holocount_differential_comparison_00096",
+    "holocount_joint_set_aggregation_00096"
+  ],
+  "22dec376e00ab6efa84820373ffaca503d03fd879007ff9d42a93351dd9dc228": [
+    "holocount_chromatic_attribution_00012",
+    "holocount_general_semantic_attribution_00047",
+    "holocount_general_semantic_attribution_00073",
+    "holocount_differential_comparison_00066"
+  ],
+  "22e8723d52cc8b576a0d4f148ae34c849ba70b9596930ca5a18c47a982da800b": [
+    "holocount_material_attribution_00021",
+    "holocount_action_and_state_attribution_00025",
+    "holocount_joint_set_aggregation_00047"
+  ],
+  "2448b1c25a117180617fa3a6e891398fb09be1fd4efc5a40d9cc66ce8eff47cb": [
+    "holocount_chromatic_attribution_00180",
+    "holocount_general_semantic_attribution_00051"
+  ],
+  "251b6aeb5d77625f558b2e13bcc0ab160cdc27cc8bf084dec7c9959344fb8266": [
+    "holocount_material_attribution_00052",
+    "holocount_general_semantic_attribution_00050"
+  ],
+  "253eb93d7613434f90313d1d16f587805e99d992cbfc05971e1745cb50ed5130": [
+    "holocount_action_and_state_attribution_00096",
+    "holocount_joint_set_aggregation_00049"
+  ],
+  "25b3d986d721d5aca6aa55a4ff8cd974bcfeb8f5f34fd3e64e0482919e072fdb": [
+    "holocount_material_attribution_00020",
+    "holocount_action_and_state_attribution_00005"
+  ],
+  "2648ff5db646406fba57f7ff5cfa7e1d65e97e6aee31b63e2e00f479a56aeab5": [
+    "holocount_atomic_counting_00040",
+    "holocount_null_target_prompting_00187"
+  ],
+  "291b437fa6ccf74b630a37e8b999ad8e643a4e518d669a302010ff975e7b89c6": [
+    "holocount_material_attribution_00089",
+    "holocount_action_and_state_attribution_00034",
+    "holocount_general_semantic_attribution_00021",
+    "holocount_differential_comparison_00085"
+  ],
+  "2a4a7e82def004d664f74d8e36c67492094f041e7366d0acf2f9946159956f80": [
+    "holocount_chromatic_attribution_00025",
+    "holocount_material_attribution_00031",
+    "holocount_differential_comparison_00014",
+    "holocount_joint_set_aggregation_00042",
+    "holocount_complementary_exclusion_00049"
+  ],
+  "2b2faf45de0589930a30c6575dfe0b933bb45ab066097d5717a6e6e9b0626f85": [
+    "holocount_action_and_state_attribution_00002",
+    "holocount_categorical_cardinality_00063"
+  ],
+  "2b9c5521c72b1dd0c3f2447fb13ed2acacba9ddcb8c0c5faf9f21499b82a445c": [
+    "holocount_scale_attribution_00005",
+    "holocount_differential_comparison_00015",
+    "holocount_joint_set_aggregation_00064",
+    "holocount_categorical_cardinality_00092"
+  ],
+  "2d8738574914acaa3858c782788913ce89aca5e50dae859ae21272aff0b9abc1": [
+    "holocount_chromatic_attribution_00046",
+    "holocount_differential_comparison_00093"
+  ],
+  "2ed666a16b7a22406eea6e07ee11fa0db91b8ff2841ba8f8d71538afccd09e08": [
+    "holocount_material_attribution_00070",
+    "holocount_general_semantic_attribution_00067",
+    "holocount_complementary_exclusion_00083"
+  ],
+  "302887dd2b4b2e3ac46e9201f6200d02dbcef3dcabf593f2c8e887b51d2faac3": [
+    "holocount_chromatic_attribution_00036",
+    "holocount_scale_attribution_00059",
+    "holocount_categorical_cardinality_00021"
+  ],
+  "310d6f5bdc1048ef2f691452fcaa2e3692fb75d2df38d501da9c83befb1f107b": [
+    "holocount_chromatic_attribution_00169",
+    "holocount_scale_attribution_00083",
+    "holocount_complementary_exclusion_00013"
+  ],
+  "318dd80e45a4385bfee8a83af61420e26fdc298e75ac829ba11b5195456a25cd": [
+    "holocount_action_and_state_attribution_00024",
+    "holocount_action_and_state_attribution_00098"
+  ],
+  "3317a998ce2b970b2d227386f5993e2cf74f56f51ad38f0478c668e7336e8a67": [
+    "holocount_material_attribution_00001",
+    "holocount_action_and_state_attribution_00059"
+  ],
+  "34b5601dd605c4f5a2dd17384ada1c134b2a2042d176e2acdc341e420d0bbb7b": [
+    "holocount_material_attribution_00058",
+    "holocount_action_and_state_attribution_00051"
+  ],
+  "3591a2ff69996ebeda0e897396574b5f2d683c8eb19d38c1ea838507546ff818": [
+    "holocount_scale_attribution_00093",
+    "holocount_joint_set_aggregation_00092"
+  ],
+  "359f67f68c366bb13644331fbed4934de95bba574d5f4a69241c754b1d83880a": [
+    "holocount_chromatic_attribution_00182",
+    "holocount_scale_attribution_00053"
+  ],
+  "35db9e246441fa552ce4b2d8838d62f32ee3b9d2b633104aea4e063c8be0a160": [
+    "holocount_chromatic_attribution_00083",
+    "holocount_scale_attribution_00032",
+    "holocount_complementary_exclusion_00073"
+  ],
+  "3723f63c1254eca6e177c9cfc3611ac5c3366624347eadca8ecd2a89e6c98e16": [
+    "holocount_differential_comparison_00098",
+    "holocount_categorical_cardinality_00094"
+  ],
+  "37f5777edd0e00402c1446ccecc87a643a21c47dbd880e90c748c48c436992e0": [
+    "holocount_chromatic_attribution_00109",
+    "holocount_material_attribution_00072"
+  ],
+  "3970d46626a880526766bfeaf852d1441ecbc2713f10b4be11799f09640c205c": [
+    "holocount_material_attribution_00073",
+    "holocount_categorical_cardinality_00083"
+  ],
+  "3ad94d31528995c44aa24a0e33034793cb7911d948dd4e2a41c462491e2d161d": [
+    "holocount_scale_attribution_00042",
+    "holocount_categorical_cardinality_00012"
+  ],
+  "3b715d282e31a590bc9c06a98cdab55764bbb6c68e7187c1430a618d35f6ea8a": [
+    "holocount_chromatic_attribution_00196",
+    "holocount_scale_attribution_00050",
+    "holocount_general_semantic_attribution_00013"
+  ],
+  "3c128846bbd4159c4e401cf0345e440624bca57cfa601533117259257189ea8c": [
+    "holocount_action_and_state_attribution_00092",
+    "holocount_general_semantic_attribution_00090"
+  ],
+  "3cd41ee45b692f6abf8a2e5c330e086c007890101c32aa68578d02db24a044ff": [
+    "holocount_chromatic_attribution_00112",
+    "holocount_complementary_exclusion_00098"
+  ],
+  "3d29133f63c8289dec6d477c3f33a8284bf03c90b8054c2dac00dc2f92184f56": [
+    "holocount_chromatic_attribution_00091",
+    "holocount_general_semantic_attribution_00071"
+  ],
+  "3dac1d854ae5b8d24806e05b345aa3dc012474a473bd593ee2d6f17e3fc97c74": [
+    "holocount_chromatic_attribution_00051",
+    "holocount_material_attribution_00081"
+  ],
+  "3de9e29e8bc500269919289b2446ff23c86469a2e12caa553c7c597259ab53dc": [
+    "holocount_scale_attribution_00022",
+    "holocount_general_semantic_attribution_00024"
+  ],
+  "3e69a3016e458e3a512eaea2f1ddf144cc714aa2a0ec1f5449f93a4063ed573a": [
+    "holocount_chromatic_attribution_00102",
+    "holocount_action_and_state_attribution_00046"
+  ],
+  "3f93dd0c916bc33ecb055d734780db5e51e7bcdddc429ad57e5425954288985f": [
+    "holocount_scale_attribution_00017",
+    "holocount_general_semantic_attribution_00028",
+    "holocount_differential_comparison_00013"
+  ],
+  "40162c93a834bfaebff582ce91fa81258ba874b25d6503cd0e01fcbc02894623": [
+    "holocount_scale_attribution_00095",
+    "holocount_action_and_state_attribution_00100"
+  ],
+  "403b0a66c11f609c38bc3ed46ef5a1a1251a777ce725cd3ea29d7013e71115ba": [
+    "holocount_chromatic_attribution_00167",
+    "holocount_action_and_state_attribution_00086"
+  ],
+  "41889c51544ea17ba56afc6c57a43173810527199f8622adbcfd661264e295e7": [
+    "holocount_chromatic_attribution_00096",
+    "holocount_joint_set_aggregation_00025",
+    "holocount_categorical_cardinality_00072"
+  ],
+  "42d17cb23ea73ebd8c3da2bb6a9f2229993c6a39ba6a376bb02570b74b1fa40f": [
+    "holocount_chromatic_attribution_00006",
+    "holocount_scale_attribution_00073",
+    "holocount_differential_comparison_00023",
+    "holocount_joint_set_aggregation_00087"
+  ],
+  "43565adf90bf9cef2d01dd63c2736eb71d4b45d23a5c119fffa25e5fc3573624": [
+    "holocount_material_attribution_00092",
+    "holocount_categorical_cardinality_00026"
+  ],
+  "4a98ff1c91259877f7bb0d96b6afb197fa760b12fdb20462578d31238a74a3bf": [
+    "holocount_chromatic_attribution_00002",
+    "holocount_general_semantic_attribution_00069",
+    "holocount_joint_set_aggregation_00093"
+  ],
+  "4b351d7e930a389d2e75f0c4294922420411bad2eda189cbd71f6e7bdcc3c4ad": [
+    "holocount_atomic_counting_00112",
+    "holocount_coordinate_prompt_region_grounding_00045"
+  ],
+  "4bb453d68a0ea620f931ea252eee4ae0167375b1390d6deea2e9294657fe1242": [
+    "holocount_chromatic_attribution_00094",
+    "holocount_differential_comparison_00074",
+    "holocount_complementary_exclusion_00024"
+  ],
+  "4bd5a49071fe2299f62cba4ed6939c638d064ce6a7fe49b33000c225ae5c21d9": [
+    "holocount_complementary_exclusion_00068",
+    "holocount_categorical_cardinality_00097"
+  ],
+  "4c1be01de5c0f3014bb5d8813752d7ec1e0d322afd3a861dc380cc49db2459df": [
+    "holocount_chromatic_attribution_00116",
+    "holocount_categorical_cardinality_00066"
+  ],
+  "4c74b0c1761504b2184239b6d268030fe56f3996512b6228addc1f7f5d6b6e8b": [
+    "holocount_differential_comparison_00032",
+    "holocount_joint_set_aggregation_00055",
+    "holocount_complementary_exclusion_00084"
+  ],
+  "4c7d74e147db7e49f4bca2936a33afc176732038dec797544cf3de6390e548f7": [
+    "holocount_material_attribution_00033",
+    "holocount_action_and_state_attribution_00087",
+    "holocount_differential_comparison_00053"
+  ],
+  "4cdb6f74140ecf775f5203e178c9c5137b2acba804f44f1f42c92bfb57165317": [
+    "holocount_chromatic_attribution_00084",
+    "holocount_general_semantic_attribution_00039",
+    "holocount_differential_comparison_00061"
+  ],
+  "4df6590103733b695a301f30bda40948d82b07b1e3fe8ac98c0bc334792a5cb1": [
+    "holocount_scale_attribution_00014",
+    "holocount_differential_comparison_00052"
+  ],
+  "4e23c7166dfe8064ca8e2f264d739dad8688c6e6efa0763838cced240b5196a0": [
+    "holocount_chromatic_attribution_00184",
+    "holocount_scale_attribution_00063",
+    "holocount_differential_comparison_00055",
+    "holocount_complementary_exclusion_00082",
+    "holocount_categorical_cardinality_00019"
+  ],
+  "4e2b2f858ce447b39f7f73eb3cc4cbb03bc533fe8caaff0e86fdddfdd2f0c4ff": [
+    "holocount_chromatic_attribution_00028",
+    "holocount_chromatic_attribution_00199",
+    "holocount_general_semantic_attribution_00027",
+    "holocount_general_semantic_attribution_00046"
+  ],
+  "4e2f69fb095cb17fd3a78441b524ea6fb01f761ec861302cf7147be686e84470": [
+    "holocount_joint_set_aggregation_00058",
+    "holocount_complementary_exclusion_00017"
+  ],
+  "4e3a808b05198db8338c8c325f3fe8bc19f52be69d655cdc2728658afdbe5052": [
+    "holocount_scale_attribution_00021",
+    "holocount_action_and_state_attribution_00097"
+  ],
+  "511b1c4263badc66708a5d4be398732f82bafa7f12e9094a178eda343a0f2569": [
+    "holocount_general_semantic_attribution_00010",
+    "holocount_complementary_exclusion_00008"
+  ],
+  "5157ed89a6911d4e4001e4e6619a816dc19b130278d08830264850098a78d84a": [
+    "holocount_chromatic_attribution_00164",
+    "holocount_scale_attribution_00036",
+    "holocount_action_and_state_attribution_00022"
+  ],
+  "5372a9dbed5b2f7cfc923f4a0c1a2ddbab523e84fccfe2a7bf2d77e01829f9c2": [
+    "holocount_material_attribution_00037",
+    "holocount_differential_comparison_00097",
+    "holocount_joint_set_aggregation_00068"
+  ],
+  "54185364783d9f085bd74cbd50c0cbb662fbe98a4512e9c9e56369443dcaef3c": [
+    "holocount_scale_attribution_00085",
+    "holocount_joint_set_aggregation_00036"
+  ],
+  "54d1130051f9b46f81fe31b7d5a14a8415e3302f7b4906dad5c63bce5f7bc630": [
+    "holocount_general_semantic_attribution_00020",
+    "holocount_joint_set_aggregation_00019"
+  ],
+  "54df861ecab042727033b8c32ab5fc492c8888ccfc1d3617d3af139a3ca6f889": [
+    "holocount_chromatic_attribution_00069",
+    "holocount_chromatic_attribution_00135",
+    "holocount_joint_set_aggregation_00056"
+  ],
+  "57ae28113ebda2f3142cfd59dc4d7c37bc5f3c534ef616a2653e01913ae151a6": [
+    "holocount_chromatic_attribution_00145",
+    "holocount_scale_attribution_00086",
+    "holocount_joint_set_aggregation_00032"
+  ],
+  "5956e215119cc2664ff723fccf5b931079326b0159a5527f1e13b02365677435": [
+    "holocount_differential_comparison_00073",
+    "holocount_complementary_exclusion_00095"
+  ],
+  "5a0230c70b253249a2e7272a1697558e8ed5782ed023b6a65d4155fa7f4529cc": [
+    "holocount_chromatic_attribution_00039",
+    "holocount_chromatic_attribution_00044",
+    "holocount_joint_set_aggregation_00022"
+  ],
+  "5a10ae161c675bed9d2444bf0c1b0c92c6b82d47f3a3144cde38817e02efc5a0": [
+    "holocount_general_semantic_attribution_00034",
+    "holocount_complementary_exclusion_00056",
+    "holocount_categorical_cardinality_00059"
+  ],
+  "5b57610e09a276ee48af594bf4f8df0eefab984de682a1d96ad3b8223984f3c3": [
+    "holocount_scale_attribution_00045",
+    "holocount_general_semantic_attribution_00003"
+  ],
+  "5bfae16c270c3fdbd7c68d1f08a275bf40a2cf8cea7ce8dfecad8942c63ce502": [
+    "holocount_chromatic_attribution_00149",
+    "holocount_general_semantic_attribution_00085"
+  ],
+  "5d26cdae0f7741067783a295c50cbc6717bb0f9a2c07d4a213a7940f20f01b22": [
+    "holocount_chromatic_attribution_00086",
+    "holocount_scale_attribution_00007",
+    "holocount_action_and_state_attribution_00045",
+    "holocount_complementary_exclusion_00093"
+  ],
+  "5d383b2c29bb6520895b0c7a887b71b3417c809590c48ed35c33c5d579b1e09d": [
+    "holocount_material_attribution_00006",
+    "holocount_scale_attribution_00051",
+    "holocount_categorical_cardinality_00093"
+  ],
+  "5daac1778b48b6d7991de5fccf1e670dfe155b0c66a84cb21dc3874f6dc3bc1e": [
+    "holocount_material_attribution_00098",
+    "holocount_action_and_state_attribution_00019",
+    "holocount_complementary_exclusion_00014"
+  ],
+  "5db9c066ee0161ad8bfb45e2534ab50f3b7051a178ca99ca1081f3d7f7347f42": [
+    "holocount_chromatic_attribution_00179",
+    "holocount_differential_comparison_00075"
+  ],
+  "5e57444bf2073e11ad78b9213d25fe369a787c0ade4d3b51a203dc4865bd8b69": [
+    "holocount_chromatic_attribution_00038",
+    "holocount_scale_attribution_00006",
+    "holocount_categorical_cardinality_00041"
+  ],
+  "5ed269798cc55c879d8e1f3822795df7dc3270e583aaf74c1996cbafb19abbdb": [
+    "holocount_chromatic_attribution_00010",
+    "holocount_general_semantic_attribution_00008"
+  ],
+  "60104de842e6bfdb4fdfc75972c4ad726397b2201bdf47d8f8fc20d4a8edd2e7": [
+    "holocount_scale_attribution_00023",
+    "holocount_joint_set_aggregation_00062",
+    "holocount_complementary_exclusion_00060"
+  ],
+  "61054d3502eb3ffdd4740c1b91855622f72875669016ea06cf6396751064db9c": [
+    "holocount_chromatic_attribution_00097",
+    "holocount_complementary_exclusion_00026"
+  ],
+  "61396d9edd02878cf49d87b687dc86f2433ef9208a9b1b228c0a8b6a7bb43a53": [
+    "holocount_chromatic_attribution_00055",
+    "holocount_scale_attribution_00009"
+  ],
+  "615d74e5d7bc2865cd25f4ca6f40acf17a99a4d48c391675238c4f8bbe540d12": [
+    "holocount_scale_attribution_00024",
+    "holocount_action_and_state_attribution_00008"
+  ],
+  "616d5fe67602fabd1514288ef98047f20318718f1477716b5550c20511496ecd": [
+    "holocount_action_and_state_attribution_00004",
+    "holocount_differential_comparison_00080"
+  ],
+  "61e0364ebf734ddab1ce911d89ca0ca3f621fbbfa8092ff8de0d7ea81998b535": [
+    "holocount_chromatic_attribution_00138",
+    "holocount_general_semantic_attribution_00009"
+  ],
+  "625af4396def2695c0fa9fb5b479e114666c1f5d8bbf4d2254e5cb34a4c928fe": [
+    "holocount_action_and_state_attribution_00001",
+    "holocount_categorical_cardinality_00045"
+  ],
+  "627db57b2df90debd274bec10accffc45ec9ae75be865daf1afe7aa13dbab6da": [
+    "holocount_chromatic_attribution_00142",
+    "holocount_scale_attribution_00002"
+  ],
+  "6365b0d01ff5641c4db93130333f40deaf25b11a11631cd4d196f35150ea5d3c": [
+    "holocount_chromatic_attribution_00146",
+    "holocount_scale_attribution_00087"
+  ],
+  "6414d5ada9e14fe1a3466abe8c2371807747eae0d98442fa082146b1599146a9": [
+    "holocount_general_semantic_attribution_00062",
+    "holocount_differential_comparison_00091"
+  ],
+  "6512c9ff3a1d6e2344b047abcaef91f07bfda5bd2a51cea4784b88d7663872b5": [
+    "holocount_chromatic_attribution_00037",
+    "holocount_material_attribution_00002",
+    "holocount_differential_comparison_00006",
+    "holocount_complementary_exclusion_00028"
+  ],
+  "697d13da6e3c182f201c892e5237dcf11ea8eb86a475d5d413b22ebd896ec873": [
+    "holocount_general_semantic_attribution_00037",
+    "holocount_categorical_cardinality_00027"
+  ],
+  "6b18a7a83aeecfeeb21148cada64cac1101ea0bd61d5d4f70f703eb01d0a07b6": [
+    "holocount_chromatic_attribution_00139",
+    "holocount_differential_comparison_00083",
+    "holocount_complementary_exclusion_00012"
+  ],
+  "6cab5b1dfc5130effd3176ea3ab1c55a636e1b3f8460f2f46b0c9920659a5d64": [
+    "holocount_material_attribution_00055",
+    "holocount_scale_attribution_00025"
+  ],
+  "6d4f0b007deaf25c7923c34af9a9e027155dd4d0acd87d29c23c1c5464928f03": [
+    "holocount_material_attribution_00056",
+    "holocount_general_semantic_attribution_00059"
+  ],
+  "6dcd794515260dbd3111edb8d6a67f3e813dbb8b4fc44d56134d606da5183ea0": [
+    "holocount_material_attribution_00024",
+    "holocount_scale_attribution_00091",
+    "holocount_categorical_cardinality_00095"
+  ],
+  "6e74b3046297b6c5ab73bfca786070ba940d7a3107b3a6b0c471f8e87a79e65b": [
+    "holocount_scale_attribution_00041",
+    "holocount_differential_comparison_00028"
+  ],
+  "6eeec6cff4afe5f6129a5067b009c090d0d52f855b178b349a150aaf95e37d23": [
+    "holocount_chromatic_attribution_00183",
+    "holocount_general_semantic_attribution_00083"
+  ],
+  "6f33d453d3183187fcb35f68a1b0e977331343a0445a7604823e0ae15ef65fc5": [
+    "holocount_differential_comparison_00068",
+    "holocount_complementary_exclusion_00036"
+  ],
+  "6f91f934c299376bc0ff00e4bc714a946b84345ec09f090aa319d47b9d427cd9": [
+    "holocount_action_and_state_attribution_00031",
+    "holocount_complementary_exclusion_00070"
+  ],
+  "708d79885979544a6e452c1c8cd380655f0a118dc6fc2b27edf9ba3c00593b3b": [
+    "holocount_scale_attribution_00010",
+    "holocount_categorical_cardinality_00017"
+  ],
+  "7147bbc94e3a86c76185f029d17166e709830ffa3a1ebb684fb3feba7c431439": [
+    "holocount_chromatic_attribution_00106",
+    "holocount_action_and_state_attribution_00036",
+    "holocount_differential_comparison_00100",
+    "holocount_categorical_cardinality_00029"
+  ],
+  "7176f25867f32aca90e08086dadba51bea1aa11887da1cbf09c1f625f8e6ed6a": [
+    "holocount_chromatic_attribution_00022",
+    "holocount_categorical_cardinality_00047"
+  ],
+  "7275b0d4f415488eee820ae0c8f8917ddd9575d4910f5158b3d2343b5da8b22b": [
+    "holocount_chromatic_attribution_00174",
+    "holocount_action_and_state_attribution_00006"
+  ],
+  "730812e2ecb6d94dc64c2977001c4bfcf618ae6ece3c67ea09ef987972ca1cac": [
+    "holocount_chromatic_attribution_00092",
+    "holocount_action_and_state_attribution_00062",
+    "holocount_general_semantic_attribution_00076"
+  ],
+  "73afc2842bcc306a087225b2f8b44d818d1495f43acb01e1379fdb21d30dbcbe": [
+    "holocount_differential_comparison_00063",
+    "holocount_categorical_cardinality_00074"
+  ],
+  "73b05ec56c1f41779f05e489071b8f8c65456c8dc2c5e2050d17a320a7b70df3": [
+    "holocount_general_semantic_attribution_00001",
+    "holocount_joint_set_aggregation_00020"
+  ],
+  "74a4f820ebd0c6c0c08754ec42c13882b4e7185380f1f366abcf9484e45d8d9f": [
+    "holocount_chromatic_attribution_00075",
+    "holocount_categorical_cardinality_00067"
+  ],
+  "750d592e3aea7130ba72f900c14c408fa82b0229f556e767cb5c4932c9a74b6a": [
+    "holocount_chromatic_attribution_00173",
+    "holocount_action_and_state_attribution_00102"
+  ],
+  "75aecedbcd7f78bcf461639a0ecc53dab38f5e3c0746492f7098c4c57e959dc5": [
+    "holocount_chromatic_attribution_00131",
+    "holocount_general_semantic_attribution_00019"
+  ],
+  "76d55b2a294857c97de39b5f6a169a1d88230b77cd93905f164cf2f277194cf9": [
+    "holocount_chromatic_attribution_00170",
+    "holocount_complementary_exclusion_00088"
+  ],
+  "7784d8cdac9af7e9b6c7738d8c97e8554d1a2ed815e50efc6164624cd43e06b0": [
+    "holocount_general_semantic_attribution_00075",
+    "holocount_categorical_cardinality_00049"
+  ],
+  "77a31e9a90464f8891125b59e6e3a65a9ccd3384752cc49474f66df8a10357e3": [
+    "holocount_chromatic_attribution_00095",
+    "holocount_action_and_state_attribution_00042"
+  ],
+  "77cb4f2e3e8508c7948daaad13d040662379b74ad80e0fcd4ce307f618ab23f3": [
+    "holocount_material_attribution_00097",
+    "holocount_scale_attribution_00018"
+  ],
+  "78090ae7e103e9c60b775739e751b42fb382c89fdf8bd39fd1c1b0ee72d5ca0b": [
+    "holocount_material_attribution_00012",
+    "holocount_action_and_state_attribution_00068"
+  ],
+  "7861b708692f167fdb4d621b78af54e5d87aba5ac1c8c248d707083cb0e74d49": [
+    "holocount_scale_attribution_00043",
+    "holocount_action_and_state_attribution_00065",
+    "holocount_complementary_exclusion_00031"
+  ],
+  "7880d943ce0faac3ad971e7f3c0047e51cea8fb29bd97f3e3402ec12b99caf1c": [
+    "holocount_chromatic_attribution_00192",
+    "holocount_action_and_state_attribution_00020"
+  ],
+  "797b5b9cafb0c62999961e0c94dc944f37dcaa24a36f28dc9910e1ece96ce7fa": [
+    "holocount_action_and_state_attribution_00011",
+    "holocount_general_semantic_attribution_00035"
+  ],
+  "799516b887af8525aa9dad0e4fa1085967c8b1c397c495764a9c34bd000c9b31": [
+    "holocount_differential_comparison_00099",
+    "holocount_joint_set_aggregation_00029",
+    "holocount_complementary_exclusion_00046"
+  ],
+  "80433c9a036e64a8be01ca0eeba769aa8cfb54db265b4f89356e718c4a595145": [
+    "holocount_differential_comparison_00072",
+    "holocount_complementary_exclusion_00003"
+  ],
+  "808d1929ca7b1fa50bb349459a6b2dbe52b4815452e6aa5e6a8b38e66eebeb07": [
+    "holocount_chromatic_attribution_00153",
+    "holocount_material_attribution_00049",
+    "holocount_joint_set_aggregation_00066"
+  ],
+  "80d67bc205142538243ad693587cd693ae09d43d014b1fafbba447bf4d31391e": [
+    "holocount_general_semantic_attribution_00056",
+    "holocount_joint_set_aggregation_00027"
+  ],
+  "814bd7f6ac47e539c14eab620648b11ea5d8eb83df1e2133c2fbf2c9b2af7df4": [
+    "holocount_scale_attribution_00008",
+    "holocount_action_and_state_attribution_00032",
+    "holocount_differential_comparison_00029"
+  ],
+  "82cf0f7d2928b509ac266b533eed2237a14962f9db0c9508f6e868049d575658": [
+    "holocount_chromatic_attribution_00073",
+    "holocount_action_and_state_attribution_00084",
+    "holocount_differential_comparison_00027"
+  ],
+  "837a1b9788dc54393ec3cc7e8522e12e4202b83abc0e7f66b9d3f9954e3707bd": [
+    "holocount_atomic_counting_00118",
+    "holocount_null_target_prompting_00058"
+  ],
+  "850363a074bb8470af4c97ecaa30ca2d73c20e4c5a694d4b0ac3da298969ee21": [
+    "holocount_general_semantic_attribution_00032",
+    "holocount_differential_comparison_00002",
+    "holocount_categorical_cardinality_00084"
+  ],
+  "85de90f5da74a06ada2411828c36594e929fa822d8662eef121ba33674e82310": [
+    "holocount_relative_canonical_orientation_00076",
+    "holocount_coordinate_prompt_region_grounding_00066"
+  ],
+  "85e7ee31a65d57fc92b8bbed122b0b4b7f8bbb5f14c9525bcbbddf731ed0617f": [
+    "holocount_relative_canonical_orientation_00006",
+    "holocount_null_target_prompting_00114"
+  ],
+  "86ded02f6acce722b267d2403297c5ec1f99f86b1a47b50d1331045df62413dd": [
+    "holocount_chromatic_attribution_00054",
+    "holocount_material_attribution_00043",
+    "holocount_scale_attribution_00088",
+    "holocount_action_and_state_attribution_00007",
+    "holocount_differential_comparison_00017",
+    "holocount_categorical_cardinality_00068"
+  ],
+  "8dc6aec14c09635774e269bd19dd16aa5e6b993514c45a8f6be6af79be66a0b3": [
+    "holocount_general_semantic_attribution_00101",
+    "holocount_joint_set_aggregation_00038"
+  ],
+  "8e112954d2feed2675d2f699adf8b65f16bca9c4f0d6a4e8c9c638d44440b7a6": [
+    "holocount_chromatic_attribution_00004",
+    "holocount_differential_comparison_00088",
+    "holocount_categorical_cardinality_00080"
+  ],
+  "8e84e69d2924618166f527e8f082e21bc8c497a7999895aab747a09c1c3a5002": [
+    "holocount_chromatic_attribution_00035",
+    "holocount_scale_attribution_00048"
+  ],
+  "8f7fb89157d9316acbf84e6d1e0417baeac09857b97b7c0a8e5f3e3400be99c1": [
+    "holocount_chromatic_attribution_00127",
+    "holocount_joint_set_aggregation_00040"
+  ],
+  "9072b7dd1efd7069e6d3d2c9d8433dc9b977535ef775ca177642bedd4d659a94": [
+    "holocount_scale_attribution_00026",
+    "holocount_action_and_state_attribution_00030",
+    "holocount_general_semantic_attribution_00030",
+    "holocount_categorical_cardinality_00056"
+  ],
+  "9275c4692c51af4717cce89232985e92f67e52791714c8abf9da8b665bb2a74d": [
+    "holocount_differential_comparison_00036",
+    "holocount_joint_set_aggregation_00078",
+    "holocount_complementary_exclusion_00055"
+  ],
+  "941017c5d427e12752d6a30f0cda164a68efbfb7aeb2f5902bf3b3e036992125": [
+    "holocount_chromatic_attribution_00136",
+    "holocount_differential_comparison_00057"
+  ],
+  "942e8f4fdf6fff34eac6a6300562ea7d4f37fb70c4b9206524868941b6173946": [
+    "holocount_material_attribution_00023",
+    "holocount_scale_attribution_00046",
+    "holocount_differential_comparison_00054"
+  ],
+  "9456cd493f24a421055b3597b11d12a3a210514fc34c9e91121457096d03d3a1": [
+    "holocount_complementary_exclusion_00011",
+    "holocount_categorical_cardinality_00071"
+  ],
+  "95213b3db31a107e990b967af1f3493d740facabc5b6daab061a0ac5acba79f1": [
+    "holocount_chromatic_attribution_00064",
+    "holocount_scale_attribution_00084"
+  ],
+  "954cee7ef50d3ffdedcb8450f3fd8997626f20299d0f8023625118cfc5c36a3f": [
+    "holocount_chromatic_attribution_00076",
+    "holocount_complementary_exclusion_00079"
+  ],
+  "970792f940f60c9e31451010264a5019333bc63d1a842f67e9e5b91278f4c6b1": [
+    "holocount_chromatic_attribution_00108",
+    "holocount_material_attribution_00044"
+  ],
+  "9995c83620220ecbab4b0890ab1880ad547bf43c79e8d129991e22ce2ba25c4e": [
+    "holocount_material_attribution_00064",
+    "holocount_scale_attribution_00062"
+  ],
+  "9c285aca1b8d536782c6da2fae0a5a8fbc5f66ecfeb289888c6eb2e6d05fa5dd": [
+    "holocount_material_attribution_00019",
+    "holocount_complementary_exclusion_00042"
+  ],
+  "9ddf72f60a66bb956ed14e3f0bb5d03e440c25233260b4590b3a90004953adca": [
+    "holocount_differential_comparison_00050",
+    "holocount_categorical_cardinality_00024"
+  ],
+  "9fd506cc2e59ba68ceb9243cc0aeeedf52b24b746875fdf2d2453a324596bdad": [
+    "holocount_differential_comparison_00060",
+    "holocount_joint_set_aggregation_00014",
+    "holocount_categorical_cardinality_00075"
+  ],
+  "a03edfe2a00a32679ed00602004d50ff5fb71c17c487b78e7d106199f664ab53": [
+    "holocount_chromatic_attribution_00087",
+    "holocount_material_attribution_00086",
+    "holocount_general_semantic_attribution_00087",
+    "holocount_differential_comparison_00049",
+    "holocount_joint_set_aggregation_00090"
+  ],
+  "a24a4fa2e745469db1bc2df82fb053dcbae4b90941e332b5f53b80cba6e56222": [
+    "holocount_chromatic_attribution_00045",
+    "holocount_material_attribution_00047",
+    "holocount_general_semantic_attribution_00084",
+    "holocount_joint_set_aggregation_00006"
+  ],
+  "a29c3967aab7726e4db4bb6013ad91ff452766f68a9897ba265056439668f794": [
+    "holocount_chromatic_attribution_00134",
+    "holocount_differential_comparison_00089",
+    "holocount_joint_set_aggregation_00013"
+  ],
+  "a71e20c1624c92a82b5e7f1aebfc9c77c8835a20e3be6ab4d207eab892d8ed19": [
+    "holocount_chromatic_attribution_00166",
+    "holocount_material_attribution_00032"
+  ],
+  "a88df337eb48f8f9231a072d70a3761707dbe741b848abcfdc4b164d18934306": [
+    "holocount_chromatic_attribution_00144",
+    "holocount_action_and_state_attribution_00091"
+  ],
+  "a8b7a917286be63470ad59d3c21d6558f4ee3e5ef12385c49b2b9db584fa555a": [
+    "holocount_chromatic_attribution_00126",
+    "holocount_action_and_state_attribution_00056"
+  ],
+  "a930939aed710508f98a54e3c56e4c8aba7ed0956f638bdff5ec333df402c6f9": [
+    "holocount_material_attribution_00015",
+    "holocount_joint_set_aggregation_00057",
+    "holocount_complementary_exclusion_00010"
+  ],
+  "a9609cf5ce73db42bc337d2c2e8db3bc544ee231632b976898065a38aecccca9": [
+    "holocount_atomic_counting_00061",
+    "holocount_coordinate_prompt_region_grounding_00050"
+  ],
+  "ab5afb0014e38348f03f750035cf9f0fc3231e948bb791becfda442c0ca35c47": [
+    "holocount_chromatic_attribution_00129",
+    "holocount_material_attribution_00005",
+    "holocount_general_semantic_attribution_00014",
+    "holocount_differential_comparison_00003",
+    "holocount_joint_set_aggregation_00072"
+  ],
+  "ac5b1f63901c05ad64601e38fc5d78b731b0610bf4bf3deb5315afc3058e4d68": [
+    "holocount_scale_attribution_00089",
+    "holocount_categorical_cardinality_00030"
+  ],
+  "acc8ce734ee74b76a9c946f5a8af6f4afb9b5e18b9545c935d73ae59ee172711": [
+    "holocount_joint_set_aggregation_00034",
+    "holocount_complementary_exclusion_00018"
+  ],
+  "adb5e4415a365a89490401d24b8de229b57fea86252bf4b1f2d93e4feb3ba77e": [
+    "holocount_chromatic_attribution_00168",
+    "holocount_joint_set_aggregation_00039"
+  ],
+  "b0546b58dbabe67da9e3824a09e8f681eafe7e322718aed8c23e95f0665e8bd9": [
+    "holocount_chromatic_attribution_00001",
+    "holocount_complementary_exclusion_00009"
+  ],
+  "b116efd01a38e86b6e1750fcf723c90168ed23f8fab4e793e44f7ef438b1b5cd": [
+    "holocount_chromatic_attribution_00057",
+    "holocount_categorical_cardinality_00096"
+  ],
+  "b1e262fb147a010b4693290e6694875bb794872c0e28c629f66115d926b0c0db": [
+    "holocount_differential_comparison_00044",
+    "holocount_joint_set_aggregation_00084",
+    "holocount_categorical_cardinality_00070"
+  ],
+  "b2122fb9a5e8be7393c2db5ac4f0c5d3448d43a9fadc542e5b6e19048684fdda": [
+    "holocount_chromatic_attribution_00024",
+    "holocount_scale_attribution_00004",
+    "holocount_general_semantic_attribution_00029"
+  ],
+  "b24c999b1016fa67bb077079f5408ebfc92ac5ec33e9959562546601a5083212": [
+    "holocount_action_and_state_attribution_00077",
+    "holocount_joint_set_aggregation_00024"
+  ],
+  "b3c4cc0508ca3cb3c873884f386ea7be9ec45a0bd5e3976d14823ddd93e6a8b4": [
+    "holocount_chromatic_attribution_00132",
+    "holocount_general_semantic_attribution_00026"
+  ],
+  "b4eaf364cbbc44c2c7c2e65cb16ff2b4c74fc03e8edc346c075f37f38da859b8": [
+    "holocount_differential_comparison_00007",
+    "holocount_complementary_exclusion_00078",
+    "holocount_categorical_cardinality_00099"
+  ],
+  "b6e053f4d5f2d039f7587ac139994e7bf23d055f22ec38ccd59517de50ded315": [
+    "holocount_chromatic_attribution_00201",
+    "holocount_scale_attribution_00016",
+    "holocount_action_and_state_attribution_00054"
+  ],
+  "b73e38e313c778b382d78b4e67ba029f57780c7ae5586a922e08d6f83230d0d3": [
+    "holocount_chromatic_attribution_00066",
+    "holocount_action_and_state_attribution_00066",
+    "holocount_joint_set_aggregation_00099"
+  ],
+  "b7eea3bd5c72cead8c4d3e39615aad859ef2e8a7bfc7b6339b04083e63f9afc0": [
+    "holocount_chromatic_attribution_00041",
+    "holocount_general_semantic_attribution_00041",
+    "holocount_joint_set_aggregation_00051"
+  ],
+  "bb5d7f4ebb66292129539c7a64a750d8152f7a6e65dec8b54f572089876d850c": [
+    "holocount_chromatic_attribution_00156",
+    "holocount_differential_comparison_00079"
+  ],
+  "bb704bc4484bc1e058c34984e1bfc9ffc5fa5ab1716ed0a01546aac283bdf998": [
+    "holocount_chromatic_attribution_00027",
+    "holocount_differential_comparison_00087"
+  ],
+  "bb7985bc8c72b09d34647506eea2f5fa4c9c58088ce93ac8e265c8f77b9e7b24": [
+    "holocount_chromatic_attribution_00123",
+    "holocount_action_and_state_attribution_00016",
+    "holocount_action_and_state_attribution_00017",
+    "holocount_general_semantic_attribution_00023",
+    "holocount_complementary_exclusion_00019"
+  ],
+  "bc438252f7b1e96ff13bacbab859a73d0abca06316598dba009ec6a75b78fb37": [
+    "holocount_scale_attribution_00058",
+    "holocount_general_semantic_attribution_00052"
+  ],
+  "bd6cd86d38033ced513d9b048eaffeadd24319a802b6e13da82332827f5af55c": [
+    "holocount_chromatic_attribution_00150",
+    "holocount_material_attribution_00082",
+    "holocount_general_semantic_attribution_00089",
+    "holocount_differential_comparison_00094"
+  ],
+  "bf46f169960ff7bffdfd853e40f46e1a6e07ab952c5e2764f071993a913eed94": [
+    "holocount_material_attribution_00041",
+    "holocount_general_semantic_attribution_00017"
+  ],
+  "c0f14ad1349c6282ae5ae1a4488d5478610429b72c599d891162bbdc3277e95d": [
+    "holocount_material_attribution_00035",
+    "holocount_general_semantic_attribution_00063"
+  ],
+  "c0f7d8cda53a8469d7f3d61bcdae27f0ccc0ebfeb2f82857e430abe5a2ad77ba": [
+    "holocount_material_attribution_00016",
+    "holocount_scale_attribution_00027",
+    "holocount_complementary_exclusion_00007"
+  ],
+  "c1a48685a0992f0680ccfdbb1bfaabd36463bc8be159202e99c92ddde385e55d": [
+    "holocount_chromatic_attribution_00190",
+    "holocount_complementary_exclusion_00091"
+  ],
+  "c2be820ceaef456ce705f804ab5ab18cf5c4031ffc2237ddb5fd15dd825d34b3": [
+    "holocount_chromatic_attribution_00089",
+    "holocount_complementary_exclusion_00005"
+  ],
+  "c3105fcb4071c2aa81317b24c36d5a8e93c1f82dd8b34750172160260c2bb160": [
+    "holocount_material_attribution_00060",
+    "holocount_action_and_state_attribution_00078",
+    "holocount_general_semantic_attribution_00054"
+  ],
+  "c5e0af633a776f21cbc52ae851c6104a23c6e7225d609b771dd888fa2be657a2": [
+    "holocount_chromatic_attribution_00059",
+    "holocount_material_attribution_00085",
+    "holocount_differential_comparison_00059",
+    "holocount_joint_set_aggregation_00095"
+  ],
+  "c6513d39bf67c1cc28abed81c069cf5fcbf2cfee6322adab4e0c58d4cdaa5808": [
+    "holocount_chromatic_attribution_00111",
+    "holocount_scale_attribution_00092"
+  ],
+  "c79c854ddc9bbcb67e1b4f9d085c8c35c4d42cf4c9538d3feea49f02f02ada0b": [
+    "holocount_general_semantic_attribution_00045",
+    "holocount_complementary_exclusion_00030"
+  ],
+  "c7abcf7a806d0f8341522c3eb4f4425587b9fba4c06b5c1befd0d4a57c5d303e": [
+    "holocount_chromatic_attribution_00189",
+    "holocount_joint_set_aggregation_00083",
+    "holocount_categorical_cardinality_00090"
+  ],
+  "c993e0109d66c2d41a6b91046dd4173024262b48d4e66c6f4914ffbc7ce27e16": [
+    "holocount_action_and_state_attribution_00063",
+    "holocount_general_semantic_attribution_00081"
+  ],
+  "c9f6638cb63628067e2ee34b5c81f34d36e86dc64cacc8454e29ec1aabc69a8b": [
+    "holocount_chromatic_attribution_00188",
+    "holocount_material_attribution_00091",
+    "holocount_joint_set_aggregation_00017"
+  ],
+  "cb74b78f56d921976ad50a7e019f67a559fcd0e269a13c7568cf63672427aab0": [
+    "holocount_general_semantic_attribution_00091",
+    "holocount_categorical_cardinality_00101"
+  ],
+  "cb8bdcd8593f6de99aa982802ed1a8980ff3253c8a1abe6c99108041d667695a": [
+    "holocount_small_scale_enumeration_00070",
+    "holocount_partial_object_occlusion_00091"
+  ],
+  "cbb0e08e1fc67611ec490ed604fa7400f0f9b01ee5d113624b540d45decf7cf4": [
+    "holocount_joint_set_aggregation_00018",
+    "holocount_complementary_exclusion_00069"
+  ],
+  "cbfbc03aebce051ddb884726fe04c43c4f99f945ef30ea257fe33904d2c8ba22": [
+    "holocount_chromatic_attribution_00113",
+    "holocount_scale_attribution_00038",
+    "holocount_general_semantic_attribution_00066",
+    "holocount_differential_comparison_00001",
+    "holocount_joint_set_aggregation_00037"
+  ],
+  "ce2cd68d556c8614353eaa6bdb4831b4884afed31aa723f8824173e54698edb5": [
+    "holocount_joint_set_aggregation_00097",
+    "holocount_categorical_cardinality_00005"
+  ],
+  "cedbd6eb0f30af65352baeb44c91192ce7ee80c7197b40690b3d6bfd92cc8826": [
+    "holocount_joint_set_aggregation_00070",
+    "holocount_complementary_exclusion_00020"
+  ],
+  "cfa1b0accc183d8725bcae295be620eec0c9c13267c27432c9670945ccd561ca": [
+    "holocount_general_semantic_attribution_00036",
+    "holocount_differential_comparison_00046"
+  ],
+  "d1440fa8cedf26b879ed320877a7a9a6c64ce7879bfa9c686456bb06bb2b1e39": [
+    "holocount_scale_attribution_00054",
+    "holocount_joint_set_aggregation_00071"
+  ],
+  "d433c437f8a31e1843571eda952e850857a00fa666c64a21393315a3036c328c": [
+    "holocount_chromatic_attribution_00080",
+    "holocount_material_attribution_00027",
+    "holocount_complementary_exclusion_00027"
+  ],
+  "d5639bf75f1bbef34752bc656575b6e99e9e2308c29b7563626026ec27ff3be4": [
+    "holocount_material_attribution_00004",
+    "holocount_action_and_state_attribution_00050",
+    "holocount_joint_set_aggregation_00052"
+  ],
+  "d6a569a24035ba428637d036e02221a30b525927034ecf2020a3742a55af20f3": [
+    "holocount_chromatic_attribution_00085",
+    "holocount_complementary_exclusion_00047"
+  ],
+  "da6224bb94f570dd03892e6583d23598277819ed2dc50123d28a316f636b3820": [
+    "holocount_scale_attribution_00094",
+    "holocount_differential_comparison_00056"
+  ],
+  "da760ef0aa7a1580178f19491649ade9e35ed041175df0a5a8ba41f3a62c7f82": [
+    "holocount_chromatic_attribution_00078",
+    "holocount_scale_attribution_00077",
+    "holocount_differential_comparison_00067"
+  ],
+  "da9534e7a2254d55cba7f7bb248d23c598a3ff0873ee156d5a71dc4e59b18688": [
+    "holocount_chromatic_attribution_00202",
+    "holocount_scale_attribution_00065",
+    "holocount_differential_comparison_00039",
+    "holocount_joint_set_aggregation_00082",
+    "holocount_categorical_cardinality_00037"
+  ],
+  "db846707af9962937916ebe2129524d128070f761a072550c69f918bc9320014": [
+    "holocount_material_attribution_00051",
+    "holocount_categorical_cardinality_00055"
+  ],
+  "dbca4528109b1ac95e7cafee131048e9d9c47497f84518f86cde1310a5f2470f": [
+    "holocount_scale_attribution_00034",
+    "holocount_action_and_state_attribution_00081",
+    "holocount_general_semantic_attribution_00093"
+  ],
+  "dbe8f01319a9fd196f1b01bfad837ecd6beb40e273263b88bd856d0a09d78f02": [
+    "holocount_chromatic_attribution_00071",
+    "holocount_categorical_cardinality_00033"
+  ],
+  "dd5ad29766414fa4f541c246360fb38735ec4f2744e48394b32b852e8b4c0928": [
+    "holocount_chromatic_attribution_00067",
+    "holocount_general_semantic_attribution_00058",
+    "holocount_differential_comparison_00010",
+    "holocount_joint_set_aggregation_00023"
+  ],
+  "ddf282c804cdf86a58fb7902c81c6b86553ef1778efa3d5e01f76b407bdbd554": [
+    "holocount_chromatic_attribution_00047",
+    "holocount_general_semantic_attribution_00043",
+    "holocount_complementary_exclusion_00029"
+  ],
+  "ddf8695fdc6362172ebc159c2000a218f6a181c928b70a153f995e7880df7aa4": [
+    "holocount_action_and_state_attribution_00060",
+    "holocount_general_semantic_attribution_00092",
+    "holocount_categorical_cardinality_00036"
+  ],
+  "de446d6fb7e3fd89e47f18fb2c61419742f9fd564af1f951c5213f3eb42d64df": [
+    "holocount_chromatic_attribution_00195",
+    "holocount_action_and_state_attribution_00049"
+  ],
+  "de5bf052bf4fd95ea5f5809d21983062e45dda2d02c486128269ab07cbd515b6": [
+    "holocount_chromatic_attribution_00030",
+    "holocount_material_attribution_00084",
+    "holocount_joint_set_aggregation_00076"
+  ],
+  "df2440cf8e26a36bdb6af8d00394ac04156ee50f456728016d306cf7be0e0596": [
+    "holocount_chromatic_attribution_00098",
+    "holocount_differential_comparison_00020",
+    "holocount_categorical_cardinality_00060"
+  ],
+  "df6ec8cc6768d3134e414371ea87244ad3f5713327f8ff50d89ba2451020c1ad": [
+    "holocount_chromatic_attribution_00185",
+    "holocount_material_attribution_00093",
+    "holocount_general_semantic_attribution_00072"
+  ],
+  "dfb64b4731d90c222c09d99e94397be19f1d0aa8d5c248dc383fb5b43eaec19a": [
+    "holocount_differential_comparison_00042",
+    "holocount_categorical_cardinality_00016"
+  ],
+  "e034a848ed4d563b78711e6df61adb51811c2eb59985c141075cc7c358a131b0": [
+    "holocount_differential_comparison_00008",
+    "holocount_complementary_exclusion_00038",
+    "holocount_categorical_cardinality_00050"
+  ],
+  "e0984027afb87c252bbdfbd9d42cbbc56d054ce92e011326d6b1896e9a868a48": [
+    "holocount_chromatic_attribution_00074",
+    "holocount_scale_attribution_00078",
+    "holocount_complementary_exclusion_00094",
+    "holocount_categorical_cardinality_00054"
+  ],
+  "e0a65822bed4c12ca0eaf78cee8e07c5a0715fdc97ac334344b8a061b3fab6fc": [
+    "holocount_chromatic_attribution_00003",
+    "holocount_differential_comparison_00031",
+    "holocount_categorical_cardinality_00089"
+  ],
+  "e0eec24bbc04d6ac8e88d29fed48a542bd68734424f33997dd5e7264872d3114": [
+    "holocount_chromatic_attribution_00060",
+    "holocount_categorical_cardinality_00015"
+  ],
+  "e1248a68f91087de9ce50cd2a0e37fee94fd13c483e7bdc8326343898c2039c8": [
+    "holocount_chromatic_attribution_00197",
+    "holocount_material_attribution_00079"
+  ],
+  "e16b7d9a41f03218fe47753c1282bfc7162e35f54aa4f8d82a79cdac3fa6f1f4": [
+    "holocount_chromatic_attribution_00008",
+    "holocount_general_semantic_attribution_00016",
+    "holocount_complementary_exclusion_00080"
+  ],
+  "e2de47aebddde50a020ac63fcc7006cabdbd79bf3618781ec0e638a3809fb527": [
+    "holocount_material_attribution_00026",
+    "holocount_categorical_cardinality_00002"
+  ],
+  "e2edd0ad7bb0d57f24d5bdaac067c1bec351e8a8c4223e9cea0c9254c7707acc": [
+    "holocount_chromatic_attribution_00019",
+    "holocount_scale_attribution_00003",
+    "holocount_action_and_state_attribution_00075"
+  ],
+  "e4948054722c03d028cfab662fcefc2deb17f961a13c3721c49697938653804e": [
+    "holocount_material_attribution_00101",
+    "holocount_scale_attribution_00035"
+  ],
+  "e57e65569142966752df0491d89b63e30312b6a00077432d7b57c7c4179ea832": [
+    "holocount_chromatic_attribution_00200",
+    "holocount_scale_attribution_00040",
+    "holocount_differential_comparison_00095",
+    "holocount_complementary_exclusion_00067"
+  ],
+  "e5932f8113c632752a05b60f0382e837359f90ad7ef1255a6ba9ee23687e74c4": [
+    "holocount_differential_comparison_00077",
+    "holocount_joint_set_aggregation_00065"
+  ],
+  "e613bc77012ff804ec026656adf59021abb4506d940d4ed5b2b7fca876fb0bf0": [
+    "holocount_chromatic_attribution_00114",
+    "holocount_material_attribution_00017",
+    "holocount_differential_comparison_00012",
+    "holocount_joint_set_aggregation_00054"
+  ],
+  "e6e92b4840648d4c676670efc557e1dfd8dd26203c425b13e72b7301db3a7cd6": [
+    "holocount_action_and_state_attribution_00101",
+    "holocount_general_semantic_attribution_00088"
+  ],
+  "e7c5dd626056c9305792a0f8dd95bb5789c5c9aa66eb682cc83144e504fff418": [
+    "holocount_complementary_exclusion_00050",
+    "holocount_categorical_cardinality_00018"
+  ],
+  "e9ab6f2495349ef1886fd838adbb2d555f8ee3f0cfc9ae17859efc9d33f89eaa": [
+    "holocount_action_and_state_attribution_00021",
+    "holocount_categorical_cardinality_00048"
+  ],
+  "ea0e50306d5512955a6bb8da13dae0a0df2977383feeda3e6d7b629250d9e8ab": [
+    "holocount_action_and_state_attribution_00048",
+    "holocount_differential_comparison_00022"
+  ],
+  "ebef27189f382ababe1778a83c88cc9eac67037fab6947ef8ffde5981b73d095": [
+    "holocount_material_attribution_00040",
+    "holocount_action_and_state_attribution_00080",
+    "holocount_differential_comparison_00069"
+  ],
+  "ec8fadc3288c468195170bbe8f1a67af822531afa537f2453ff1c8bac0cb0749": [
+    "holocount_chromatic_attribution_00015",
+    "holocount_material_attribution_00007",
+    "holocount_complementary_exclusion_00100"
+  ],
+  "eca54e65120203e2053cd9e386bd5552e97f3c0e614223fd6792872cbfa513df": [
+    "holocount_chromatic_attribution_00163",
+    "holocount_complementary_exclusion_00043"
+  ],
+  "ed77af3ef72a6ac86e62776bbb46b8ecc7150c530fcc576d58c1477d7e2ff540": [
+    "holocount_chromatic_attribution_00101",
+    "holocount_action_and_state_attribution_00053"
+  ],
+  "edc3ebb366a0fe9eba994fdfc9b7efd90d411908d0a80d707906ecd02fbf0c1a": [
+    "holocount_joint_set_aggregation_00030",
+    "holocount_complementary_exclusion_00101"
+  ],
+  "eea3cf78cdccc96b1938c3e2f94b46811e2a0bbbcc27b93b35a11aa84beb6b95": [
+    "holocount_chromatic_attribution_00007",
+    "holocount_action_and_state_attribution_00047"
+  ],
+  "eeff8196949c11e99348ba82b68a5175e871f70aea1e810f46b00c11ef616f9b": [
+    "holocount_chromatic_attribution_00029",
+    "holocount_differential_comparison_00004"
+  ],
+  "ef57597f34615d0efc38eb305f1bce350696e868cb12b359bb6e3bcddd7ec72e": [
+    "holocount_material_attribution_00003",
+    "holocount_categorical_cardinality_00087"
+  ],
+  "efbc028bd8b14adbaa14edfa8ce719245d2770171861ee9271717c15d5fd681d": [
+    "holocount_chromatic_attribution_00186",
+    "holocount_categorical_cardinality_00043"
+  ],
+  "f2fad1e8eee63362f6e1e8b27c1b16441e50dd47478ab7cfe5f9414be5895ad2": [
+    "holocount_scale_attribution_00013",
+    "holocount_complementary_exclusion_00037"
+  ],
+  "f3337e589117bf9045fe3b001dfacd2f956fc6a57adbf9574e9cf8d29367cdee": [
+    "holocount_partial_object_occlusion_00006",
+    "holocount_partial_object_occlusion_00082"
+  ],
+  "f486e3c6e23c8a4b88480a84ed9438753812f795272652ab42bde5557cef9aec": [
+    "holocount_chromatic_attribution_00155",
+    "holocount_chromatic_attribution_00193",
+    "holocount_general_semantic_attribution_00100",
+    "holocount_differential_comparison_00030"
+  ],
+  "f4b6fcfd59bbdac6df280a21e53ead5256b7eb1a9406f0b11f06356845ff357a": [
+    "holocount_differential_comparison_00041",
+    "holocount_joint_set_aggregation_00100"
+  ],
+  "f4cbcae3304269b7a9863456c3d584182ff7da0b91a711e9b051b60cc14b2f51": [
+    "holocount_chromatic_attribution_00082",
+    "holocount_scale_attribution_00066",
+    "holocount_joint_set_aggregation_00075"
+  ],
+  "f71e66473df8ccb68f0bca53479f2cf64caf78602cf1f556e760da5cee32b3b2": [
+    "holocount_action_and_state_attribution_00052",
+    "holocount_general_semantic_attribution_00004"
+  ],
+  "f811ca5182e3bd915bab6e7160e1cf74916932cc4c47145eb6c88c414c5e29fa": [
+    "holocount_action_and_state_attribution_00095",
+    "holocount_differential_comparison_00081",
+    "holocount_joint_set_aggregation_00007",
+    "holocount_categorical_cardinality_00088"
+  ],
+  "f818c27a48664f309ec6fa2b282896cca6dd5a13ab4aa062066f0f21e8814357": [
+    "holocount_action_and_state_attribution_00010",
+    "holocount_differential_comparison_00051",
+    "holocount_complementary_exclusion_00062"
+  ],
+  "f8703071837e3de4b0ad69959e01fd11a8d1e1ab22b5475d770a241d51671c24": [
+    "holocount_material_attribution_00062",
+    "holocount_general_semantic_attribution_00057",
+    "holocount_complementary_exclusion_00066"
+  ],
+  "fa3a12ae6cc24b831ecc3fad96e30043c0759c48043aca1d5fca3d683805f342": [
+    "holocount_chromatic_attribution_00107",
+    "holocount_differential_comparison_00048"
+  ],
+  "fadcbb4a20fd427309426ff099fd3d8a5a891f34a671ccd4e014d0fdff68cfdf": [
+    "holocount_scale_attribution_00052",
+    "holocount_action_and_state_attribution_00099",
+    "holocount_complementary_exclusion_00097"
+  ],
+  "fb9e97c810b637bc7a61d21b060510287e103f3f5c0a1e6677f6ebfc7b832362": [
+    "holocount_material_attribution_00046",
+    "holocount_general_semantic_attribution_00078"
+  ],
+  "fc4e1449408dca9a682573856c1dffd4c3c3de4dff4821a8946dc60b539a0ddc": [
+    "holocount_chromatic_attribution_00072",
+    "holocount_material_attribution_00042",
+    "holocount_categorical_cardinality_00034"
+  ],
+  "fc4f4b4e50c601f92cac0bd3e9c1e5f4a34e43266dda8cee9769e998103cd0e7": [
+    "holocount_material_attribution_00095",
+    "holocount_scale_attribution_00011"
+  ],
+  "fc69ee2f739d48e2bbc817e5e438cdba514b1f51b636970ea6e029b8ad06ab42": [
+    "holocount_material_attribution_00038",
+    "holocount_scale_attribution_00056",
+    "holocount_complementary_exclusion_00032"
+  ],
+  "fdb6917a1fd538beac4c86af18d891aacf61ae475fa80ba3bf1b542f8a374b42": [
+    "holocount_scale_attribution_00067",
+    "holocount_joint_set_aggregation_00053"
+  ],
+  "ff64b982b9b2672a2700e319b82ea8f736c326268c80df42cc13d0087d698dab": [
+    "holocount_material_attribution_00083",
+    "holocount_differential_comparison_00070",
+    "holocount_complementary_exclusion_00087"
+  ],
+  "ff9f80f19e4a18c384089d12a13a32c1c17ccb11cb40229fcd612cb3ea48b7dc": [
+    "holocount_scale_attribution_00029",
+    "holocount_joint_set_aggregation_00045",
+    "holocount_categorical_cardinality_00091"
+  ]
+}
