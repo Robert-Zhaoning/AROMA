@@ -1,0 +1,30 @@
+name: Repository Integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Repository integrity
+        run: python scripts/ci_repo_integrity.py
+
+      - name: Compile reusable source
+        run: python -m compileall -q src tests
+
+      - name: Git whitespace check
+        run: git diff --check HEAD^ HEAD || true

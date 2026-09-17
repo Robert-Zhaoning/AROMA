@@ -1,0 +1,37 @@
+name: Reproducibility issue
+description: Report difficulty reproducing an AROMA experiment.
+title: "[Reproducibility] "
+labels:
+  - reproducibility
+body:
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Experiment
+      description: Which protocol, runner, or result are you reproducing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python, PyTorch, Transformers, CUDA, GPU, and model revision.
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: Exact command used.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
