@@ -1,0 +1,36 @@
+{
+  "experiment": "aroma_utility_router_final_confirmation_v1",
+  "status": "single frozen final evaluation",
+  "population": "final selected_alpha > 1",
+  "n": 294,
+  "candidate_set": {
+    "identity": true,
+    "methods": [
+      "MN",
+      "SA"
+    ],
+    "beta_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ]
+  },
+  "primary_method": "Frozen Utility Router v1",
+  "primary_comparator": "MN beta=2.00",
+  "primary_endpoint": "paired exact-count accuracy",
+  "primary_test": "two-sided exact McNemar",
+  "effect_interval": "paired bootstrap 95% CI",
+  "bootstrap_repetitions": 20000,
+  "bootstrap_seed": 20260920,
+  "tie_break": "identity -> smaller beta -> MN -> SA",
+  "secondary_fixed_SA": "SA beta=1.75",
+  "no_tuning": true,
+  "router_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+  "feature_freeze_sha256": "f672bcd8f6549487c393df393831915ba4a0acbbf50db76b928a092f14a353c2",
+  "candidate_freeze_sha256": "a66dce80ba45a2f9d9d930d8c29f4ed195795e0467599d6c68237410e42b7145",
+  "protocol_sha256": "7a37d80f53e86944631571799d55b8eac8d4873ce74cf1f9a84d11c118654922"
+}

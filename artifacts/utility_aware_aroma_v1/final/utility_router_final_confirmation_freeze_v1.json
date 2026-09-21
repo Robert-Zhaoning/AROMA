@@ -1,0 +1,67 @@
+{
+  "experiment": "aroma_utility_router_final_confirmation_v1",
+  "status": "FINAL CONFIRMATORY RESULT FROZEN",
+  "population": "pre-specified selected_alpha > 1 final confirmation population",
+  "upward_n": 294,
+  "primary_comparison": "Frozen Utility Router v1 vs frozen global MN beta=2.00",
+  "primary_result": {
+    "global_MN_beta_2_correct": 178,
+    "global_MN_beta_2_accuracy": 0.6054421768707483,
+    "utility_router_correct": 195,
+    "utility_router_accuracy": 0.6632653061224489,
+    "router_minus_global_pp": 5.782312925170068,
+    "bootstrap_95_ci_pp": [
+      3.4013605442176873,
+      8.503401360544217
+    ],
+    "mcnemar_exact_p": 1.52587890625e-05,
+    "router_only": 17,
+    "global_only": 0
+  },
+  "mechanistic_behavior": {
+    "router_repairs": 138,
+    "router_breaks": 16,
+    "router_net_repairs": 122,
+    "global_repairs": 132,
+    "global_breaks": 27,
+    "global_net_repairs": 105
+  },
+  "secondary_results": {
+    "identity_correct": 73,
+    "fixed_SA_beta_1_75_correct": 176,
+    "oracle_correct": 217,
+    "full_n": 1000,
+    "baseline_full_correct": 480,
+    "global_full_correct": 585,
+    "router_full_correct": 602
+  },
+  "router_selection": {
+    "method_distribution": {
+      "IDENTITY": 60,
+      "MN": 134,
+      "SA": 100
+    },
+    "beta_distribution": {
+      "0.0": 60,
+      "0.5": 29,
+      "0.75": 7,
+      "1.0": 16,
+      "1.25": 20,
+      "1.5": 18,
+      "1.75": 22,
+      "2.0": 122
+    }
+  },
+  "provenance": {
+    "cohort_freeze_sha256": "719915ee7fc139e70b936a9be41aaa5b3e2541d93d52dfff9dd0a7224006e79b",
+    "action_freeze_sha256": "4fb05b5d1c91ab3613432ee580126dcd504dd59abf875eb5a56ec79e4745edef",
+    "feature_freeze_sha256": "f672bcd8f6549487c393df393831915ba4a0acbbf50db76b928a092f14a353c2",
+    "candidate_freeze_sha256": "a66dce80ba45a2f9d9d930d8c29f4ed195795e0467599d6c68237410e42b7145",
+    "final_execution_freeze_sha256": "b43ce0a147d3dd1236c9917900b450bf62521f7288ac600ef35bf7f6bc8eac76",
+    "final_protocol_sha256": "7a37d80f53e86944631571799d55b8eac8d4873ce74cf1f9a84d11c118654922",
+    "utility_router_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+    "final_policy_results_sha256": "e9d78e3c4555750261c524e02d66983552753c53e058cba2ff2b1fa8a054ae38",
+    "final_summary_sha256": "b1bf10266c44df5b446197564bdc25630c71b9bd9d500b2abddb1a84413e65f6"
+  },
+  "analysis_policy": "This confirmatory result is final. No post-hoc router retraining, candidate modification, comparator change, endpoint change, or replacement of the final confirmation cohort is permitted."
+}

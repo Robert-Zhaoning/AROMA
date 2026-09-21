@@ -1,0 +1,13 @@
+{
+  "version": "AROMA_UTILITY_ROUTER_V1",
+  "bundle": "outputs/proc_count_sa_dev_v1/utility_router_final_v1/aroma_utility_router_v1.joblib",
+  "bundle_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+  "training_freeze": "outputs/proc_count_sa_dev_v1/utility_router_final_v1/final_training_freeze.json",
+  "training_freeze_sha256": "2044c65006b609d7f46daffc9b966bd21bf73943ba97bd4adfcfb1dde8f62364",
+  "protocol_sha256": "2bf3ba6504c8915c846c810adf2a6652e31caba9658ba4993fd1de4d4959c5c8",
+  "candidate_dataset_sha256": "e615029ef04e44d923134a8aa355918af5f6b7a5fd49055a860ee90efb1c88cb",
+  "feature_count": 431,
+  "training_samples": 160,
+  "training_rows": 2400,
+  "no_further_tuning": true
+}

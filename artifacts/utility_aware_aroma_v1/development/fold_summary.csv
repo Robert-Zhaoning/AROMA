@@ -1,0 +1,6 @@
+fold,train_samples,test_samples,global_candidate,router_correct,global_correct,identity_correct,oracle_correct
+1,128,32,MN_b2.00,19,19,7,22
+2,128,32,MN_b2.00,21,17,10,23
+3,128,32,SA_b1.75,21,20,6,25
+4,128,32,MN_b2.00,22,19,12,24
+5,128,32,MN_b2.00,25,25,9,29

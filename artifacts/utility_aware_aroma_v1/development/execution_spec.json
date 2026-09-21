@@ -1,0 +1,37 @@
+{
+  "experiment": "aroma_utility_router_cv_v1",
+  "population_n": 160,
+  "candidate_rows": 2400,
+  "outer_cv": {
+    "folds": 5,
+    "split_unit": "sample",
+    "shuffle": true,
+    "seed": 20260920
+  },
+  "model": {
+    "type": "L2 logistic regression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 10000,
+    "class_weight": null
+  },
+  "identity_encoding": "reference candidate: all candidate channels zero",
+  "sample_feature_count": 47,
+  "candidate_channel_count": 8,
+  "design_feature_count": 431,
+  "candidate_channels": [
+    "cand__mn",
+    "cand__sa",
+    "cand__beta",
+    "cand__beta_sq",
+    "cand__mn_beta",
+    "cand__sa_beta",
+    "cand__mn_beta_sq",
+    "cand__sa_beta_sq"
+  ],
+  "interaction_policy": "every GT-free sample feature multiplied by every candidate channel",
+  "selection_rule": "argmax predicted P(candidate_correct) within each held-out sample",
+  "global_comparator": "within each training fold choose the single MN/SA candidate with highest training exact accuracy; ties -> fewer breaks -> smaller beta -> MN before SA",
+  "candidate_dataset_sha256": "e615029ef04e44d923134a8aa355918af5f6b7a5fd49055a860ee90efb1c88cb",
+  "protocol_sha256": "2bf3ba6504c8915c846c810adf2a6652e31caba9658ba4993fd1de4d4959c5c8"
+}

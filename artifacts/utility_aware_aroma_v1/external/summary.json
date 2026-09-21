@@ -1,0 +1,30 @@
+{
+  "n": 156,
+  "router_correct": 111,
+  "router_accuracy": 0.7115384615384616,
+  "frozen_global_candidate": "MN_b2.00",
+  "global_correct": 104,
+  "global_accuracy": 0.6666666666666666,
+  "identity_correct": 45,
+  "oracle_correct": 121,
+  "router_repairs": 71,
+  "router_breaks": 5,
+  "global_repairs": 70,
+  "global_breaks": 11,
+  "router_only": 9,
+  "global_only": 2,
+  "router_minus_global_pp": 4.487179487179487,
+  "bootstrap_95_ci_pp": [
+    0.641025641025641,
+    8.974358974358974
+  ],
+  "mcnemar_exact_p": 0.0654296875,
+  "method_distribution": {
+    "IDENTITY": 35,
+    "MN": 67,
+    "SA": 54
+  },
+  "evaluation_spec_sha256": "d8bdebb58464d9bfa82de283c5f9891af55beeaeb39da3605adba84b8ddf8fe5",
+  "router_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+  "external_features_sha256": "007dca7e45fdeecde4b88e950eef9ca3a212d223410c8e1e9d930dea93924674"
+}

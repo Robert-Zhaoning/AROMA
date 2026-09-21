@@ -1,0 +1,53 @@
+{
+  "experiment": "aroma_utility_router_cv_v1",
+  "n": 160,
+  "router_correct": 108,
+  "router_accuracy": 0.675,
+  "global_correct": 100,
+  "global_accuracy": 0.625,
+  "identity_correct": 44,
+  "identity_accuracy": 0.275,
+  "oracle_correct": 123,
+  "oracle_accuracy": 0.76875,
+  "router_repairs": 72,
+  "router_breaks": 8,
+  "router_net_repairs": 64,
+  "global_repairs": 72,
+  "global_breaks": 16,
+  "global_net_repairs": 56,
+  "router_only_correct": 10,
+  "global_only_correct": 2,
+  "router_minus_global_pp": 5.0,
+  "bootstrap_95_ci_pp": [
+    1.25,
+    9.375
+  ],
+  "mcnemar_exact_p": 0.03857421875,
+  "oracle_headroom_pp": 14.375000000000004,
+  "recovered_headroom_pp": 5.000000000000004,
+  "fraction_oracle_headroom_recovered": 0.34782608695652195,
+  "selection_distribution": {
+    "IDENTITY": 34,
+    "MN_b0.50": 8,
+    "MN_b1.00": 3,
+    "MN_b1.25": 3,
+    "MN_b1.50": 4,
+    "MN_b1.75": 5,
+    "MN_b2.00": 42,
+    "SA_b0.50": 4,
+    "SA_b0.75": 5,
+    "SA_b1.00": 8,
+    "SA_b1.25": 8,
+    "SA_b1.50": 7,
+    "SA_b1.75": 7,
+    "SA_b2.00": 22
+  },
+  "method_distribution": {
+    "IDENTITY": 34,
+    "MN": 65,
+    "SA": 61
+  },
+  "protocol_sha256": "2bf3ba6504c8915c846c810adf2a6652e31caba9658ba4993fd1de4d4959c5c8",
+  "candidate_dataset_sha256": "e615029ef04e44d923134a8aa355918af5f6b7a5fd49055a860ee90efb1c88cb",
+  "execution_spec_sha256": "2937c2dfdb375e1e7a2a73f51b1e8e0fc5782cc7b83f36263fdf65f2e1e300b9"
+}

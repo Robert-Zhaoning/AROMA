@@ -1,0 +1,105 @@
+{
+  "experiment": "aroma_utility_router_final_confirmation_v1",
+  "status": "preregistered before final cohort generation",
+  "purpose": "Final untouched confirmation of the frozen AROMA Utility Router v1.",
+  "dataset": {
+    "name": "proc_count_utility_final_v1",
+    "total_n": 1000,
+    "counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "conditions": [
+      "dense",
+      "distractors",
+      "grid",
+      "random_sparse",
+      "row"
+    ],
+    "count_condition_cells": 50,
+    "samples_per_cell": 20,
+    "renderer": "exact frozen v3 renderer",
+    "required_independence": "zero seed and exact-image-hash overlap with v1, v2, v3, v4, SA-dev, and TSG prospective cohorts"
+  },
+  "utility_router": {
+    "bundle": "outputs/proc_count_sa_dev_v1/utility_router_final_v1/aroma_utility_router_v1.joblib",
+    "bundle_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+    "retuning_allowed": false,
+    "candidate_set": {
+      "identity": true,
+      "methods": [
+        "MN",
+        "SA"
+      ],
+      "beta_grid": [
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0
+      ]
+    },
+    "tie_break": "identity -> smaller beta -> MN -> SA"
+  },
+  "procedural_router": "existing frozen cardinality controller",
+  "evaluation_population": "samples assigned selected_alpha > 1 by the frozen procedural router",
+  "primary_comparison": {
+    "method": "Frozen Utility Router v1",
+    "comparator": "frozen global MN beta=2.00",
+    "comparator_selection": "fixed from SA-dev development before external validation",
+    "endpoint": "paired exact-count accuracy on selected_alpha > 1 samples",
+    "statistical_test": "two-sided exact McNemar",
+    "effect_estimate": "paired accuracy difference in percentage points",
+    "confidence_interval": "paired bootstrap 95% CI, 20000 repetitions",
+    "bootstrap_seed": 20260920
+  },
+  "secondary_endpoints": [
+    "repairs",
+    "breaks",
+    "net repairs",
+    "identity/MN/SA selection distribution",
+    "gain-selection distribution",
+    "full-policy accuracy after inserting the Utility Router into upward actions"
+  ],
+  "secondary_comparators": [
+    "identity/no intervention",
+    "fixed MN beta=2.00",
+    "fixed SA beta=1.75"
+  ],
+  "oracle_analysis": "descriptive only; not a confirmatory endpoint",
+  "sample_size_rationale": {
+    "external_upward_n": 156,
+    "external_router_only": 9,
+    "external_global_only": 2,
+    "external_effect_pp": 4.487,
+    "approx_required_upward_n_for_80pct_power": 273,
+    "historical_upward_fraction": "approximately 0.31-0.32",
+    "chosen_total_n": 1000,
+    "expected_upward_n": "approximately 310",
+    "note": "Power calculation is approximate and used only to motivate cohort size; realized upward N is determined by the frozen router."
+  },
+  "analysis_policy": {
+    "no_router_retraining": true,
+    "no_feature_changes": true,
+    "no_gain_grid_changes": true,
+    "no_comparator_changes_after_generation": true,
+    "no_interim_outcome_analysis": true,
+    "single_final_evaluation": true
+  },
+  "source_artifacts": {
+    "router_manifest": "outputs/proc_count_sa_dev_v1/utility_router_final_v1/manifest.json",
+    "router_manifest_sha256": "f6397e3e64f432cfc744f2a6772b9e4fd86ba3c954dd1000bb58a50c1bc1a501",
+    "external_validation_freeze": "outputs/proc_count_tsg_prospective_v1/utility_router_external_v1/freeze/external_validation_freeze_v1.json",
+    "external_validation_freeze_sha256": "a2a5d38f0b4c9276c8623546d3520b7fc5b4e385b76c091c313cf532c53c930d"
+  }
+}

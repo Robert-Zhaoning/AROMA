@@ -1,0 +1,23 @@
+{
+  "experiment": "aroma_utility_router_external_v1",
+  "status": "frozen external diagnostic validation",
+  "n": 156,
+  "router_correct": 111,
+  "global_correct": 104,
+  "oracle_correct": 121,
+  "router_minus_global_pp": 4.487179487179487,
+  "bootstrap_95_ci_pp": [
+    0.641025641025641,
+    8.974358974358974
+  ],
+  "mcnemar_exact_p": 0.0654296875,
+  "router_repairs": 71,
+  "router_breaks": 5,
+  "global_repairs": 70,
+  "global_breaks": 11,
+  "interpretation": "external diagnostic; not pristine final confirmation",
+  "no_further_router_tuning": true,
+  "router_sha256": "4192129c525822fed7ab9d013dc3d564981f48faf81f28b3011a4be1a2168563",
+  "evaluation_spec_sha256": "d8bdebb58464d9bfa82de283c5f9891af55beeaeb39da3605adba84b8ddf8fe5",
+  "summary_sha256": "611915086f6369f6b72b146e4e262329c080b60d40a6ec8cff660d31171b6c07"
+}
