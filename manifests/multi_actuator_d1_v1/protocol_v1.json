@@ -1,0 +1,102 @@
+{
+  "experiment": "Experiment D1 \u2014 Multi-actuator causal replication",
+  "scientific_question": "Does bidirectional cardinality actuation replicate across the historically selected candidate-head pool, rather than being unique to L18H13?",
+  "evidence_class": "prospective fresh-cohort robustness evaluation",
+  "candidate_pool_origin": "historical fixed seven-head candidate pool; not selected using Experiment D outcomes",
+  "heads": [
+    {
+      "name": "L33H1",
+      "layer": 33,
+      "head": 1
+    },
+    {
+      "name": "L3H4",
+      "layer": 3,
+      "head": 4
+    },
+    {
+      "name": "L18H13",
+      "layer": 18,
+      "head": 13
+    },
+    {
+      "name": "L8H30",
+      "layer": 8,
+      "head": 30
+    },
+    {
+      "name": "L3H11",
+      "layer": 3,
+      "head": 11
+    },
+    {
+      "name": "L13H11",
+      "layer": 13,
+      "head": 11
+    },
+    {
+      "name": "L33H21",
+      "layer": 33,
+      "head": 21
+    }
+  ],
+  "reference_head": "L18H13",
+  "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "dataset": {
+    "name": "proc_count_multi_actuator_d1_v1",
+    "planned_n": 300,
+    "counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "conditions": 5,
+    "replicates_per_count_condition": 6,
+    "base_seed": 314159265,
+    "renderer": "scripts/generate_proc_count_causal_v3.py",
+    "freshness_requirement": "zero seed overlap and zero exact image-hash overlap with proc_count_causal_v1/v2/v3/v4"
+  },
+  "intervention": {
+    "family": "whole-head multiplicative gain",
+    "alphas": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "attenuation_endpoint": "mu(alpha=0.5) < mu(alpha=1.0)",
+    "amplification_endpoint": "mu(alpha=1.5) > mu(alpha=1.0)",
+    "strict_order_secondary": "mu(0.5) < mu(1.0) < mu(1.5)",
+    "head_specific_gain_tuning": false
+  },
+  "primary_reporting": {
+    "per_head": [
+      "downward consistency",
+      "upward consistency",
+      "strict ordering",
+      "mean downward shift",
+      "mean upward shift"
+    ],
+    "formal_directional_tests": "one-sided exact binomial tests versus 0.5 for downward and upward consistency",
+    "multiplicity": "Holm correction across the 14 directional tests (7 heads x 2 directions)",
+    "bidirectional_replication_definition": "both downward and upward directional tests remain significant after Holm correction"
+  },
+  "interpretation": {
+    "primary": "report the number and identity of historical candidate heads showing fresh bidirectional replication",
+    "not_claimed": [
+      "that all 256 heads are actuators",
+      "that L18H13 is not stronger than alternatives",
+      "that any alternative head is universally superior",
+      "that candidate prevalence estimates head prevalence"
+    ]
+  },
+  "generator_path": "scripts/generate_proc_count_multi_actuator_d1_v1.py",
+  "generator_sha256": "3d25b88dec5f2d0d63215419d978342794735089cacf50172706a9db8aa6b303"
+}
