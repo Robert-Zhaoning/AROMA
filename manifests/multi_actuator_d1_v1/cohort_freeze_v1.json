@@ -1,0 +1,52 @@
+{
+  "experiment": "Experiment D1 \u2014 Multi-actuator causal replication",
+  "status": "fresh cohort frozen before model inference",
+  "n": 300,
+  "unique_seeds": 300,
+  "unique_image_hashes": 300,
+  "count_distribution": {
+    "1": 30,
+    "2": 30,
+    "3": 30,
+    "4": 30,
+    "5": 30,
+    "6": 30,
+    "7": 30,
+    "8": 30,
+    "9": 30,
+    "10": 30
+  },
+  "condition_distribution": {
+    "dense": 60,
+    "distractors": 60,
+    "grid": 60,
+    "random_sparse": 60,
+    "row": 60
+  },
+  "count_condition_cells": 50,
+  "samples_per_cell": 6,
+  "historical_overlap": {
+    "v1": {
+      "seed_overlap": 0,
+      "hash_overlap": 0
+    },
+    "v2": {
+      "seed_overlap": 0,
+      "hash_overlap": 0
+    },
+    "v3": {
+      "seed_overlap": 0,
+      "hash_overlap": 0
+    },
+    "v4": {
+      "seed_overlap": 0,
+      "hash_overlap": 0
+    }
+  },
+  "metadata_sha256": "8fc0bc763d5cb712108dcbfe8f1f3db7250643081b52613c78ccdee5128c3d4a",
+  "generator_sha256": "d1e048a9faae6665e1468b65d7fd275e45782eca230229f7f8f75282a9ad9c12",
+  "protocol_sha256": "9abe80cef943870fd91847326bdd8e244b758f06a533a9da12633757dfa3849c",
+  "generation_manifest_sha256": "831cf923a2bad35ecc6764102c260990f1c67e7e4618bfe692f30d8dd2c8659c",
+  "model_inference_occurred": false,
+  "model_outcomes_observed": false
+}
