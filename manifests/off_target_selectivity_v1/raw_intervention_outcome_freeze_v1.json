@@ -1,0 +1,68 @@
+{
+  "experiment": "off_target_selectivity_v1",
+  "stage": "raw_intervention_outcome_freeze_v1",
+  "freeze_status": "all formal intervention raw outcomes frozen before endpoint performance analysis",
+  "created_utc": "2026-09-26T11:30:28.462081+00:00",
+  "formal_design": {
+    "population_n": 1000,
+    "lambda_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ],
+    "methods": [
+      "WHOLE",
+      "MN"
+    ],
+    "conditions_per_sample": 14,
+    "matched_method_pairs": 7000,
+    "total_conditions": 14000
+  },
+  "raw_outcomes": {
+    "jsonl_path": "outputs/off_target_selectivity_v1/intervention_stress_test_v1/intervention_results_v1.jsonl",
+    "jsonl_sha256": "2eafa15819da9ec1b633588a6c30981877906186e021a09cc8513060d95c6ff1",
+    "csv_path": "outputs/off_target_selectivity_v1/intervention_stress_test_v1/intervention_results_v1.csv",
+    "csv_sha256": "8d01529b4c96d653085798ff6d0dae0754e828c157660cce06b0e901cd20159d"
+  },
+  "supporting_output_hashes": {
+    "progress_v1.json": "8b2967461c496df28fc00571d92bc5d0c98e2df2acb4d623d6b7ce3bc9b47394",
+    "run_metadata_v1.json": "e3ea062ac5dc9e9a24e1adfb5ae9cf1aed5bc82cc859679a0da2e150f1dc21c2",
+    "completion_v1.json": "f4e1131e74c6897b57224eb59ef62413421f4660b7145077d90bf781de0064d3"
+  },
+  "frozen_input_hashes": {
+    "population": "76a409ea7ee097899cc091fb19ecddb8d95f2305d3167989730bf3f22abf204d",
+    "protocol": "b3fde7262e025ac7c0bb5c11750c9ee218ea7e7ffdb2e0b3130d795c4cc0dad2",
+    "execution_freeze": "43fca908d91fe18e519cc977ba8ca6561823fe5be835ec89c0f28dbe9a549e6a",
+    "u4": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14",
+    "runner": "8715bc2c1951172ea978503ce33220dac9d172b88a90efb393c0f1986e929c61"
+  },
+  "git_provenance": {
+    "head_at_raw_outcome_freeze": "e2ce68457914cbe85f54a17c73d279f3d95c8db0",
+    "runner_commit": "e2ce68457914cbe85f54a17c73d279f3d95c8db0",
+    "execution_freeze_commit": "e2ce68457914cbe85f54a17c73d279f3d95c8db0"
+  },
+  "completion_record": {
+    "complete": true,
+    "population_n": 1000,
+    "total_conditions": 14000,
+    "git_head_at_completion": "e2ce68457914cbe85f54a17c73d279f3d95c8db0"
+  },
+  "analysis_state_at_freeze": {
+    "endpoint_analysis_performed_by_runner": false,
+    "primary_mean_break_burden_computed": false,
+    "paired_bootstrap_computed": false,
+    "mcnemar_computed": false,
+    "subgroup_analysis_computed": false
+  },
+  "planned_primary_endpoint": "mean across the seven lambda values of per-sample MN break indicator minus mean across the seven lambda values of per-sample WHOLE break indicator",
+  "planned_primary_interpretation": "negative MN-minus-WHOLE effect supports greater off-target selectivity of MN",
+  "planned_primary_inference": {
+    "paired_bootstrap_replicates": 20000,
+    "bootstrap_seed": 20260922,
+    "confidence_interval": 0.95
+  }
+}
