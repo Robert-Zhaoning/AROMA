@@ -97,8 +97,8 @@
       "that candidate prevalence estimates head prevalence"
     ]
   },
-  "generator_path": "scripts/generate_proc_count_multi_actuator_d1_v1.py",
-  "generator_sha256": "88fb6adc642db3496805356c9f973318cbc34b5f64e575ec0cf54e6f0bc43248",
+  "generator_path": "scripts/generate_multi_actuator_d1_clean.py",
+  "generator_sha256": "d1e048a9faae6665e1468b65d7fd275e45782eca230229f7f8f75282a9ad9c12",
   "pre_inference_implementation_correction": {
     "reason": "The D1 generator was mechanically derived from the v4 N=2000 generator. D1 intentionally uses 10 counts x 5 conditions x 6 replicates = N=300, but inherited terminal validation still required N=2000.",
     "scientific_design_changed": false,
@@ -130,5 +130,16 @@
     "alphas_changed": false,
     "model_inference_occurred": false,
     "model_outcomes_observed": false
+  },
+  "cohort_audit_path": "scripts/audit_multi_actuator_d1_clean.py",
+  "cohort_audit_sha256": "c686101c29e9771f8c88c0cdb65fc382b3953b5bc0ae8b35a12f3a7f988172b5",
+  "pre_inference_clean_generator_replacement": {
+    "reason": "The earlier D1 generator mechanically inherited v4-specific validation and helper assumptions. It was replaced before model inference by a small standalone generator that reuses only the frozen v3 draw_sample renderer.",
+    "scientific_design_changed": false,
+    "planned_n_changed": false,
+    "candidate_pool_changed": false,
+    "intervention_changed": false,
+    "model_inference_before_replacement": false,
+    "model_outcomes_observed_before_replacement": false
   }
 }
