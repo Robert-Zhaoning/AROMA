@@ -98,7 +98,7 @@
     ]
   },
   "generator_path": "scripts/generate_proc_count_multi_actuator_d1_v1.py",
-  "generator_sha256": "a6686d82ea5daef2945236551b2d780cb9cd0040c42def0f1ceb557410c1a783",
+  "generator_sha256": "88fb6adc642db3496805356c9f973318cbc34b5f64e575ec0cf54e6f0bc43248",
   "pre_inference_implementation_correction": {
     "reason": "The D1 generator was mechanically derived from the v4 N=2000 generator. D1 intentionally uses 10 counts x 5 conditions x 6 replicates = N=300, but inherited terminal validation still required N=2000.",
     "scientific_design_changed": false,
@@ -118,6 +118,16 @@
     },
     "planned_n_changed": false,
     "scientific_design_changed": false,
+    "model_inference_occurred": false,
+    "model_outcomes_observed": false
+  },
+  "pre_inference_implementation_correction_v3": {
+    "reason": "The v4 image exclusion was initially passed as a directory Path to image_hash_set(), which expects an iterable of image file paths.",
+    "correction": "Expand data/proc_count_causal_v4/images recursively into sorted image-file Paths before calling image_hash_set().",
+    "scientific_design_changed": false,
+    "planned_n_changed": false,
+    "candidate_heads_changed": false,
+    "alphas_changed": false,
     "model_inference_occurred": false,
     "model_outcomes_observed": false
   }

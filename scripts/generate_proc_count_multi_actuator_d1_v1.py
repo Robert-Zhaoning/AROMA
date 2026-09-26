@@ -43,6 +43,15 @@ V3_META = Path(
     "data/proc_count_causal_v3/metadata.jsonl"
 )
 
+HIST_V4_META = Path(
+    "data/proc_count_causal_v4/metadata.jsonl"
+)
+
+HIST_V4_IMAGE_DIR = Path(
+    "data/proc_count_causal_v4/images"
+)
+
+
 V4_ROOT = Path(
     "data/proc_count_multi_actuator_d1_v1"
 )
@@ -245,6 +254,14 @@ historical_hashes = (
     v2_hashes
     |
     v3_hashes
+    |
+    image_hash_set(
+        sorted(
+            p
+            for p in HIST_V4_IMAGE_DIR.rglob("*")
+            if p.is_file()
+        )
+    )
 )
 
 historical_seeds = (
@@ -253,6 +270,10 @@ historical_seeds = (
     v2_seeds
     |
     v3_seeds
+    |
+    seed_set(
+        HIST_V4_META
+    )
 )
 
 
@@ -261,6 +282,9 @@ print(
     len(v1_seeds),
     len(v2_seeds),
     len(v3_seeds),
+    len(seed_set(
+        HIST_V4_META
+    )),
 )
 
 print(
@@ -268,6 +292,13 @@ print(
     len(v1_hashes),
     len(v2_hashes),
     len(v3_hashes),
+    len(image_hash_set(
+        sorted(
+            p
+            for p in HIST_V4_IMAGE_DIR.rglob("*")
+            if p.is_file()
+        )
+    )),
 )
 
 
