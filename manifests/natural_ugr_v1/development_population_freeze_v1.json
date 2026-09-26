@@ -1,0 +1,22 @@
+{
+  "experiment": "natural_ugr_v1",
+  "status": "FROZEN BEFORE STAGE-2 NATURAL CANDIDATE OUTCOMES",
+  "source_results": "outputs/tallyqa_natural_confirmation_v2/final_frozen_controller/tallyqa_final_results.csv",
+  "source_results_sha256": "8a03c6d888f1b0a3e664e86f0a541e5a9d77b23a983e7383000773b4cba574d9",
+  "population_csv": "manifests/natural_ugr_v1/development_population_v1.csv",
+  "population_csv_sha256": "de509f52bbd7cac0974282f49c2a2e33e5d80450dbbcf2e13cee3eda1f01c1ca",
+  "n": 292,
+  "subset_distribution": {
+    "complex": 222,
+    "simple": 70
+  },
+  "alpha_distribution": {
+    "1.5": 32,
+    "2.0": 122,
+    "4.0": 138
+  },
+  "feature_mapping": "manifests/natural_ugr_v1/controller_feature_mapping_v1.json",
+  "feature_mapping_sha256": "fd54a75ceef7c65be8c18903c6d52049c9b8f262afb1c22761145316ab41ee73",
+  "question_id_unique": true,
+  "image_id_unique": true
+}

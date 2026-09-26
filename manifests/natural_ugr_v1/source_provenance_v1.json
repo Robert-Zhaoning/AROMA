@@ -1,0 +1,54 @@
+{
+  "experiment": "natural_ugr_v1",
+  "freeze_stage": "F1 prospective protocol",
+  "current_parent_commit": "eb2000b685cc85a0febb1cd5945c961a95e87e7f",
+  "historical_ugr_ref": "unified-geometry-router-v1",
+  "historical_ugr_commit": "d2b5c2bd1b2de022302ca648bf423660c93a33b3",
+  "historical_ugr_files": {
+    "protocol": {
+      "path": "docs/UNIFIED_GEOMETRY_ROUTER_PROTOCOL_v1.md",
+      "sha256": "ae38b6f5eb948e0b941265a0573138264de55d6571000a5f01b0d7f1bd1f4005"
+    },
+    "router_analysis": {
+      "path": "scripts/run_ugr_dev_router_analysis_v1.py",
+      "sha256": "8e9b9e5359fe35f6c4e62eae033c53a76eb83687501039ec84e84b2b620a688f"
+    },
+    "candidate_sweep": {
+      "path": "scripts/run_ugr_dev_stage2_candidate_sweep_v1.py",
+      "sha256": "03c7713bc5d3aa52673a3e648d54361f398908690c627e315bcef6d8fd94c450"
+    },
+    "feature_archive": {
+      "path": "scripts/run_ugr_dev_stage2_feature_archive_v1.py",
+      "sha256": "ffcf2c5d5c79fc07d54ff3b23b87868f611e537e6f1133e1de2caeda3ffb8b72"
+    },
+    "gradient_collection": {
+      "path": "scripts/run_ugr_dev_gradient_collection_v1.py",
+      "sha256": "392491bc0626cf07a0db6a5fece092f6880b86123cb2a590b525c708d4065313"
+    },
+    "u4_primary": {
+      "path": "artifacts/unified_geometry_router_v1/frozen_inputs/U4_primary.npy",
+      "sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+    },
+    "router_spec": {
+      "path": "artifacts/unified_geometry_router_v1/development/router_analysis_v1/router_analysis_spec_v1.json",
+      "sha256": "296917420d54d191d203fc0817c9e50ae8ee05a60723bf65d2c65c688a4e77d1"
+    },
+    "candidate_spec": {
+      "path": "artifacts/unified_geometry_router_v1/development/stage2/candidate_sweep_spec_v1.json",
+      "sha256": "4380ca8b311d28cb9ecc407deeb39c85ac1258cb53e0bf2181407cfa6b90c2cb"
+    },
+    "implementation_spec": {
+      "path": "artifacts/unified_geometry_router_v1/development/stage2/implementation_spec_v1.json",
+      "sha256": "2b1e65beb5969a77695ad510488590812f9ed773105a444c4ac1345ac832f66d"
+    }
+  },
+  "natural_inputs": {
+    "outputs/tallyqa_natural_confirmation_v2/final_frozen_controller/tallyqa_final_results.csv": "8a03c6d888f1b0a3e664e86f0a541e5a9d77b23a983e7383000773b4cba574d9",
+    "outputs/tallyqa_natural_confirmation_v2/manifest.jsonl": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d",
+    "outputs/tallyqa_natural_confirmation_v2/image_inventory/image_inventory.csv": "475e28e0ebb7934d49d2062734b164ff04f4f04461d61de9ee4315f96182f0b2",
+    "data/tallyqa_natural_ood_v1/manifest.jsonl": "068a489a02d499da6eb0b837a81c8817583b64b51c23f944c77645420fe2c32c",
+    "outputs/tallyqa_natural_ood_v1/image_inventory/image_inventory.csv": "976a4f209d13d32ba5a412f7a943b4c798797a2c5cb45d561f7c182812a7f635",
+    "scripts/build_tallyqa_natural_confirmation_v2.py": "71b937feecb4f9c4501b342e6f578446a2f623ea07b51f2410d7e71183e5ce33",
+    "scripts/run_tallyqa_natural_confirmation_v2_final.py": "0b14deb9cbf0fe73ecacd1f0584a94df8abd4949ae657b1b38f2ed4a15018d5d"
+  }
+}
