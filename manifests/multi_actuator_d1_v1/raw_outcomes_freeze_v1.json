@@ -1,0 +1,108 @@
+{
+  "experiment": "Experiment D1 \u2014 Multi-actuator causal replication",
+  "status": "all seven formal raw outcomes frozen before endpoint analysis",
+  "heads": [
+    "L33H1",
+    "L3H4",
+    "L18H13",
+    "L8H30",
+    "L3H11",
+    "L13H11",
+    "L33H21"
+  ],
+  "n_per_head": 300,
+  "alphas": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "rows_per_head": 900,
+  "baseline_consistency_across_heads": true,
+  "baseline_fingerprint": "5e34cad807cdb2fcaf45f3a46a347ede749d7f93e57d72ec5c124bf070cdceb8",
+  "files": {
+    "L33H1": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L33H1/results.csv",
+      "results_sha256": "d277d1f89da737da9889d578b843308a83b381a2854dae049387d525cf093389",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L33H1/summary.csv",
+      "summary_sha256": "536e965097e253df760ef78c769b166f8bb4580c597b5794ba66a22adbd7fda8",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L3H4": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L3H4/results.csv",
+      "results_sha256": "673c7248a7510ca9492d8e65227f414cbc3ff9fc0a3842b024b255fbefb2d098",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L3H4/summary.csv",
+      "summary_sha256": "e2ef4d6115bd257403f6daf3f0bd392e0de3e5f59f0a619fa5fedfe077107d6e",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L18H13": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L18H13/results.csv",
+      "results_sha256": "03bf1d1b5e5db43da96e918cfd2df30e0c033ea4d343664a178d4c9ec410e56e",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L18H13/summary.csv",
+      "summary_sha256": "24d6913eb2325eea22c6f78cf78b5530b3ced50d64520ab9eae86bc3fd55aed3",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L8H30": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L8H30/results.csv",
+      "results_sha256": "c27d72826968a583ffa8a5628aef6624e7a921b03ee11bc549e62db51a14fcc3",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L8H30/summary.csv",
+      "summary_sha256": "1ba93a4c9f4dc5a48ec7a72d189cca06afc889d3b18910349480a860be8f462b",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L3H11": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L3H11/results.csv",
+      "results_sha256": "dbb6f021aa22c8d40d8954be0f12b04d31cf1386e74a58d768e1239a22c49156",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L3H11/summary.csv",
+      "summary_sha256": "dd59516fb71269ab2607d6384b9738705afc686634ea6dcd94b31842f661f54a",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L13H11": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L13H11/results.csv",
+      "results_sha256": "6c68574b8aaf961b3c08feed3ec735fb92fcbd7c5f89d5ea6d5bf026b934e49c",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L13H11/summary.csv",
+      "summary_sha256": "c7efd5476cb7f42dc03032bb5f941996214ba58e6876506a4b528623ef3a72e9",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    },
+    "L33H21": {
+      "results_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L33H21/results.csv",
+      "results_sha256": "a0108d6e9140cc56ec0d21e6d6d43ad1afd8ef853978d9f42a47448473d70490",
+      "summary_path": "outputs/proc_count_multi_actuator_d1_v1/inference/L33H21/summary.csv",
+      "summary_sha256": "d534b0b98b034d1a144b78893c7d73024ac6f5b59fd3c4a61576f9c85d49a822",
+      "rows": 900,
+      "alpha_counts": {
+        "0.5": 300,
+        "1.0": 300,
+        "1.5": 300
+      }
+    }
+  }
+}
