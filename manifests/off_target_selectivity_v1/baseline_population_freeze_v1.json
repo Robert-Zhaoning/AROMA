@@ -1,0 +1,66 @@
+{
+  "experiment": "off_target_selectivity_v1",
+  "stage": "baseline_population_freeze_v1",
+  "freeze_status": "population frozen before any intervention outcome",
+  "created_utc": "2026-09-26T04:48:21.559119+00:00",
+  "scientific_role": "Prospectively freeze the exact baseline-correct GQA population before MN or Whole intervention evaluation.",
+  "prebaseline_protocol": {
+    "path": "manifests/off_target_selectivity_v1/prebaseline_protocol_v1.json",
+    "sha256": "b3fde7262e025ac7c0bb5c11750c9ee218ea7e7ffdb2e0b3130d795c4cc0dad2",
+    "initial_freeze_commit": "6fedce6",
+    "lf_hash_correction_commit": "c560837"
+  },
+  "candidate_manifest": {
+    "path": "manifests/off_target_selectivity_v1/prebaseline_candidate_manifest_v1.csv",
+    "sha256": "129713fe4e746804078a9c574a39f515be40e97d61271b09d52d5def52edcdaf",
+    "candidate_count": 10234
+  },
+  "baseline_runner": {
+    "path": "scripts/run_off_target_baseline_v1.py",
+    "commit": "60532a0"
+  },
+  "baseline_scan": {
+    "output_path": "outputs/off_target_selectivity_v1/baseline_population_v1/baseline_scan_v1.jsonl",
+    "sha256": "426c3b8df67f308bf2c28acb2c64db1d2f32edacec3121911121d3c97594dafb",
+    "processed_candidates": 2146,
+    "first_candidate_rank": 1,
+    "last_candidate_rank": 2146,
+    "baseline_correct_n": 1000,
+    "selection_fraction": "1000/2146",
+    "selection_rule": "scan frozen candidate_rank order and take the first 1000 exact-match baseline-correct examples"
+  },
+  "frozen_population": {
+    "original_output_path": "outputs/off_target_selectivity_v1/baseline_population_v1/baseline_correct_population_v1.csv",
+    "tracked_copy_path": "manifests/off_target_selectivity_v1/baseline_correct_population_v1.csv",
+    "sha256": "76a409ea7ee097899cc091fb19ecddb8d95f2305d3167989730bf3f22abf204d",
+    "n": 1000,
+    "unique_images": 1000,
+    "unique_question_ids": 1000,
+    "last_selected_candidate_rank": 2146
+  },
+  "model": {
+    "id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "weights_frozen": true
+  },
+  "baseline_decoding": {
+    "do_sample": false,
+    "max_new_tokens": 12,
+    "decode_scope": "newly generated tokens only",
+    "correctness": "exact string match after frozen minimal generation cleanup"
+  },
+  "output_artifact_hashes": {
+    "baseline_scan_v1.jsonl": "426c3b8df67f308bf2c28acb2c64db1d2f32edacec3121911121d3c97594dafb",
+    "baseline_correct_population_v1.csv": "76a409ea7ee097899cc091fb19ecddb8d95f2305d3167989730bf3f22abf204d",
+    "metadata_v1.json": "0270b895384473b347415c372f913c046db6bbcc23580b55b6f1a0347c8984f0",
+    "progress_v1.json": "ec1582403abcc13d6a05af5b094a76184417c0c8e036015df2be1da21f2c2825",
+    "summary_v1.json": "95c817f45f676a6390465c427b8db8e6c723d7c93d532e6eee266a846b106d39"
+  },
+  "intervention_state_at_freeze": {
+    "mn_run": false,
+    "whole_run": false,
+    "lambda_outcomes_observed": false,
+    "intervention_output_files_detected": false
+  },
+  "git_head_before_population_freeze": "60532a05f20affaeeb3ff16e9e3dfe99ed861765"
+}
