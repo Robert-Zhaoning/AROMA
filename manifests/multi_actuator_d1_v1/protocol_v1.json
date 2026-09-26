@@ -98,7 +98,7 @@
     ]
   },
   "generator_path": "scripts/generate_proc_count_multi_actuator_d1_v1.py",
-  "generator_sha256": "874e8e84bc6ec2ac6ffa21988fdc4556934ea1dda0d17ef182d53319e13da23d",
+  "generator_sha256": "a6686d82ea5daef2945236551b2d780cb9cd0040c42def0f1ceb557410c1a783",
   "pre_inference_implementation_correction": {
     "reason": "The D1 generator was mechanically derived from the v4 N=2000 generator. D1 intentionally uses 10 counts x 5 conditions x 6 replicates = N=300, but inherited terminal validation still required N=2000.",
     "scientific_design_changed": false,
@@ -107,5 +107,18 @@
     "correction": "Replace inherited fixed N=2000 validation with EXPECTED_N = 10 * len(CONDITIONS) * REPLICATES.",
     "old_generator_sha256": "3d25b88dec5f2d0d63215419d978342794735089cacf50172706a9db8aa6b303",
     "corrected_generator_sha256": "874e8e84bc6ec2ac6ffa21988fdc4556934ea1dda0d17ef182d53319e13da23d"
+  },
+  "pre_inference_implementation_correction_v2": {
+    "reason": "Remaining validation constants 400, 200, and 40 were inherited from the v4 40-replicate design.",
+    "replacement": {
+      "samples_per_condition": "10 * REPLICATES = 60",
+      "samples_per_count": "5 * REPLICATES = 30",
+      "samples_per_count_condition": "REPLICATES = 6",
+      "number_of_count_condition_cells": 50
+    },
+    "planned_n_changed": false,
+    "scientific_design_changed": false,
+    "model_inference_occurred": false,
+    "model_outcomes_observed": false
   }
 }

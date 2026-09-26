@@ -17,6 +17,9 @@ import generate_proc_count_causal_v3 as g
 g.REPLICATES = 6
 
 EXPECTED_N = 10 * len(g.CONDITIONS) * g.REPLICATES
+EXPECTED_PER_CONDITION = 10 * g.REPLICATES
+EXPECTED_PER_COUNT = len(g.CONDITIONS) * g.REPLICATES
+EXPECTED_PER_COMBO = g.REPLICATES
 
 
 # ============================================================
@@ -804,12 +807,12 @@ for condition in (
             condition
         ]
         !=
-        400
+        EXPECTED_PER_CONDITION
     ):
 
         raise RuntimeError(
             f"{condition}: "
-            f"expected 400."
+            f"expected {EXPECTED_PER_CONDITION}."
         )
 
 
@@ -831,12 +834,12 @@ for n in range(
     if (
         count_counts[n]
         !=
-        200
+        EXPECTED_PER_COUNT
     ):
 
         raise RuntimeError(
             f"count {n}: "
-            f"expected 200."
+            f"expected {EXPECTED_PER_COUNT}."
         )
 
 
@@ -864,7 +867,7 @@ if len(combo_counts) != 50:
 
 
 if not all(
-    v == 40
+    v == EXPECTED_PER_COMBO
     for v in (
         combo_counts
         .values()

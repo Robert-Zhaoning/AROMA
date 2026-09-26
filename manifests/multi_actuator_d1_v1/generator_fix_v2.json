@@ -1,0 +1,9 @@
+{
+  "stage": "pre-inference implementation correction v2",
+  "old_generator_sha256": "874e8e84bc6ec2ac6ffa21988fdc4556934ea1dda0d17ef182d53319e13da23d",
+  "new_generator_sha256": "a6686d82ea5daef2945236551b2d780cb9cd0040c42def0f1ceb557410c1a783",
+  "scientific_design_changed": false,
+  "planned_n": 300,
+  "model_inference_occurred": false,
+  "model_outcomes_observed": false
+}
