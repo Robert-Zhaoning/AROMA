@@ -1,0 +1,13 @@
+{
+  "experiment": "Experiment D1 \u2014 Multi-actuator causal replication",
+  "stage": "pre-inference generator correction",
+  "old_generator_sha256": "3d25b88dec5f2d0d63215419d978342794735089cacf50172706a9db8aa6b303",
+  "corrected_generator_sha256": "874e8e84bc6ec2ac6ffa21988fdc4556934ea1dda0d17ef182d53319e13da23d",
+  "reason": "Inherited v4 validation expected 2000 samples although D1 prospectively specifies N=300.",
+  "scientific_protocol_changed": false,
+  "candidate_heads_changed": false,
+  "alphas_changed": false,
+  "planned_n_changed": false,
+  "model_inference_occurred": false,
+  "model_outcomes_observed": false
+}

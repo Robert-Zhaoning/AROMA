@@ -16,6 +16,8 @@ import generate_proc_count_causal_v3 as g
 # 10 counts x 5 conditions x 6 replicates.
 g.REPLICATES = 6
 
+EXPECTED_N = 10 * len(g.CONDITIONS) * g.REPLICATES
+
 
 # ============================================================
 # FROZEN V4 CONFIG
@@ -656,7 +658,7 @@ try:
                         print(
                             "accepted",
                             len(records),
-                            "/2000"
+                            f"/{EXPECTED_N}"
                         )
 
 
@@ -673,15 +675,15 @@ finally:
 # STRUCTURAL AUDITS
 # ============================================================
 
-if len(records) != 2000:
+if len(records) != EXPECTED_N:
 
     raise RuntimeError(
-        f"Expected 2000 records; "
+        f"Expected {EXPECTED_N} records; "
         f"got {len(records)}"
     )
 
 
-if len(accepted_seeds) != 2000:
+if len(accepted_seeds) != EXPECTED_N:
 
     raise RuntimeError(
         "V4 seeds are not "
@@ -689,7 +691,7 @@ if len(accepted_seeds) != 2000:
     )
 
 
-if len(accepted_hashes) != 2000:
+if len(accepted_hashes) != EXPECTED_N:
 
     raise RuntimeError(
         "V4 image hashes are "
@@ -705,7 +707,7 @@ sample_ids = {
 }
 
 
-if len(sample_ids) != 2000:
+if len(sample_ids) != EXPECTED_N:
 
     raise RuntimeError(
         "V4 sample IDs are "
