@@ -1,0 +1,15 @@
+{
+  "experiment": "Experiment D1 \u2014 Multi-actuator causal replication",
+  "analysis": "primary directional endpoint",
+  "analysis_script": "scripts/analyze_multi_actuator_d1_v1.py",
+  "analysis_script_sha256": "20e179995d0335860d7ede8152847a15974cb7d6692615a6a24dea2af424e251",
+  "raw_outcomes_freeze_sha256": "b882464b24121cd901458801504038abdce81936612681c6b5a2b91211e20d15",
+  "protocol_sha256": "9abe80cef943870fd91847326bdd8e244b758f06a533a9da12633757dfa3849c",
+  "primary_metric": "response_expected_numeral_shift",
+  "attenuation_success": "shift < 0 at alpha=0.5",
+  "amplification_success": "shift > 0 at alpha=1.5",
+  "tie_handling": "zero retained in N=300 and treated as non-success",
+  "test": "one-sided exact binomial test versus p=0.5",
+  "multiplicity": "Holm across 14 directional tests",
+  "bidirectional_rule": "both directional Holm-adjusted p-values < 0.05"
+}
