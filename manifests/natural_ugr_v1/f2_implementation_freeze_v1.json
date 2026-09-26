@@ -1,0 +1,56 @@
+{
+  "candidate_contract": {
+    "candidate_rows": 12556,
+    "candidates_per_sample": 43,
+    "order": "IDENTITY, MN gains ascending, SA gains ascending, WHOLE gains ascending",
+    "population_n": 292
+  },
+  "controller_feature_policy": "Use the F1-frozen archived 39 natural Stage-1 features.",
+  "experiment": "natural_ugr_v1",
+  "f1_protocol_commit": "b2b99d5",
+  "formal_execution_order": [
+    "run_natural_ugr_dev_gradient_collection_v1.py",
+    "finalize_natural_ugr_dev_mechanistic_v1.py",
+    "run_natural_ugr_dev_feature_archive_v1.py",
+    "run_natural_ugr_dev_candidate_sweep_v1.py"
+  ],
+  "gradient_target_policy": "Use AST-exact historical UGR differentiable_mu from run_ugr_dev_gradient_collection_v1.py.",
+  "ground_truth_policy": "No GT in gradient, mechanistic finalization, or 47-feature construction. GT is used only during candidate sweep to create supervised candidate_correct/repair/break labels.",
+  "historical_source_sha256": {
+    "candidate_sweep": "03c7713bc5d3aa52673a3e648d54361f398908690c627e315bcef6d8fd94c450",
+    "gradient_collection": "392491bc0626cf07a0db6a5fece092f6880b86123cb2a590b525c708d4065313"
+  },
+  "historical_ugr_ref": "unified-geometry-router-v1",
+  "implementation_files": {
+    "scripts/finalize_natural_ugr_dev_mechanistic_v1.py": "8d14bf81e6ba94ed01b8af373e5214664258676494c0243ffc7355f42975a9f2",
+    "scripts/natural_ugr_stage2_common_v1.py": "59e7b4f3a849d86e3b6e636227e55245fe60254161862bbd5e54872563f0d173",
+    "scripts/run_natural_ugr_dev_candidate_sweep_v1.py": "297acd966ad6cdd22f356f167234b14d492567d6aaac174d782591aff2d24a8d",
+    "scripts/run_natural_ugr_dev_feature_archive_v1.py": "ffc7dee6b48c9556bf8474d38a2b62a6a082157ec67212df1518b1be855cf00d",
+    "scripts/run_natural_ugr_dev_gradient_collection_v1.py": "8648ea73cbaa053e0820d6d328fe1bbe2ba8baeab13b4051a017b7bd65712e12"
+  },
+  "smoke_provenance": {
+    "baseline_reproduced": true,
+    "candidate_count": 43,
+    "controller_feature_source": "frozen_archive",
+    "formal_outcome": false,
+    "gradient_shape": [
+      128
+    ],
+    "gradient_target_dtype": "torch.float64",
+    "gradient_target_source": "exact_historical_ugr_differentiable_mu",
+    "ground_truth_used": false,
+    "max_lowrank_shift_ratio_error": 4.76837158203125e-07,
+    "method_counts": {
+      "IDENTITY": 1,
+      "MN": 14,
+      "SA": 14,
+      "WHOLE": 14
+    },
+    "sample_feature_count": 47,
+    "sample_uid": "natural_ugr_dev_v1::q30147433::i92338205",
+    "script_sha256": "ba4b4aff61be51d318cb25959a3a6b867db7c3a6aca12c45693ac4c592994d9d",
+    "summary_sha256": "e2a3cf3a97988ca0e032573848c9a5ccc509b4c28f8fcad27ce5bfc6fc28e3e0"
+  },
+  "stage": "F2 production implementation freeze",
+  "status": "FROZEN BEFORE FORMAL NATURAL-UGR DEVELOPMENT GRADIENT OR CANDIDATE OUTCOMES"
+}
