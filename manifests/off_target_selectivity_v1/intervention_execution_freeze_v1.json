@@ -1,0 +1,45 @@
+{
+  "experiment": "off_target_selectivity_v1",
+  "stage": "intervention_execution_freeze_v1",
+  "freeze_status": "execution semantics frozen before any formal intervention outcome",
+  "created_utc": "2026-09-26T05:24:44.643560+00:00",
+  "population_sha256": "76a409ea7ee097899cc091fb19ecddb8d95f2305d3167989730bf3f22abf204d",
+  "protocol_sha256": "b3fde7262e025ac7c0bb5c11750c9ee218ea7e7ffdb2e0b3130d795c4cc0dad2",
+  "population_freeze_sha256": "3a7de982ad4e9678c1b40ccb3ba1c02ec7b9cf29257242a56e4fdf9ec90eb2c4",
+  "u4_path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+  "u4_sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14",
+  "runner_path": "scripts/run_off_target_intervention_v1.py",
+  "runner_sha256": "8715bc2c1951172ea978503ce33220dac9d172b88a90efb393c0f1986e929c61",
+  "baseline_runner_commit": "60532a05f20affaeeb3ff16e9e3dfe99ed861765",
+  "lifecycle_audit_commit": "277d233f80aaea15fb0a1651b6e0c424a4b1ebd8",
+  "matched_budget_audit_commit": "5eb443c62e719cff6e6488f3f4c39a4ea0497d32",
+  "population_freeze_commit": "f0bd7f5febda98a83cf018f562b2830f8c8c11e1",
+  "population_n": 1000,
+  "lambda_grid": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+  ],
+  "method_order": [
+    "WHOLE",
+    "MN"
+  ],
+  "schedule_order": "population order -> lambda ascending -> WHOLE then MN",
+  "total_conditions": 14000,
+  "whole_semantics": "H'_t = (1 + lambda) H_t",
+  "mn_semantics": "h = mean_t H_t; d = P_U h / ||P_U h||; H'_t = H_t + lambda ||h|| d",
+  "generation_semantics": "intervention applied at every actual L18H13 cross_attn.o_proj pre-hook call during autoregressive generation",
+  "matched_budget_scope": "per-method local current-state budget at each hook; WHOLE and MN additionally required to have identical first-call pre-intervention h norm and target displacement for each sample/lambda pair",
+  "numeric_guardrails": {
+    "max_planned_strength_error": 1e-05,
+    "max_planned_subspace_residual": 1e-05,
+    "max_realized_strength_error": 0.03,
+    "max_realized_mn_subspace_residual": 0.05
+  },
+  "formal_output_state_at_freeze": "no formal intervention output exists",
+  "endpoint_analysis_in_runner": false
+}
