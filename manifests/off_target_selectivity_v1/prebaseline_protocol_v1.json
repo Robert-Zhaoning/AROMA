@@ -16,7 +16,7 @@
     "seed_string": "AROMA-off-target-selectivity-v1-20260922",
     "candidate_count": 10234,
     "candidate_manifest": "manifests/off_target_selectivity_v1/prebaseline_candidate_manifest_v1.csv",
-    "candidate_manifest_sha256": "df05a70a26b4dbeeafcd04ff98a0d5c03ed87d652bcf861cdd3ee4e9c3a850d2",
+    "candidate_manifest_sha256": "129713fe4e746804078a9c574a39f515be40e97d61271b09d52d5def52edcdaf",
     "no_type_quota": true,
     "reason": "avoid image clustering and avoid post-hoc question-type selection"
   },
