@@ -1,0 +1,89 @@
+{
+  "experiment": "off_target_selectivity_v1",
+  "stage": "prebaseline_freeze",
+  "scientific_question": "Under matched finite displacement budgets, does frozen rank-4 MN-CSA preserve baseline-correct non-counting behavior better than whole-head actuation?",
+  "hypothesis_status": "pre-outcome hypothesis; not an established paper claim",
+  "dataset": {
+    "name": "GQA balanced validation",
+    "source_file": "data/gqa_raw/val_balanced_questions.json",
+    "source_sha256": "2f675643c0cfffe0485dbae0c0c0dfc16b547443309a98544502bc1ae87c0779",
+    "total_questions": 132062,
+    "unique_images": 10234,
+    "counting_filter_result": "zero lexical counting-pattern hits and zero numeric-answer questions; therefore no question is excluded for counting risk"
+  },
+  "candidate_sampling": {
+    "rule": "one question per image; choose the question minimizing SHA256(seed_string|image_id|question_id), then globally sort by that hash",
+    "seed_string": "AROMA-off-target-selectivity-v1-20260922",
+    "candidate_count": 10234,
+    "candidate_manifest": "manifests/off_target_selectivity_v1/prebaseline_candidate_manifest_v1.csv",
+    "candidate_manifest_sha256": "df05a70a26b4dbeeafcd04ff98a0d5c03ed87d652bcf861cdd3ee4e9c3a850d2",
+    "no_type_quota": true,
+    "reason": "avoid image clustering and avoid post-hoc question-type selection"
+  },
+  "baseline_population": {
+    "target_n": 1000,
+    "rule": "scan the frozen candidate manifest in candidate_rank order and take the first 1000 examples answered correctly by the frozen baseline model",
+    "selection_uses_intervention_outcomes": false,
+    "missing_or_corrupt_images": "hard error; do not skip and replace samples based on model behavior"
+  },
+  "model": {
+    "id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "weights_frozen": true
+  },
+  "baseline_decoding": {
+    "prompt_template": "Answer the question about the image. Respond with only the short answer, using a single word or short phrase. Do not explain.",
+    "do_sample": false,
+    "max_new_tokens": 12,
+    "correctness": "exact match after frozen minimal generation cleanup",
+    "normalization": [
+      "Unicode NFKC",
+      "lowercase",
+      "first non-empty generated line",
+      "trim whitespace",
+      "collapse internal whitespace",
+      "strip surrounding punctuation only"
+    ]
+  },
+  "intervention_stress_test": {
+    "stage": "run only after the N=1000 baseline-correct population is frozen",
+    "actuator": "Llama L18H13",
+    "subspace": "frozen Llama Top-4 U4",
+    "lambda_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ],
+    "whole_head_definition": "H'_t = (1 + lambda) H_t",
+    "mn_definition": "h = mean_t H_t; d_MN = P_U h / ||P_U h||; H'_t = H_t + lambda * ||h|| * d_MN",
+    "matched_pooled_displacement": "||Delta h_Whole||_2 = ||Delta h_MN||_2 = lambda * ||h||_2",
+    "proposal_controller_used": false,
+    "candidate_utility_router_used": false,
+    "purpose": "geometry-only off-target stress test; not a deployment-policy evaluation"
+  },
+  "primary_endpoint": {
+    "name": "mean_break_burden_across_lambda_grid",
+    "per_sample": "b_m(i) = mean_lambda I[intervention prediction != gold], on the frozen baseline-correct population",
+    "effect": "mean_i[b_MN(i) - b_Whole(i)]",
+    "direction_if_hypothesis_supported": "negative",
+    "interval": "paired bootstrap 95% CI, 20000 repetitions",
+    "bootstrap_seed": 20260922
+  },
+  "secondary_endpoints": [
+    "per-lambda break rate for MN and Whole",
+    "per-lambda MN-vs-Whole paired exact McNemar tests",
+    "MN-only versus Whole-only break discordance",
+    "overall answer-flip rate",
+    "structural and semantic question-type subgroup summaries"
+  ],
+  "analysis_scope": {
+    "primary_population": "baseline-correct, image-unique GQA balanced-validation examples",
+    "confirmatory_status": "prospectively frozen off-target diagnostic",
+    "no_posthoc_gain_selection": true,
+    "no_posthoc_question_type_selection": true
+  }
+}
