@@ -1,0 +1,27 @@
+{
+  "attempt_parent_commit": "6a1e8c147a7f65faef2d6af72e2868e602fa19fa",
+  "candidate_execution_freeze_commit": "6a1e8c1",
+  "completed_candidate_rows": 473,
+  "completed_full_samples": 11,
+  "experiment": "natural_ugr_v1",
+  "failed_sample": {
+    "archived_baseline_prediction": 5,
+    "cohort_uid": "natural_ugr_dev_v1::q9239592916626::i92395929",
+    "failure": "exact baseline reproduction hard gate",
+    "live_baseline_prediction": 6,
+    "population_index_zero_based": 11,
+    "question_id": "9239592916626"
+  },
+  "failed_sample_candidate_execution_started": false,
+  "partial_archive": {
+    "formal_final_artifact": false,
+    "path": "outputs/natural_ugr_v1/development/stage2/candidate_outcomes_v1/partial_candidate_samples.jsonl",
+    "sha256_at_failure": "a3d8878da19de40e8ffc563cfe2a2d1c81fe8cb376f21693452baff33a382bb4"
+  },
+  "performance_summary_computed": false,
+  "policy": "Do not resume, reinterpret, or modify the candidate runner until an outcome-blind baseline reproducibility audit determines whether the frozen Stage-1 baseline can be reproduced in the current execution environment.",
+  "restricted_comparator_selected": false,
+  "router_fitted": false,
+  "stage": "F2F formal candidate sweep attempt 1 failure",
+  "status": "STOPPED BEFORE COMPLETION"
+}
