@@ -1,0 +1,48 @@
+{
+  "analysis_state_at_freeze": {
+    "accuracy_by_method_computed": false,
+    "best_gain_selected": false,
+    "oof_analysis_run": false,
+    "restricted_comparator_selected": false,
+    "router_fitted": false
+  },
+  "b200_qualification_commit": "c5bad7d",
+  "candidate_csv_sha256": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e",
+  "candidate_execution_freeze_commit": "6a1e8c1",
+  "candidate_family_counts": {
+    "IDENTITY": 292,
+    "MN": 4088,
+    "SA": 4088,
+    "WHOLE": 4088
+  },
+  "candidate_rows": 12556,
+  "candidates_per_sample": 43,
+  "current_parent_commit": "c5bad7dcba892d9417c83a65fd7936dc49d66098",
+  "execution_environment": {
+    "device": "NVIDIA B200",
+    "qualification": "292/292 frozen baseline predictions reproduced exactly"
+  },
+  "experiment": "natural_ugr_v1",
+  "formal_artifact_count": 2,
+  "formal_artifacts": {
+    "outputs/natural_ugr_v1/development/stage2/candidate_outcomes_v1/candidate_outcomes_v1.csv": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e",
+    "outputs/natural_ugr_v1/development/stage2/candidate_outcomes_v1/metadata.json": "4b021d7d35ddc2adb7ca09d7f69f99aa627a4ab40033983ec04d229b403c08d8"
+  },
+  "next_permitted_step": "Development-only F3 OOF router analysis under the frozen Natural-UGR protocol.",
+  "population_n": 292,
+  "rejected_workstation_attempt": {
+    "formal_samples_reused": 0,
+    "mixed_with_b200": false
+  },
+  "resumable_checkpoint": {
+    "completed_samples": 292,
+    "exists": true,
+    "formal_artifact": false,
+    "path": "outputs/natural_ugr_v1/development/stage2/candidate_outcomes_v1/partial_candidate_samples.jsonl",
+    "policy": "Complete resumable execution state. Excluded from the formal frozen candidate-outcome artifact set.",
+    "sha256": "e986aab8f8fc386876471d7e867d980d427e8103e73782431d808120847bd00b",
+    "staged_for_freeze": false
+  },
+  "stage": "F2F formal development raw candidate-outcome freeze",
+  "status": "FROZEN AFTER B200 FORMAL CANDIDATE SWEEP AND BEFORE PERFORMANCE ANALYSIS, ROUTER FITTING, OR COMPARATOR SELECTION"
+}
