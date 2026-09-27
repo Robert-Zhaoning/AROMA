@@ -1,0 +1,87 @@
+{
+  "artifact": "Natural UGR development router analysis execution freeze v1",
+  "candidate_outcomes_frozen_before_router_analysis": true,
+  "candidate_rows": 12556,
+  "cross_validation": {
+    "folds": 5,
+    "grouping": "sample",
+    "historical_recipe_exactly_recovered": true,
+    "seed": 20260920,
+    "shuffle": true
+  },
+  "design": {
+    "candidate_channels": 9,
+    "interactions": 423,
+    "sample_features": 47,
+    "total": 479
+  },
+  "experiment": "natural_ugr_v1",
+  "feature_archive_frozen_before_router_analysis": true,
+  "files": {
+    "analysis_runner": {
+      "path": "scripts/run_natural_ugr_dev_router_analysis_v1.py",
+      "sha256": "affbc5530614f4d12198dfbedf951d2259101715a5303e538238db5e4f84ff2e"
+    },
+    "analysis_spec": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/router_analysis_spec_v1.json",
+      "sha256": "4f67dfe3c92b52018546c813c84399f9b6a64dec5c4c4760b9164622edb4950b"
+    },
+    "candidate_freeze": {
+      "path": "manifests/natural_ugr_v1/f2f_raw_candidate_outcomes_freeze_v1.json",
+      "sha256": "e744be9f344b5cca335b36f8e6e15b4a4c7ba07305c2b83b5bee3692c621a0a8"
+    },
+    "candidate_outcomes": {
+      "path": "outputs/natural_ugr_v1/development/stage2/candidate_outcomes_v1/candidate_outcomes_v1.csv",
+      "sha256": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e"
+    },
+    "feature_csv": {
+      "path": "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_features_v1.csv",
+      "sha256": "ea3fa4832cad8b7ff176a5b135e9a8ace23da43ac72d4c9f129cfd219997932b"
+    },
+    "feature_freeze": {
+      "path": "manifests/natural_ugr_v1/f2e_feature_archive_freeze_v1.json",
+      "sha256": "340db935c06001776a49534eb0ffcb5ecd08c06121f7eb681dadd9c0fcb2f603"
+    },
+    "feature_matrix": {
+      "path": "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_matrix_v1.npy",
+      "sha256": "307ff7e96de42c0807b160dd118cb835f1305e5bdf2ae09bdb98aaab6019f5fc"
+    },
+    "feature_names": {
+      "path": "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_names_v1.json",
+      "sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1"
+    },
+    "fold_manifest": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/fold_manifest_v1.csv",
+      "sha256": "89c1e98d3eebb55e1b81ab1ceae7730f5218a0bee0a40d48bea042ce6f0efb44"
+    },
+    "protocol": {
+      "path": "manifests/natural_ugr_v1/protocol_v1.json",
+      "sha256": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47"
+    }
+  },
+  "final_cohort_observed": false,
+  "model": {
+    "C": 1.0,
+    "max_iter": 10000,
+    "pipeline": "StandardScaler + L2 LogisticRegression",
+    "solver": "lbfgs"
+  },
+  "next_allowed_step": "Execute the frozen Natural grouped 5-fold development router analysis and fit the three final development router bundles.",
+  "oof_predictions_generated": false,
+  "population_n": 292,
+  "restricted_comparator_selected": false,
+  "restricted_comparator_selection": [
+    "higher exact OOF accuracy",
+    "fewer OOF breaks if accuracy tied",
+    "smaller mean selected nonzero gain if still tied",
+    "lowrank_restricted if still tied"
+  ],
+  "router_families": [
+    "lowrank_restricted",
+    "whole_restricted",
+    "unified"
+  ],
+  "router_training_performed": false,
+  "source_git_head": "11f4f15b8ed98bb562cec7dd71ba788f9af02419",
+  "status": "FROZEN BEFORE NATURAL UGR DEVELOPMENT ROUTER ANALYSIS"
+}

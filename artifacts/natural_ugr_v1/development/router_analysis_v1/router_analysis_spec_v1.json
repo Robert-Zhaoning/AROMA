@@ -1,0 +1,107 @@
+{
+  "artifact": "Natural UGR development router analysis specification v1",
+  "candidate_channel_count": 9,
+  "candidate_channels": [
+    "is_MN",
+    "is_SA",
+    "is_WHOLE",
+    "MN_gain",
+    "SA_gain",
+    "WHOLE_gain",
+    "MN_gain_sq",
+    "SA_gain_sq",
+    "WHOLE_gain_sq"
+  ],
+  "candidate_rows": 12556,
+  "candidate_selection": {
+    "objective": "highest predicted probability of candidate correctness",
+    "probability_tie_definition": "exact floating-point equality",
+    "tie_break": [
+      "IDENTITY",
+      "smaller gain",
+      "MN",
+      "SA",
+      "WHOLE"
+    ]
+  },
+  "candidates_per_sample": 43,
+  "cross_validation": {
+    "candidate_rows_from_same_sample_share_fold": true,
+    "fold_assignment": "sklearn.model_selection.KFold over the frozen 292-sample development ordering",
+    "historical_recipe_reconstructed_exactly": true,
+    "historical_reconstruction_match": "654/654",
+    "n_folds": 5,
+    "seed": 20260920,
+    "shuffle": true,
+    "type": "sample-grouped five-fold OOF"
+  },
+  "design_feature_count": 479,
+  "design_formula": "47 + 9 + (47 * 9) = 479",
+  "development_reports": [
+    "OOF exact accuracy",
+    "repairs",
+    "breaks",
+    "candidate-selection distribution",
+    "geometry-selection distribution",
+    "gain-selection distribution",
+    "candidate-oracle accuracy",
+    "fraction of candidate-oracle headroom captured"
+  ],
+  "experiment": "natural_ugr_v1",
+  "final_cohort_observed": false,
+  "final_training": {
+    "final_cohort_may_be_observed_before_bundles_freeze": false,
+    "fit_each_router_on_all_292_development_samples": true,
+    "save_three_router_bundles": true
+  },
+  "fold_manifest_sha256": "89c1e98d3eebb55e1b81ab1ceae7730f5218a0bee0a40d48bea042ce6f0efb44",
+  "frozen_input_sha256": {
+    "candidate_freeze": "e744be9f344b5cca335b36f8e6e15b4a4c7ba07305c2b83b5bee3692c621a0a8",
+    "candidate_outcomes": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e",
+    "feature_csv": "ea3fa4832cad8b7ff176a5b135e9a8ace23da43ac72d4c9f129cfd219997932b",
+    "feature_freeze": "340db935c06001776a49534eb0ffcb5ecd08c06121f7eb681dadd9c0fcb2f603",
+    "feature_matrix": "307ff7e96de42c0807b160dd118cb835f1305e5bdf2ae09bdb98aaab6019f5fc",
+    "feature_names": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+    "protocol": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47"
+  },
+  "historical_router_source": {
+    "commit": "d2b5c2bd1b2de022302ca648bf423660c93a33b3",
+    "path": "scripts/run_ugr_dev_router_analysis_v1.py",
+    "sha256": "8e9b9e5359fe35f6c4e62eae033c53a76eb83687501039ec84e84b2b620a688f"
+  },
+  "interaction_policy": "interact every candidate channel with every one of the 47 sample features",
+  "mean_nonzero_gain_policy": "mean candidate_gain among selected non-IDENTITY candidates; 0.0 if none",
+  "population_n": 292,
+  "restricted_comparator_selection": [
+    "higher exact OOF accuracy",
+    "fewer OOF breaks if accuracy tied",
+    "smaller mean selected nonzero gain if still tied",
+    "lowrank_restricted if still tied"
+  ],
+  "router_families": {
+    "lowrank_restricted": [
+      "IDENTITY",
+      "MN",
+      "SA"
+    ],
+    "unified": [
+      "IDENTITY",
+      "MN",
+      "SA",
+      "WHOLE"
+    ],
+    "whole_restricted": [
+      "IDENTITY",
+      "WHOLE"
+    ]
+  },
+  "router_model": {
+    "C": 1.0,
+    "max_iter": 10000,
+    "pipeline": "StandardScaler + L2 LogisticRegression",
+    "solver": "lbfgs",
+    "target": "candidate_correct"
+  },
+  "sample_features": 47,
+  "status": "FROZEN BEFORE NATURAL UGR DEVELOPMENT ROUTER TRAINING"
+}
