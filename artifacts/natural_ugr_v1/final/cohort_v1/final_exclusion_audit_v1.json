@@ -1,0 +1,14 @@
+{
+  "all_pass": true,
+  "complex": 4000,
+  "image_id_overlap_pre_f1": 0,
+  "image_path_overlap_pre_f1": 0,
+  "pixel_sha256_overlap_pre_f1": 0,
+  "question_id_overlap_pre_f1": 0,
+  "selected_total": 8000,
+  "simple": 4000,
+  "unique_image_ids": 8000,
+  "unique_images": 8000,
+  "unique_pixel_sha256": 8000,
+  "unique_question_ids": 8000
+}

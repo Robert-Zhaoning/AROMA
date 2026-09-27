@@ -1,0 +1,41 @@
+{
+  "artifact": "Natural UGR untouched final cohort freeze v1",
+  "cohort": {
+    "complex": 4000,
+    "image_id_overlap": 0,
+    "n": 8000,
+    "pixel_overlap": 0,
+    "question_overlap": 0,
+    "simple": 4000
+  },
+  "files": {
+    "exclusion_audit": {
+      "path": "artifacts/natural_ugr_v1/final/cohort_v1/final_exclusion_audit_v1.json",
+      "sha256": "4afd80f401e66ab9f72f0ff5cd0628e4ed0975836ffe09241f6b28d6c2800d37"
+    },
+    "image_inventory": {
+      "path": "artifacts/natural_ugr_v1/final/cohort_v1/final_image_inventory_v1.csv",
+      "sha256": "b78655e60b559ef27e6df034d6015a5194125233f65ca63c22f8614a84bd932a"
+    },
+    "manifest": {
+      "path": "artifacts/natural_ugr_v1/final/cohort_v1/final_manifest_v1.jsonl",
+      "sha256": "cb9bd03edb1788494d27c2a8f29e1a8a06f19138ce03c43bf867d09233727c83"
+    },
+    "manifest_summary": {
+      "path": "artifacts/natural_ugr_v1/final/cohort_v1/final_manifest_summary_v1.json",
+      "sha256": "5e84c7872fa654523b051526a0e9c305601878c612eb3446404f03a70a3f7b49"
+    }
+  },
+  "final_state_at_freeze": {
+    "model_outcome_observed": false,
+    "stage1_inference_run": false,
+    "stage2_inference_run": false
+  },
+  "provenance": {
+    "cohort_may_not_be_regenerated": true,
+    "development_may_not_be_retuned": true,
+    "generator_freeze_commit": "172a198",
+    "hierarchical_router_freeze_commit": "df8212b"
+  },
+  "status": "FROZEN BEFORE ANY FINAL MODEL INFERENCE"
+}

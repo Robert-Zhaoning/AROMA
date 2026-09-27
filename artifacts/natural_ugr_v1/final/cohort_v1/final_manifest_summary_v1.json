@@ -1,0 +1,38 @@
+{
+  "answer_used_for_ordering": false,
+  "artifact": "Natural UGR untouched final source cohort v1",
+  "image_inventory_sha256": "b78655e60b559ef27e6df034d6015a5194125233f65ca63c22f8614a84bd932a",
+  "manifest_sha256": "cb9bd03edb1788494d27c2a8f29e1a8a06f19138ce03c43bf867d09233727c83",
+  "model_outcome_observed": false,
+  "pre_f1_exclusion_universe": {
+    "image_ids": 8000,
+    "image_paths": 8000,
+    "pixel_sha256": 8000,
+    "question_ids": 8000
+  },
+  "rejections": {
+    "new_duplicate_image": 945,
+    "new_duplicate_image_id": 0,
+    "new_duplicate_pixel": 0,
+    "pre_f1_image": 5551,
+    "pre_f1_image_id": 0,
+    "pre_f1_pixel": 0,
+    "pre_f1_question_id": 8000
+  },
+  "selected": {
+    "complex": 4000,
+    "simple": 4000,
+    "total": 8000,
+    "unique_image_ids": 8000,
+    "unique_images": 8000,
+    "unique_pixel_sha256": 8000,
+    "unique_question_ids": 8000
+  },
+  "selection_rule": "Global SHA256 metadata-only order; greedy 4000 Simple / 4000 Complex selection; question/image/image_id uniqueness; pixel collisions rejected in frozen order.",
+  "selection_salt": "AROMA_NATURAL_UGR_FINAL_V1_20260926",
+  "selection_seed": 20260926,
+  "source": "official TallyQA test.json",
+  "source_sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2",
+  "stage1_inference_run": false,
+  "status": "GENERATED AFTER DEVELOPMENT ROUTER AND COMPARATOR FREEZE"
+}
