@@ -1,0 +1,124 @@
+{
+  "artifact": "Natural UGR v2 final Stage-2 feature-input freeze v1",
+  "candidate_runner": {
+    "path": "scripts/run_natural_ugr_v2_final_candidate_sweep_v1.py",
+    "sha256": "2a6bdf61b2a9c016abff6b3d3faa589de5c933bfcb2ecf826b1899059adbb00c"
+  },
+  "candidate_space": {
+    "families": [
+      "IDENTITY",
+      "MN",
+      "SA",
+      "WHOLE"
+    ],
+    "full_exhaustive_sweep": true,
+    "gains": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75,
+      3.0,
+      3.25,
+      3.5,
+      4.0
+    ]
+  },
+  "feature_contract": {
+    "candidate_outcomes_used_for_feature_construction": false,
+    "controller_features": 39,
+    "feature_name_schema_sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+    "ground_truth_used_for_feature_construction": false,
+    "mechanistic_features": 6,
+    "proposal_features": 2,
+    "total_sample_features": 47
+  },
+  "input_inventory": {
+    "feature_archive": {
+      "outputs/natural_ugr_v2/final/stage2/feature_archive_v1/metadata.json": {
+        "sha256": "d857ac71f573c9a98cee563b849ae1a55efe5ad224372025eabec787f88ef053",
+        "size_bytes": 608
+      },
+      "outputs/natural_ugr_v2/final/stage2/feature_archive_v1/stage2_sample_feature_matrix_v1.npy": {
+        "sha256": "7cc5b0a00da62559f66b74b53308f2f696979d213a57812f082078a13e93cd8e",
+        "size_bytes": 237384
+      },
+      "outputs/natural_ugr_v2/final/stage2/feature_archive_v1/stage2_sample_feature_names_v1.json": {
+        "sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+        "size_bytes": 1671
+      },
+      "outputs/natural_ugr_v2/final/stage2/feature_archive_v1/stage2_sample_features_v1.csv": {
+        "sha256": "39f480994398cf5d6ef6e2c28eceb13aea4587a4dc1b6b866fd15f06e7af04ea",
+        "size_bytes": 593494
+      }
+    },
+    "gradient": {
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/cohort_uids.npy": {
+        "sha256": "026f5ada297ae6a1e4c98b45d782a9ba06c3430b461c7efc8ef71e9829ed1b71",
+        "size_bytes": 30680
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/gradient_matrix.npy": {
+        "sha256": "2377aba9d2147ca54475ea50f86361fba062d9f3c1f62108335350e102463cdf",
+        "size_bytes": 646272
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/metadata.json": {
+        "sha256": "e3976f810e2bb183530872d41e9fbfbdd306bdfbe158ebf2e54f3b4e505bfbe0",
+        "size_bytes": 697
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/mu.npy": {
+        "sha256": "dbf14670771d25ef950c27133420aaccb79fea8ae71db4db6c169481a836122f",
+        "size_bytes": 5176
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/pooled_h_matrix.npy": {
+        "sha256": "54019def64446560eb910fcc445fc5ce827c19c366bf258062e08d2219653c37",
+        "size_bytes": 646272
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/sample_ids.npy": {
+        "sha256": "60b12a13e7e6b4de931392e0d39e5a15418850a0f3adeab2c6874a988531181c",
+        "size_bytes": 9226
+      },
+      "outputs/natural_ugr_v2/final/stage2/gradient_collection_v1/token_lengths.npy": {
+        "sha256": "2e844824c0c27fcb369c8d2d2962a193c11e495afefe9173198babaa5b4336e5",
+        "size_bytes": 5176
+      }
+    },
+    "mechanistic": {
+      "outputs/natural_ugr_v2/final/stage2/mechanistic_collection_v1/mechanistic_summary_v1.csv": {
+        "sha256": "36eba7346611f06cc921e053f7c62c75c6309d7bba4d11f4325f8dc2647e05e0",
+        "size_bytes": 237002
+      },
+      "outputs/natural_ugr_v2/final/stage2/mechanistic_collection_v1/metadata.json": {
+        "sha256": "6ab41c63b41aa47e19007a05141edb1fc98a5c0efb2526327cc1491657c661e4",
+        "size_bytes": 447
+      },
+      "outputs/natural_ugr_v2/final/stage2/mechanistic_collection_v1/mn_directions.npy": {
+        "sha256": "fce6b4949a4c9d2bba642c3e2091c3b27d0c1b9ec5bd6a570cb8529f3ddd1b8b",
+        "size_bytes": 646272
+      },
+      "outputs/natural_ugr_v2/final/stage2/mechanistic_collection_v1/sa_directions.npy": {
+        "sha256": "2f1f4860152206f81fd956a28c805d443bf9e7255e2cd3cc5ab1a447ee4f5aa0",
+        "size_bytes": 646272
+      }
+    }
+  },
+  "population": {
+    "candidate_count_per_sample": 43,
+    "expected_candidate_rows": 27133,
+    "n": 631,
+    "population_sha256": "1aa8a2fe44b9ee80b6f87c06937d6e509c32d06985f08399b30340dcb06d1f0b",
+    "rule": "selected_alpha > 1"
+  },
+  "source_git_head": "468c155356a1f84ad28589b94063fdcd2fc68455",
+  "state_at_freeze": {
+    "candidate_outcomes_observed": false,
+    "population_changed": false,
+    "primary_router_changed": false,
+    "primary_router_retrained": false
+  },
+  "status": "FROZEN BEFORE ANY FINAL CANDIDATE OUTCOMES"
+}

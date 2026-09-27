@@ -1,0 +1,12 @@
+{
+  "candidate_outcomes_used_in_feature_construction": false,
+  "controller_feature_count": 39,
+  "controller_feature_source": "frozen_natural_stage1_archive",
+  "experiment": "natural_ugr_v2_final_stage2_feature_archive_v1",
+  "feature_count": 47,
+  "feature_csv_sha256": "39f480994398cf5d6ef6e2c28eceb13aea4587a4dc1b6b866fd15f06e7af04ea",
+  "feature_matrix_sha256": "7cc5b0a00da62559f66b74b53308f2f696979d213a57812f082078a13e93cd8e",
+  "feature_names_sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+  "ground_truth_used_in_feature_construction": false,
+  "population_n": 631
+}

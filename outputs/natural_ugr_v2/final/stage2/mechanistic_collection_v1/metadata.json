@@ -1,0 +1,14 @@
+{
+  "U4_sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14",
+  "definitions": {
+    "MN": "normalize(P_U h)",
+    "SA": "normalize(P_U g)",
+    "activation_capture": "||P_U h||_2 / ||h||_2",
+    "gradient_capture": "||P_U g||_2 / ||g||_2",
+    "logs": "base-10",
+    "sa_sensitivity": "||h||_2 * ||P_U g||_2"
+  },
+  "experiment": "natural_ugr_v2_final_mechanistic_v1",
+  "ground_truth_used": false,
+  "population_n": 631
+}
