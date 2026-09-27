@@ -1,0 +1,67 @@
+{
+  "artifact": "Natural UGR development router results freeze v1",
+  "baseline": {
+    "accuracy": 0.3013698630136986,
+    "correct": 88
+  },
+  "contrast_policy": "Integer correct-count contrast is authoritative; percentage-point contrast is derived from counts.",
+  "development_oof": {
+    "lowrank_restricted": {
+      "accuracy": 0.3219178082191781,
+      "breaks": 7,
+      "candidate_oracle_correct": 115,
+      "correct": 94,
+      "repairs": 13
+    },
+    "unified": {
+      "accuracy": 0.3595890410958904,
+      "breaks": 7,
+      "candidate_oracle_correct": 131,
+      "correct": 105,
+      "repairs": 24
+    },
+    "whole_restricted": {
+      "accuracy": 0.3801369863013699,
+      "breaks": 1,
+      "candidate_oracle_correct": 122,
+      "correct": 111,
+      "repairs": 24
+    }
+  },
+  "development_population_n": 292,
+  "development_unified_minus_selected_restricted_correct": -6,
+  "development_unified_minus_selected_restricted_pp": -2.054794520547945,
+  "experiment": "natural_ugr_v1",
+  "formal_result_artifacts": {
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/oof_selections_v1.csv": "18662fbdeec0b711c07b49ccc8670025fa706511acc1d633e2316390cb6adf40",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_analysis_metadata_v1.json": "7722b51e85a478424059a79d59d53fda1ef6aa38c3fec7ddca29b5f8b7466e34",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_bundle_manifest_v1.json": "49ce897b9a6a2d02d4f5fee191a32c43dd9e003b7203218a61a219593a7b08c7",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_lowrank_restricted_v1.joblib": "b1007a0f51d7667a06f3ca187267c991652c23c2989492ac09ba6f3c08f18e44",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_unified_v1.joblib": "f310fde7e2b2c424e55ad7ff76531db34d0e62037658d18881340f57fdb284f7",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_whole_restricted_v1.joblib": "2636e1343811cce11c98306df4006f52199644cb41142d7622f9a4bcc242bf8a",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/selected_restricted_comparator_v1.json": "05341f3db3b83a4a0b1e9438449d0443eb2f0ad864026d94f5a12d924a6f71e2",
+    "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/summary_v1.json": "247bf113b2ad8cbb1e574b7bf7657cb1261108ec38cf6d355060f594dc74fb63"
+  },
+  "next_allowed_step": "Freeze the untouched Natural-UGR final-cohort generation/evaluation implementation, then generate the prospectively specified fresh N=8000 TallyQA source cohort.",
+  "restricted_comparator_selection_reason": "higher exact OOF accuracy",
+  "router_analysis_implementation_commit": "aa48594",
+  "router_bundles_frozen": [
+    "router_lowrank_restricted_v1.joblib",
+    "router_whole_restricted_v1.joblib",
+    "router_unified_v1.joblib"
+  ],
+  "scientific_state": {
+    "candidate_grid_modification_permitted": false,
+    "comparator_reselection_permitted": false,
+    "development_results_observed": true,
+    "feature_modification_permitted": false,
+    "final_cohort_observed": false,
+    "restricted_comparator_identity_frozen": true,
+    "restricted_comparator_selected": true,
+    "router_retraining_permitted": false,
+    "router_training_performed": true
+  },
+  "selected_restricted_comparator": "whole_restricted",
+  "source_git_head": "aa485947bf4dcb13d6eece60b4c40dfcbc281ad1",
+  "status": "FROZEN AFTER DEVELOPMENT OOF ANALYSIS AND BEFORE FINAL-COHORT GENERATION"
+}

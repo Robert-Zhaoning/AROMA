@@ -1,0 +1,26 @@
+{
+  "experiment": "natural_ugr_dev_router_analysis_v1",
+  "final_cohort_observed": false,
+  "restricted_comparator_selected": true,
+  "router_training_performed": true,
+  "selected_restricted_comparator": "whole_restricted",
+  "sha256": {
+    "analysis_spec": "4f67dfe3c92b52018546c813c84399f9b6a64dec5c4c4760b9164622edb4950b",
+    "bundle_manifest": "49ce897b9a6a2d02d4f5fee191a32c43dd9e003b7203218a61a219593a7b08c7",
+    "candidate_outcome_freeze": "e744be9f344b5cca335b36f8e6e15b4a4c7ba07305c2b83b5bee3692c621a0a8",
+    "candidate_outcomes": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e",
+    "execution_freeze": "f573918662b04dd15f654b55fa5ea62f3a3ed8c6c5ada86a19f9f6481cecb49e",
+    "feature_freeze": "340db935c06001776a49534eb0ffcb5ecd08c06121f7eb681dadd9c0fcb2f603",
+    "feature_matrix": "307ff7e96de42c0807b160dd118cb835f1305e5bdf2ae09bdb98aaab6019f5fc",
+    "feature_names": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+    "fold_manifest": "89c1e98d3eebb55e1b81ab1ceae7730f5218a0bee0a40d48bea042ce6f0efb44",
+    "oof_selections": "18662fbdeec0b711c07b49ccc8670025fa706511acc1d633e2316390cb6adf40",
+    "protocol": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47",
+    "router_lowrank": "b1007a0f51d7667a06f3ca187267c991652c23c2989492ac09ba6f3c08f18e44",
+    "router_unified": "f310fde7e2b2c424e55ad7ff76531db34d0e62037658d18881340f57fdb284f7",
+    "router_whole": "2636e1343811cce11c98306df4006f52199644cb41142d7622f9a4bcc242bf8a",
+    "selected_comparator": "05341f3db3b83a4a0b1e9438449d0443eb2f0ad864026d94f5a12d924a6f71e2",
+    "summary": "247bf113b2ad8cbb1e574b7bf7657cb1261108ec38cf6d355060f594dc74fb63"
+  },
+  "status": "development OOF complete; three final development routers fit"
+}

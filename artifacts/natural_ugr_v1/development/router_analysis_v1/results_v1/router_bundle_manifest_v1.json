@@ -1,0 +1,21 @@
+{
+  "routers": {
+    "lowrank_restricted": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_lowrank_restricted_v1.joblib",
+      "sha256": "b1007a0f51d7667a06f3ca187267c991652c23c2989492ac09ba6f3c08f18e44",
+      "training_candidate_rows": 8468
+    },
+    "unified": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_unified_v1.joblib",
+      "sha256": "f310fde7e2b2c424e55ad7ff76531db34d0e62037658d18881340f57fdb284f7",
+      "training_candidate_rows": 12556
+    },
+    "whole_restricted": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_whole_restricted_v1.joblib",
+      "sha256": "2636e1343811cce11c98306df4006f52199644cb41142d7622f9a4bcc242bf8a",
+      "training_candidate_rows": 4380
+    }
+  },
+  "selected_restricted_comparator": "whole_restricted",
+  "version": "NATURAL_UGR_ROUTER_BUNDLE_MANIFEST_V1"
+}

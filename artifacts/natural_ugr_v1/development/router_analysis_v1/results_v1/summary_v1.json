@@ -1,0 +1,149 @@
+{
+  "baseline": {
+    "accuracy": 0.3013698630136986,
+    "correct": 88
+  },
+  "development_population_n": 292,
+  "experiment": "natural_ugr_v1",
+  "restricted_selection_reason": "higher exact OOF accuracy",
+  "routers": {
+    "lowrank_restricted": {
+      "baseline_accuracy": 0.3013698630136986,
+      "baseline_correct": 88,
+      "breaks": 7,
+      "candidate_oracle_accuracy": 0.3938356164383562,
+      "candidate_oracle_correct": 115,
+      "candidate_oracle_headroom_pp": 9.246575342465757,
+      "fold_accuracy": {
+        "0": 0.3220338983050847,
+        "1": 0.3389830508474576,
+        "2": 0.3275862068965517,
+        "3": 0.2413793103448276,
+        "4": 0.3793103448275862
+      },
+      "fraction_candidate_oracle_headroom_captured": 0.22222222222222243,
+      "mean_selected_nonzero_gain": 2.7437759336099585,
+      "n": 292,
+      "nonidentity_selections": 241,
+      "repairs": 13,
+      "router": "lowrank_restricted",
+      "router_accuracy": 0.3219178082191781,
+      "router_correct": 94,
+      "router_minus_baseline_pp": 2.054794520547948,
+      "selection_gain_counts": {
+        "0.00": 51,
+        "0.50": 44,
+        "0.75": 7,
+        "1.00": 5,
+        "1.25": 9,
+        "1.50": 9,
+        "1.75": 5,
+        "2.00": 5,
+        "2.25": 7,
+        "2.50": 9,
+        "2.75": 4,
+        "3.00": 6,
+        "3.25": 3,
+        "3.50": 7,
+        "4.00": 121
+      },
+      "selection_method_counts": {
+        "IDENTITY": 51,
+        "MN": 161,
+        "SA": 80
+      }
+    },
+    "unified": {
+      "baseline_accuracy": 0.3013698630136986,
+      "baseline_correct": 88,
+      "breaks": 7,
+      "candidate_oracle_accuracy": 0.4486301369863014,
+      "candidate_oracle_correct": 131,
+      "candidate_oracle_headroom_pp": 14.726027397260278,
+      "fold_accuracy": {
+        "0": 0.4067796610169492,
+        "1": 0.3728813559322034,
+        "2": 0.3448275862068966,
+        "3": 0.27586206896551724,
+        "4": 0.39655172413793105
+      },
+      "fraction_candidate_oracle_headroom_captured": 0.3953488372093023,
+      "mean_selected_nonzero_gain": 3.1591760299625467,
+      "n": 292,
+      "nonidentity_selections": 267,
+      "repairs": 24,
+      "router": "unified",
+      "router_accuracy": 0.3595890410958904,
+      "router_correct": 105,
+      "router_minus_baseline_pp": 5.82191780821918,
+      "selection_gain_counts": {
+        "0.00": 25,
+        "0.50": 28,
+        "0.75": 4,
+        "1.00": 4,
+        "1.25": 3,
+        "1.50": 5,
+        "1.75": 11,
+        "2.00": 5,
+        "2.25": 6,
+        "2.50": 4,
+        "2.75": 4,
+        "3.00": 14,
+        "3.25": 8,
+        "3.50": 9,
+        "4.00": 162
+      },
+      "selection_method_counts": {
+        "IDENTITY": 25,
+        "MN": 66,
+        "SA": 55,
+        "WHOLE": 146
+      }
+    },
+    "whole_restricted": {
+      "baseline_accuracy": 0.3013698630136986,
+      "baseline_correct": 88,
+      "breaks": 1,
+      "candidate_oracle_accuracy": 0.4178082191780822,
+      "candidate_oracle_correct": 122,
+      "candidate_oracle_headroom_pp": 11.64383561643836,
+      "fold_accuracy": {
+        "0": 0.423728813559322,
+        "1": 0.3898305084745763,
+        "2": 0.3275862068965517,
+        "3": 0.3275862068965517,
+        "4": 0.43103448275862066
+      },
+      "fraction_candidate_oracle_headroom_captured": 0.6764705882352943,
+      "mean_selected_nonzero_gain": 3.223004694835681,
+      "n": 292,
+      "nonidentity_selections": 213,
+      "repairs": 24,
+      "router": "whole_restricted",
+      "router_accuracy": 0.3801369863013699,
+      "router_correct": 111,
+      "router_minus_baseline_pp": 7.876712328767127,
+      "selection_gain_counts": {
+        "0.00": 79,
+        "0.50": 20,
+        "0.75": 2,
+        "1.00": 5,
+        "1.50": 3,
+        "1.75": 5,
+        "2.00": 4,
+        "2.25": 6,
+        "2.50": 10,
+        "2.75": 4,
+        "3.00": 7,
+        "3.25": 9,
+        "3.50": 6,
+        "4.00": 132
+      },
+      "selection_method_counts": {
+        "IDENTITY": 79,
+        "WHOLE": 213
+      }
+    }
+  },
+  "selected_restricted_comparator": "whole_restricted"
+}

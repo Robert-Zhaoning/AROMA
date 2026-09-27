@@ -1,0 +1,22 @@
+{
+  "lowrank_restricted": {
+    "breaks": 7,
+    "mean_selected_nonzero_gain": 2.7437759336099585,
+    "router_accuracy": 0.3219178082191781,
+    "router_correct": 94
+  },
+  "selected_restricted_comparator": "whole_restricted",
+  "selection_reason": "higher exact OOF accuracy",
+  "selection_rule": [
+    "higher exact OOF accuracy",
+    "fewer OOF breaks if tied",
+    "smaller mean selected nonzero gain if still tied",
+    "lowrank_restricted if still tied"
+  ],
+  "whole_restricted": {
+    "breaks": 1,
+    "mean_selected_nonzero_gain": 3.223004694835681,
+    "router_accuracy": 0.3801369863013699,
+    "router_correct": 111
+  }
+}
