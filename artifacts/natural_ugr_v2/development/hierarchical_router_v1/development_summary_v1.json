@@ -1,0 +1,47 @@
+{
+  "artifact": "Natural UGR v2 hierarchical development summary",
+  "evidence_class": "EXPLORATORY DEVELOPMENT; formulation chosen after observing Natural UGR v1 development",
+  "families": {
+    "unified_hierarchical": {
+      "accuracy": 0.3561643835616438,
+      "baseline_correct": 88,
+      "breaks": 0,
+      "correct": 104,
+      "interventions": 30,
+      "n": 292,
+      "oracle_accuracy": 0.4486301369863014,
+      "oracle_correct": 131,
+      "repairs": 16,
+      "selection_methods": {
+        "IDENTITY": 262,
+        "MN": 6,
+        "SA": 1,
+        "WHOLE": 23
+      }
+    },
+    "whole_hierarchical": {
+      "accuracy": 0.3424657534246575,
+      "baseline_correct": 88,
+      "breaks": 0,
+      "correct": 100,
+      "interventions": 21,
+      "n": 292,
+      "oracle_accuracy": 0.4178082191780822,
+      "oracle_correct": 122,
+      "repairs": 12,
+      "selection_methods": {
+        "IDENTITY": 271,
+        "WHOLE": 21
+      }
+    }
+  },
+  "interpretation": "Hierarchical intervention gating followed by conditional action ranking converts the Natural development comparison from v1's negative point estimate to a positive Unified-vs-Whole point estimate while producing zero breaks in both hierarchical policies. Untouched final evidence is required for confirmation.",
+  "population_n": 292,
+  "primary_comparison": {
+    "exploratory_exact_p": 0.21875,
+    "unified_minus_whole_correct": 4,
+    "unified_minus_whole_pp": 1.36986301369863,
+    "unified_only_correct": 5,
+    "whole_only_correct": 1
+  }
+}

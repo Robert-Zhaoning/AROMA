@@ -1,0 +1,52 @@
+{
+  "artifact": "Natural UGR v2 hierarchical router specification",
+  "development_status": "FROZEN AFTER EXPLORATORY DEVELOPMENT, BEFORE FINAL",
+  "development_tuning_after_this_freeze": false,
+  "final_primary_comparison": "unified_hierarchical vs whole_hierarchical",
+  "fold_source": "artifacts/natural_ugr_v1/development/router_analysis_v1/fold_manifest_v1.csv",
+  "folds": 5,
+  "gate": {
+    "C": 1.0,
+    "features": 47,
+    "model": "StandardScaler + L2 LogisticRegression",
+    "target": "identity incorrect and at least one available nonidentity action correct",
+    "threshold": 0.5
+  },
+  "input_sha256": {
+    "candidate_outcomes": "fb60fd5e2a33d8b05f0ac860fb6a098a464c58d0652b936cf47dafb91e6d795e",
+    "feature_names": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+    "fold_manifest": "89c1e98d3eebb55e1b81ab1ceae7730f5218a0bee0a40d48bea042ce6f0efb44",
+    "sample_features": "ea3fa4832cad8b7ff176a5b135e9a8ace23da43ac72d4c9f129cfd219997932b"
+  },
+  "oof_sha256": "2301532d43add75cbdf52f0d34e94848a1d3abfbd7dc45416989ab04655bfea7",
+  "population_n": 292,
+  "ranker": {
+    "C": 1.0,
+    "dimensions": 432,
+    "maximum_pairs_per_sample": 128,
+    "model": "pairwise StandardScaler + L2 LogisticRegression",
+    "sample_weighting": "equal total pair weight per source sample"
+  },
+  "router_bundles": {
+    "unified_hierarchical": {
+      "path": "artifacts/natural_ugr_v2/development/hierarchical_router_v1/router_unified_hierarchical_v1.joblib",
+      "sha256": "57da4a76c461e06bdcac19ea21e305e1c61d60949294db140b6c369cadefeb53"
+    },
+    "whole_hierarchical": {
+      "path": "artifacts/natural_ugr_v2/development/hierarchical_router_v1/router_whole_hierarchical_v1.joblib",
+      "sha256": "67649a24fcf7446f31609390c2f5bcccf160166ed47cafebca30e79ffc92aabc"
+    }
+  },
+  "summary_sha256": "7da2bf4de3b8fb5ea52d03a3869042da1f581d32974b2964660aa4789289177b",
+  "unified_family": [
+    "IDENTITY",
+    "MN",
+    "SA",
+    "WHOLE"
+  ],
+  "untouched_final_observed": false,
+  "whole_family": [
+    "IDENTITY",
+    "WHOLE"
+  ]
+}
