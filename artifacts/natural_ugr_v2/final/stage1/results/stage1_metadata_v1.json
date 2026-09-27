@@ -1,0 +1,20 @@
+{
+  "action_distribution_sha256": "cbb9820e5e0b040120923e3b1174214393ab6a48b4c1da9af144db6ae9dd9888",
+  "artifact": "Natural UGR v2 final Stage-1 result",
+  "baseline_accuracy": 0.637875,
+  "baseline_correct": 5103,
+  "controller_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+  "development_retuned": false,
+  "manifest_sha256": "cb9bd03edb1788494d27c2a8f29e1a8a06f19138ce03c43bf867d09233727c83",
+  "model_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "n": 8000,
+  "no_candidate_sweep_executed": true,
+  "no_stage2_router_executed": true,
+  "runner_sha256": "b0a16392ea1543f09f1c919631f4558254503dbf1f3fbaa6257795548fffeadc",
+  "stage1_action_manifest_sha256": "c83aca9bac3ba620883385e4077d497f740ec53df73594715b42397a4d4c3540",
+  "status": "COMPLETE",
+  "upward_definition": "selected_alpha > 1",
+  "upward_n": 631,
+  "upward_population_sha256": "85c7f480696e1474de8a9884488d7f90f211c0ec381fc2233537d2ee6250cd06"
+}

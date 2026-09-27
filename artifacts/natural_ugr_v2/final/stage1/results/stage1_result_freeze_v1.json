@@ -1,0 +1,53 @@
+{
+  "artifact": "Natural UGR v2 final Stage-1 result freeze v1",
+  "files": {
+    "action_distribution": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/stage1_action_distribution_v1.csv",
+      "sha256": "cbb9820e5e0b040120923e3b1174214393ab6a48b4c1da9af144db6ae9dd9888"
+    },
+    "action_manifest": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/stage1_action_manifest_v1.csv",
+      "sha256": "c83aca9bac3ba620883385e4077d497f740ec53df73594715b42397a4d4c3540"
+    },
+    "metadata": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/stage1_metadata_v1.json",
+      "sha256": "1c7fbe0af3122a0ceaca90a7e5d644387d1476f6671db5b53622e570a0f0d2e8"
+    },
+    "run_started": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/stage1_run_started_v1.json",
+      "sha256": "9c4c7744b8f317b99c8d7ac413c6576fe51b7cd61fa74709d36a2fd7c3150120"
+    },
+    "upward_population": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/upward_population_v1.csv",
+      "sha256": "85c7f480696e1474de8a9884488d7f90f211c0ec381fc2233537d2ee6250cd06"
+    }
+  },
+  "full_final_population": {
+    "baseline_accuracy": 0.637875,
+    "baseline_correct": 5103,
+    "n": 8000
+  },
+  "proposal_action_distribution": {
+    "0.0": 990,
+    "1.0": 6379,
+    "1.5": 64,
+    "2.0": 271,
+    "4.0": 296
+  },
+  "source_git_head": "2703fd6a99bb880ffd74836678d9c4dff5056ec1",
+  "stage2_population": {
+    "definition": "selected_alpha > 1",
+    "fraction": 0.078875,
+    "n": 631,
+    "population_may_not_be_redefined": true,
+    "resampling_allowed": false,
+    "top_up_allowed": false
+  },
+  "stage2_state_at_freeze": {
+    "candidate_sweep_run": false,
+    "intervention_outcomes_observed": false,
+    "mechanistic_collection_run": false,
+    "router_executed": false
+  },
+  "status": "FROZEN AFTER STAGE-1 BEFORE STAGE-2"
+}
