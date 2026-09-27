@@ -1,0 +1,100 @@
+{
+  "artifact": "Natural UGR v2 exhaustive final Stage-2 execution freeze v1",
+  "candidate_space": {
+    "candidates_per_sample": 43,
+    "families": [
+      "IDENTITY",
+      "MN",
+      "SA",
+      "WHOLE"
+    ],
+    "gain_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75,
+      3.0,
+      3.25,
+      3.5,
+      4.0
+    ],
+    "total_candidate_rows": 27133
+  },
+  "exhaustive_final_analysis": {
+    "family_oracle_analysis": true,
+    "full_candidate_sweep": true,
+    "gain_analysis": true,
+    "oracle_analysis": true,
+    "repair_break_analysis": true,
+    "subgroup_analysis": true
+  },
+  "files": {
+    "candidate_sweep_runner": {
+      "path": "scripts/run_natural_ugr_v2_final_candidate_sweep_v1.py",
+      "sha256": "2a6bdf61b2a9c016abff6b3d3faa589de5c933bfcb2ecf826b1899059adbb00c"
+    },
+    "controller_feature_mapping": {
+      "path": "manifests/natural_ugr_v2/controller_feature_mapping_v1.json",
+      "sha256": "fd54a75ceef7c65be8c18903c6d52049c9b8f262afb1c22761145316ab41ee73"
+    },
+    "feature_archive_runner": {
+      "path": "scripts/run_natural_ugr_v2_final_feature_archive_v1.py",
+      "sha256": "e8fc86cb2b94a4449f0633e8d0c342721bdbd97ccc8f26b3e91b8f8086661f82"
+    },
+    "final_stage2_population": {
+      "path": "manifests/natural_ugr_v2/final_stage2_population_v1.csv",
+      "sha256": "1aa8a2fe44b9ee80b6f87c06937d6e509c32d06985f08399b30340dcb06d1f0b"
+    },
+    "gradient_runner": {
+      "path": "scripts/run_natural_ugr_v2_final_gradient_collection_v1.py",
+      "sha256": "4ebd646b88477f27e8d8eccf5fc37108046e0a92305b43803a75496696563e73"
+    },
+    "hierarchical_unified_router": {
+      "path": "artifacts/natural_ugr_v2/development/hierarchical_router_v1/router_unified_hierarchical_v1.joblib",
+      "sha256": "57da4a76c461e06bdcac19ea21e305e1c61d60949294db140b6c369cadefeb53"
+    },
+    "hierarchical_whole_router": {
+      "path": "artifacts/natural_ugr_v2/development/hierarchical_router_v1/router_whole_hierarchical_v1.joblib",
+      "sha256": "67649a24fcf7446f31609390c2f5bcccf160166ed47cafebca30e79ffc92aabc"
+    },
+    "mechanistic_finalizer": {
+      "path": "scripts/finalize_natural_ugr_v2_final_mechanistic_v1.py",
+      "sha256": "b22a1bf1cace6858b046a8ade5388c8c49acf9070e05c4e62e8b68b5e8fcbf6e"
+    },
+    "protocol": {
+      "path": "manifests/natural_ugr_v2/protocol_v1.json",
+      "sha256": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47"
+    },
+    "stage1_result_freeze": {
+      "path": "artifacts/natural_ugr_v2/final/stage1/results/stage1_result_freeze_v1.json",
+      "sha256": "a54cd5029d31c9128dd7f506dbaa5982cff97cb1fecc5e87d37eaf7fcaea362d"
+    }
+  },
+  "population": {
+    "n": 631,
+    "resampling": false,
+    "rule": "selected_alpha > 1",
+    "source_stage1_freeze": "c7388b8",
+    "top_up": false
+  },
+  "primary_policy": {
+    "development_retuning_allowed": false,
+    "final_candidate_outcomes_may_not_be_used_to_retune_primary_router": true,
+    "unified_router": "frozen hierarchical Unified v1",
+    "whole_router": "frozen hierarchical Whole-only v1"
+  },
+  "source_git_head": "c7388b8ad8e92a102b4600100438e06207eabe8c",
+  "state_at_freeze": {
+    "candidate_outcomes_observed": false,
+    "final_router_result_observed": false,
+    "gradient_collection_executed": false,
+    "mechanistic_features_observed": false
+  },
+  "status": "FROZEN BEFORE FINAL STAGE-2 MECHANISTIC OR CANDIDATE OUTCOMES"
+}

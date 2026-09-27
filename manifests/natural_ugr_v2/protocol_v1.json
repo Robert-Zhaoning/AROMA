@@ -1,0 +1,320 @@
+{
+  "experiment": "Natural-domain Unified Geometry Router v1",
+  "short_name": "natural_ugr_v1",
+  "status": "FROZEN BEFORE NATURAL STAGE-2 CANDIDATE OUTCOMES",
+  "scientific_question": "Does example-conditional selection among identity, MN, SA, and WHOLE geometry provide positive utility on natural TallyQA counting examples beyond the strongest development-selected geometry-restricted router?",
+  "model": {
+    "id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "attention_implementation": "eager",
+    "torch_dtype": "bfloat16",
+    "actuator": {
+      "layer": 18,
+      "head": 13,
+      "head_dim": 128,
+      "hidden_slice": [
+        1664,
+        1792
+      ]
+    }
+  },
+  "historical_ugr_source": {
+    "ref": "unified-geometry-router-v1",
+    "commit": "d2b5c2bd1b2de022302ca648bf423660c93a33b3",
+    "policy": "Mechanically reuse the historical UGR-v1 candidate semantics, 47-feature representation, candidate encoding, router model class, OOF procedure, tie-breaking, and restricted comparator rule.",
+    "files": {
+      "protocol": {
+        "path": "docs/UNIFIED_GEOMETRY_ROUTER_PROTOCOL_v1.md",
+        "sha256": "ae38b6f5eb948e0b941265a0573138264de55d6571000a5f01b0d7f1bd1f4005"
+      },
+      "router_analysis": {
+        "path": "scripts/run_ugr_dev_router_analysis_v1.py",
+        "sha256": "8e9b9e5359fe35f6c4e62eae033c53a76eb83687501039ec84e84b2b620a688f"
+      },
+      "candidate_sweep": {
+        "path": "scripts/run_ugr_dev_stage2_candidate_sweep_v1.py",
+        "sha256": "03c7713bc5d3aa52673a3e648d54361f398908690c627e315bcef6d8fd94c450"
+      },
+      "feature_archive": {
+        "path": "scripts/run_ugr_dev_stage2_feature_archive_v1.py",
+        "sha256": "ffcf2c5d5c79fc07d54ff3b23b87868f611e537e6f1133e1de2caeda3ffb8b72"
+      },
+      "gradient_collection": {
+        "path": "scripts/run_ugr_dev_gradient_collection_v1.py",
+        "sha256": "392491bc0626cf07a0db6a5fece092f6880b86123cb2a590b525c708d4065313"
+      },
+      "u4_primary": {
+        "path": "artifacts/unified_geometry_router_v1/frozen_inputs/U4_primary.npy",
+        "sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+      },
+      "router_spec": {
+        "path": "artifacts/unified_geometry_router_v1/development/router_analysis_v1/router_analysis_spec_v1.json",
+        "sha256": "296917420d54d191d203fc0817c9e50ae8ee05a60723bf65d2c65c688a4e77d1"
+      },
+      "candidate_spec": {
+        "path": "artifacts/unified_geometry_router_v1/development/stage2/candidate_sweep_spec_v1.json",
+        "sha256": "4380ca8b311d28cb9ecc407deeb39c85ac1258cb53e0bf2181407cfa6b90c2cb"
+      },
+      "implementation_spec": {
+        "path": "artifacts/unified_geometry_router_v1/development/stage2/implementation_spec_v1.json",
+        "sha256": "2b1e65beb5969a77695ad510488590812f9ed773105a444c4ac1345ac832f66d"
+      }
+    }
+  },
+  "development": {
+    "source": "outputs/tallyqa_natural_confirmation_v2/final_frozen_controller/tallyqa_final_results.csv",
+    "source_sha256": "8a03c6d888f1b0a3e664e86f0a541e5a9d77b23a983e7383000773b4cba574d9",
+    "population_definition": "selected_alpha > 1.0",
+    "n_total_source": 4000,
+    "n_stage2": 292,
+    "subset_distribution": {
+      "complex": 222,
+      "simple": 70
+    },
+    "alpha_distribution": {
+      "1.5": 32,
+      "2.0": 122,
+      "4.0": 138
+    },
+    "question_id_unique": true,
+    "image_id_unique": true,
+    "allowed_use": "Development only. May be used for natural Stage-2 candidate outcome generation, feature collection, grouped OOF router development, restricted comparator selection, and final router fitting.",
+    "not_final": true
+  },
+  "candidate_family": {
+    "identity": {
+      "method": "IDENTITY",
+      "gain": 0.0,
+      "meaning": "No Stage-2 displacement."
+    },
+    "geometries": [
+      "MN",
+      "SA",
+      "WHOLE"
+    ],
+    "gain_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75,
+      3.0,
+      3.25,
+      3.5,
+      4.0
+    ],
+    "candidates_per_stage2_sample": 43,
+    "candidate_order": [
+      "IDENTITY",
+      "MN gains ascending",
+      "SA gains ascending",
+      "WHOLE gains ascending"
+    ],
+    "semantics": {
+      "MN": "d_MN = normalize((h @ U4) @ U4.T); Delta h = gain * (selected_alpha - 1) * ||h||_2 * d_MN",
+      "SA": "d_SA = normalize(Pg); Delta h = gain * (selected_alpha - 1) * ||h||_2 * d_SA",
+      "WHOLE": "effective_alpha = 1 + gain * (selected_alpha - 1); multiply the full L18H13 slice by effective_alpha"
+    },
+    "no_post_outcome_change": true
+  },
+  "sample_features": {
+    "count": 47,
+    "composition": "39 frozen natural Proposal Controller features + selected_alpha + selected_score + 6 mechanistic summaries",
+    "feature_order": [
+      "ctrl__baseline_best_numeral",
+      "ctrl__baseline_conditional_margin",
+      "ctrl__baseline_entropy",
+      "ctrl__baseline_entropy_norm",
+      "ctrl__baseline_expected_numeral",
+      "ctrl__baseline_numprob_0",
+      "ctrl__baseline_numprob_1",
+      "ctrl__baseline_numprob_10",
+      "ctrl__baseline_numprob_11",
+      "ctrl__baseline_numprob_12",
+      "ctrl__baseline_numprob_13",
+      "ctrl__baseline_numprob_14",
+      "ctrl__baseline_numprob_15",
+      "ctrl__baseline_numprob_2",
+      "ctrl__baseline_numprob_3",
+      "ctrl__baseline_numprob_4",
+      "ctrl__baseline_numprob_5",
+      "ctrl__baseline_numprob_6",
+      "ctrl__baseline_numprob_7",
+      "ctrl__baseline_numprob_8",
+      "ctrl__baseline_numprob_9",
+      "ctrl__baseline_top1_prob",
+      "ctrl__baseline_vocab_numeral_mass",
+      "ctrl__geom_down_boundary_gap",
+      "ctrl__geom_down_distance_mass",
+      "ctrl__geom_down_mass",
+      "ctrl__geom_expected_minus_pred",
+      "ctrl__geom_local_asymmetry",
+      "ctrl__geom_p_down1",
+      "ctrl__geom_p_down2",
+      "ctrl__geom_p_up1",
+      "ctrl__geom_p_up2",
+      "ctrl__geom_signed_distance_mass",
+      "ctrl__geom_signed_tail_mass",
+      "ctrl__geom_top2_prob",
+      "ctrl__geom_up_boundary_gap",
+      "ctrl__geom_up_distance_mass",
+      "ctrl__geom_up_down_logratio",
+      "ctrl__geom_up_mass",
+      "selected_alpha",
+      "selected_score",
+      "mech__log_pg_norm",
+      "mech__log_h_norm",
+      "mech__log_sa_sensitivity",
+      "mech__cos_pug_puh",
+      "mech__gradient_capture",
+      "mech__activation_capture"
+    ],
+    "ground_truth_allowed_in_feature_construction": false,
+    "candidate_outcomes_allowed_in_feature_construction": false
+  },
+  "mechanistic_features": [
+    "mech__log_pg_norm",
+    "mech__log_h_norm",
+    "mech__log_sa_sensitivity",
+    "mech__cos_pug_puh",
+    "mech__gradient_capture",
+    "mech__activation_capture"
+  ],
+  "candidate_encoding": {
+    "channels": [
+      "is_MN",
+      "is_SA",
+      "is_WHOLE",
+      "MN_gain",
+      "SA_gain",
+      "WHOLE_gain",
+      "MN_gain_sq",
+      "SA_gain_sq",
+      "WHOLE_gain_sq"
+    ],
+    "sample_candidate_interactions": "all 47 x 9",
+    "design_feature_count": 479,
+    "identity_reference": "all nine candidate channels equal zero"
+  },
+  "router": {
+    "model": "StandardScaler + L2 LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 10000,
+    "target": "candidate_correct",
+    "families": {
+      "lowrank_restricted": [
+        "IDENTITY",
+        "MN",
+        "SA"
+      ],
+      "whole_restricted": [
+        "IDENTITY",
+        "WHOLE"
+      ],
+      "unified": [
+        "IDENTITY",
+        "MN",
+        "SA",
+        "WHOLE"
+      ]
+    }
+  },
+  "cross_validation": {
+    "folds": 5,
+    "seed": 20260920,
+    "policy": "Reuse the exact historical UGR KFold/fold construction implementation. All 43 candidate rows from one natural sample must remain in the same fold.",
+    "selection_objective": "highest predicted candidate-correctness probability",
+    "probability_tie_definition": "exact floating-point equality",
+    "tie_break": [
+      "IDENTITY",
+      "smaller gain",
+      "MN",
+      "SA",
+      "WHOLE"
+    ]
+  },
+  "restricted_comparator_selection": {
+    "eligible": [
+      "lowrank_restricted",
+      "whole_restricted"
+    ],
+    "rule": [
+      "higher grouped-OOF exact-count accuracy",
+      "fewer OOF breaks if accuracy tied",
+      "smaller mean selected nonzero gain if still tied",
+      "lowrank_restricted if still tied"
+    ],
+    "selection_timing": "After development OOF results, before any Natural-UGR final cohort generation."
+  },
+  "final_cohort": {
+    "generation_timing": "May be generated only after development candidate outcomes, natural Stage-2 feature archive, all three final router bundles, restricted comparator identity, and analysis implementation are frozen and committed.",
+    "target_total_n": 8000,
+    "target_simple_n": 4000,
+    "target_complex_n": 4000,
+    "selection_seed": 20260926,
+    "one_question_per_image": true,
+    "selection_policy": "Use the same TallyQA source eligibility and answer-validity rules as confirmation-v2, then deterministically select fresh examples after excluding every pre-F1 TallyQA question/image used by formal natural-domain AROMA experiments.",
+    "required_exclusions": [
+      "zero question_id overlap with all pre-F1 formal TallyQA cohorts",
+      "zero image_id overlap with all pre-F1 formal TallyQA cohorts",
+      "zero pixel-SHA256 overlap with all pre-F1 formal TallyQA cohorts"
+    ],
+    "collision_policy": "If a deterministically selected candidate collides by image or pixel hash, reject it and take the next deterministic candidate under the frozen ordering.",
+    "realized_stage2_population": "All and only final samples for which the unchanged frozen natural Stage-1 controller produces selected_alpha > 1.0.",
+    "no_upward_top_up": true,
+    "no_resampling_after_stage1": true,
+    "evaluation_once": true
+  },
+  "primary_comparison": {
+    "population": "realized fresh final samples with selected_alpha > 1.0",
+    "experimental": "unified router",
+    "comparator": "development-selected strongest geometry-restricted router",
+    "endpoint": "paired exact-count accuracy",
+    "effect": "unified accuracy minus restricted accuracy in percentage points",
+    "mcnemar": {
+      "type": "exact paired McNemar",
+      "alternative": "two-sided"
+    },
+    "bootstrap": {
+      "type": "paired nonparametric sample bootstrap",
+      "reps": 20000,
+      "seed": 20260922,
+      "interval": "95% percentile CI"
+    }
+  },
+  "secondary_endpoints": [
+    "unified-only versus restricted-only count",
+    "repairs and breaks",
+    "geometry-selection distribution",
+    "gain-selection distribution",
+    "identity-selection fraction",
+    "candidate-oracle accuracy",
+    "fraction of oracle headroom captured",
+    "composite full-cohort exact-count accuracy: retain frozen Stage-1 action on non-upward samples and use Stage-2 router choice on upward samples"
+  ],
+  "interpretation_policy": {
+    "statistically_supported_natural_transfer": "unified-minus-restricted > 0, paired 95% bootstrap CI lower bound > 0, and exact McNemar p < 0.05",
+    "positive_but_uncertain_transfer": "unified-minus-restricted > 0 and unified-only > restricted-only, but one or both conventional paired uncertainty criteria do not cross the prespecified threshold",
+    "no_positive_transfer": "unified-minus-restricted <= 0",
+    "scientific_scope": "The primary hypothesis tests whether example-conditional geometry routing provides positive natural-domain utility. It does not require MN, SA, or WHOLE to be universally superior."
+  },
+  "prohibited_after_f1": [
+    "change geometry set",
+    "change gain grid",
+    "change 47-feature representation",
+    "change 9 candidate channels",
+    "change router model class or C",
+    "change CV fold count or seed",
+    "change deterministic candidate tie-break",
+    "change restricted-comparator selection rule",
+    "change primary endpoint",
+    "change primary statistical tests",
+    "change target final cohort size based on development candidate outcomes"
+  ]
+}
