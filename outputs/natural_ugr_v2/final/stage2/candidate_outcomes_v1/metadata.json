@@ -1,0 +1,30 @@
+{
+  "candidate_csv_sha256": "c4b81a58947b29293f8a10835358c473e10198bf4a9c5d07d0b3136a84b61020",
+  "candidate_rows": 27133,
+  "candidates_per_sample": 43,
+  "experiment": "natural_ugr_v2_final_stage2_candidate_sweep_v1",
+  "gains": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    4.0
+  ],
+  "ground_truth_role": "used only for candidate_correct / repair / break outcome labels",
+  "method_counts": {
+    "IDENTITY": 631,
+    "MN": 8834,
+    "SA": 8834,
+    "WHOLE": 8834
+  },
+  "population_n": 631
+}

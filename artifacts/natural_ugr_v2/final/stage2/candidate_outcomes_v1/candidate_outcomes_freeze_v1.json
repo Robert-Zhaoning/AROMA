@@ -1,0 +1,17 @@
+{
+  "artifact": "Natural UGR v2 final exhaustive candidate-outcome freeze v1",
+  "candidate_csv_sha256": "c4b81a58947b29293f8a10835358c473e10198bf4a9c5d07d0b3136a84b61020",
+  "candidate_rows": 27133,
+  "candidate_space_changed": false,
+  "candidates_per_sample": 43,
+  "development_retuned": false,
+  "metadata_sha256": "a2d719c6ea4159b98ebded5458f5e200362be916bced5951b09ba27a2f58fc24",
+  "method_counts": {
+    "IDENTITY": 631,
+    "MN": 8834,
+    "SA": 8834,
+    "WHOLE": 8834
+  },
+  "population_n": 631,
+  "routers_retrained": false
+}
