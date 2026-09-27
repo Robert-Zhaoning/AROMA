@@ -1,0 +1,20 @@
+{
+  "accepted": true,
+  "candidate_interventions_executed": false,
+  "candidate_outcomes_read": false,
+  "device": "NVIDIA B200",
+  "experiment": "natural_ugr_v1",
+  "ground_truth_accessed": false,
+  "match_count": 292,
+  "max_abs_expected_numeral_delta": 8.881784197001252e-16,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "performance_summary_computed": false,
+  "population_n": 292,
+  "python_version": "3.11.16",
+  "qualification_rule": "ACCEPT iff all 292 frozen discrete baseline predictions are exactly reproduced",
+  "router_fitted": false,
+  "stage": "B200 outcome-blind baseline execution qualification",
+  "torch_version": "2.11.0+cu128"
+}
