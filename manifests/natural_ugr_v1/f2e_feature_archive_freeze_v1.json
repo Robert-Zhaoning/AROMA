@@ -1,0 +1,43 @@
+{
+  "audit": {
+    "all_finite": true,
+    "csv_round_trip_exact": true,
+    "feature_csv_shape": [
+      292,
+      52
+    ],
+    "feature_matrix_shape": [
+      292,
+      47
+    ],
+    "feature_name_count": 47
+  },
+  "candidate_outcomes_observed": false,
+  "candidate_outcomes_used": false,
+  "controller_feature_count": 39,
+  "controller_feature_source": "frozen_natural_stage1_archive",
+  "current_parent_commit": "f03882ffcc62155ca0b412cfce2d16fd82fa75cb",
+  "design_semantics": "39 F1-frozen GT-free natural controller features + selected_alpha + selected_score + six F2D-frozen mechanistic summaries",
+  "experiment": "natural_ugr_v1",
+  "feature_count": 47,
+  "formal_artifact_count": 4,
+  "formal_artifacts": {
+    "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/metadata.json": "4a7025c8beb36b4d5f1c4320ec1ec54eb95297cd3f19549ee3bbc2deb76a2800",
+    "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_matrix_v1.npy": "307ff7e96de42c0807b160dd118cb835f1305e5bdf2ae09bdb98aaab6019f5fc",
+    "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_names_v1.json": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+    "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_features_v1.csv": "ea3fa4832cad8b7ff176a5b135e9a8ace23da43ac72d4c9f129cfd219997932b"
+  },
+  "ground_truth_used": false,
+  "mechanistic_feature_count": 6,
+  "mechanistic_freeze_commit": "f03882f",
+  "next_permitted_step": "Formal development 43-candidate sweep over the frozen N=292 population.",
+  "population_n": 292,
+  "proposal_feature_count": 2,
+  "serialization_policy": {
+    "csv": "human-readable tabular mirror; exactly recoverable using pandas float_precision='round_trip'",
+    "round_trip_exact": true,
+    "scientific_matrix": "stage2_sample_feature_matrix_v1.npy is the canonical float64 design matrix"
+  },
+  "stage": "F2E Stage-2 47-feature archive freeze",
+  "status": "FROZEN AFTER 47-FEATURE CONSTRUCTION AND BEFORE DEVELOPMENT CANDIDATE OUTCOMES"
+}
