@@ -1,0 +1,154 @@
+{
+  "candidate_contract": {
+    "MN": 14,
+    "SA": 14,
+    "WHOLE": 14,
+    "candidates_per_sample": 43,
+    "formal_candidate_rows": 12556,
+    "gains": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75,
+      3.0,
+      3.25,
+      3.5,
+      4.0
+    ],
+    "identity": 1,
+    "ordering": "IDENTITY, then MN ascending gain, then SA ascending gain, then WHOLE ascending gain"
+  },
+  "candidate_outcomes_observed": false,
+  "chronology": [
+    {
+      "commit": "b2b99d5",
+      "stage": "prospective protocol freeze"
+    },
+    {
+      "commit": "244cd2c",
+      "stage": "Stage-2 implementation freeze"
+    },
+    {
+      "commit": "6a41fa8",
+      "stage": "formal raw-gradient freeze"
+    },
+    {
+      "commit": "f03882f",
+      "stage": "mechanistic collection freeze"
+    },
+    {
+      "commit": "81a9044",
+      "stage": "47-feature archive freeze"
+    }
+  ],
+  "current_parent_commit": "81a90445a741e5b181b18a26e403af845280ff78",
+  "execution_semantics": {
+    "MN": "normalize(P_U h) with gain*(alpha-1)*||h|| displacement",
+    "SA": "frozen normalize(P_U g) with gain*(alpha-1)*||h|| displacement",
+    "WHOLE": "effective_alpha = 1 + gain*(selected_alpha-1)",
+    "free_generation": false,
+    "head": 13,
+    "head_dim": 128,
+    "identity": "unmodified baseline state",
+    "layer": 18,
+    "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "prompt_semantics": "Frozen natural TallyQA question with 'Return the number only.' suffix"
+  },
+  "experiment": "natural_ugr_v1",
+  "formal_input_sha256": {
+    "MN_directions": {
+      "path": "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/mn_directions.npy",
+      "sha256": "4b1ce8ea70a01659846ada3d95f1155334c0a65bd0aeb470e77a4f9f157ab5f9"
+    },
+    "SA_directions": {
+      "path": "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/sa_directions.npy",
+      "sha256": "7fdf6b5f51b12ffbc1e2b642260653eb3cf206d844808c461e26c892f11c21cf"
+    },
+    "U4": {
+      "path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+      "sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+    },
+    "candidate_runner": {
+      "path": "scripts/run_natural_ugr_dev_candidate_sweep_v1.py",
+      "sha256": "297acd966ad6cdd22f356f167234b14d492567d6aaac174d782591aff2d24a8d"
+    },
+    "common_module": {
+      "path": "scripts/natural_ugr_stage2_common_v1.py",
+      "sha256": "59e7b4f3a849d86e3b6e636227e55245fe60254161862bbd5e54872563f0d173"
+    },
+    "development_population": {
+      "path": "manifests/natural_ugr_v1/development_population_v1.csv",
+      "sha256": "de509f52bbd7cac0974282f49c2a2e33e5d80450dbbcf2e13cee3eda1f01c1ca"
+    },
+    "feature_freeze": {
+      "path": "manifests/natural_ugr_v1/f2e_feature_archive_freeze_v1.json",
+      "sha256": "340db935c06001776a49534eb0ffcb5ecd08c06121f7eb681dadd9c0fcb2f603"
+    },
+    "feature_matrix": {
+      "path": "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_matrix_v1.npy",
+      "sha256": "307ff7e96de42c0807b160dd118cb835f1305e5bdf2ae09bdb98aaab6019f5fc"
+    },
+    "feature_names": {
+      "path": "outputs/natural_ugr_v1/development/stage2/feature_archive_v1/stage2_sample_feature_names_v1.json",
+      "sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1"
+    },
+    "gradient_freeze": {
+      "path": "manifests/natural_ugr_v1/f2c_gradient_freeze_v1.json",
+      "sha256": "dd97c7b27bd5bca6729531d409f0dac0ddada58266b63f6e39cc7c29d0ae7fdd"
+    },
+    "head_gain_helper": {
+      "path": "scripts/run_l18h13_gain_all300.py",
+      "sha256": "436cc0842f8f79298c268efdb5efa3c3525f2d273405791aadbccb0d01868983"
+    },
+    "implementation_freeze": {
+      "path": "manifests/natural_ugr_v1/f2_implementation_freeze_v1.json",
+      "sha256": "c00e1ecc963b9bc637f2ecf325d47bd2a6c7a1101f78667da2ca5c996af9f9d0"
+    },
+    "mechanistic_freeze": {
+      "path": "manifests/natural_ugr_v1/f2d_mechanistic_freeze_v1.json",
+      "sha256": "63fb5943f354a5c0b70966ee10107fd5857518f7aa516f9c8ea4f2fa1bbcad42"
+    },
+    "mechanistic_summary": {
+      "path": "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/mechanistic_summary_v1.csv",
+      "sha256": "83538e2bb8971052d9aa9f13bfaec764e49e651baa8a99bcdbcee7c30ea59c3e"
+    },
+    "natural_prompt_helper": {
+      "path": "scripts/run_tallyqa_natural_confirmation_v2_final.py",
+      "sha256": "0b14deb9cbf0fe73ecacd1f0584a94df8abd4949ae657b1b38f2ed4a15018d5d"
+    },
+    "numeral_metrics_helper": {
+      "path": "scripts/expanded_numeral_metrics.py",
+      "sha256": "c554f2ea1364e9c82f60d802d69bc3e79b115b02164f1b6a27e206ebb7d809be"
+    },
+    "protocol": {
+      "path": "manifests/natural_ugr_v1/protocol_v1.json",
+      "sha256": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47"
+    }
+  },
+  "ground_truth_policy": "Ground truth is accessed only after the GT-free baseline/input execution and is used only to label candidate_correct, repair, and break.",
+  "next_permitted_step": "Execute the formal N=292 x 43 development candidate sweep.",
+  "parent_feature_freeze_commit": "81a9044",
+  "population": {
+    "n": 292,
+    "selected_alpha_counts": {
+      "1.5": 32,
+      "2.0": 122,
+      "4.0": 138
+    }
+  },
+  "runtime_environment": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "python": "Python 3.11.16",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0"
+  },
+  "stage": "F2F candidate execution freeze",
+  "status": "FROZEN BEFORE FORMAL NATURAL-UGR DEVELOPMENT CANDIDATE OUTCOMES"
+}
