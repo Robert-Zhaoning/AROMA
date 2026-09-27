@@ -1,0 +1,13 @@
+{
+  "artifact": "Natural UGR v2 B200 baseline/controller replay v1",
+  "baseline_prediction_matches": 630,
+  "baseline_prediction_mismatches": 1,
+  "candidate_interventions_executed": false,
+  "controller_action_matches": 629,
+  "controller_action_mismatches": 2,
+  "csv_sha256": "7723e120562f88d2dae62313bbeb2ae205e3ba36d3e0811d0ab62a73bbe21ea7",
+  "max_selected_score_abs_difference": 0.13469089186189842,
+  "n": 631,
+  "population_redefined": false,
+  "router_retrained": false
+}

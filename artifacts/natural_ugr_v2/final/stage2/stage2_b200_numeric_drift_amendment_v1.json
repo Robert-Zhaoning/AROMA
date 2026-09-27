@@ -1,0 +1,65 @@
+{
+  "artifact": "Natural UGR v2 final Stage-2 B200 numeric-drift execution amendment v1",
+  "execution_change": {
+    "allowed_baseline_drift_question_id": 9236394016419,
+    "new_behavior": "Only the single baseline mismatch identified by the full pre-resume B200 replay audit is allowed to continue; any other baseline prediction mismatch still aborts execution.",
+    "old_behavior": "Any live B200 baseline prediction mismatch aborted candidate execution."
+  },
+  "files": {
+    "b200_replay_csv": {
+      "path": "artifacts/natural_ugr_v2/final/stage2/b200_baseline_replay_v1/b200_baseline_replay_v1.csv",
+      "sha256": "7723e120562f88d2dae62313bbeb2ae205e3ba36d3e0811d0ab62a73bbe21ea7"
+    },
+    "b200_replay_json": {
+      "path": "artifacts/natural_ugr_v2/final/stage2/b200_baseline_replay_v1/b200_baseline_replay_v1.json",
+      "sha256": "f0f61c4279ef0d494e29d2f35f3e11599306612d501c60612cc1fcbc725ec917"
+    },
+    "partial_candidate_archive_at_amendment": {
+      "path": "outputs/natural_ugr_v2/final/stage2/candidate_outcomes_v1/partial_candidate_samples.jsonl",
+      "sha256": "0fa93de4efa4a892d98b1f3b194d25b4cd90be024d5a631df71087334e4e8967"
+    },
+    "patched_candidate_runner": {
+      "path": "scripts/run_natural_ugr_v2_final_candidate_sweep_v1.py",
+      "sha256": "1b96b26cabc714124b365b9fe88d325e763baccf1d39559a512a44b39ee13112"
+    }
+  },
+  "frozen_scientific_semantics": {
+    "candidate_actions_continue_to_use": "frozen Stage-1 selected_alpha",
+    "candidate_space_changed": false,
+    "development_retuned": false,
+    "identity_candidate_continues_to_use": "frozen Stage-1 baseline_prediction",
+    "identity_reference_changed": false,
+    "router_changed": false,
+    "router_retrained": false,
+    "stage1_selected_alpha_changed": false,
+    "stage1_selected_score_changed": false,
+    "stage2_population_changed": false,
+    "stage2_population_n": 631
+  },
+  "reason": "A full 631-sample B200 replay identified one baseline prediction drift and two Proposal Controller action drifts relative to the already-frozen Stage-1 archive.",
+  "replay_summary": {
+    "baseline_exact": 630,
+    "baseline_mismatch": 1,
+    "baseline_mismatch_question_ids": [
+      9236394016419
+    ],
+    "controller_action_exact": 629,
+    "controller_action_mismatch": 2,
+    "controller_action_mismatch_question_ids": [
+      9240518013706,
+      9236394016419
+    ],
+    "max_selected_score_abs_difference": 0.1346908918618984,
+    "n": 631
+  },
+  "source_git_head": "fe155b8497c586b5633697c026f889e9e20c6e29",
+  "status": "FROZEN BEFORE RESUMING CANDIDATE EXECUTION",
+  "timing": {
+    "amendment_motivated_by_candidate_performance": false,
+    "completed_candidate_rows_before_failure": 430,
+    "completed_samples_before_failure": 10,
+    "failure_occurred_before_candidate_rows_for_failure_sample": true,
+    "failure_question_id": 9236394016419,
+    "failure_sample_stage2_index": 10
+  }
+}
