@@ -1,0 +1,50 @@
+{
+  "artifact": "Natural UGR v2 final Stage-1 execution freeze v1",
+  "candidate_sweep_executed": false,
+  "cohort": {
+    "cohort_freeze_path": "artifacts/natural_ugr_v1/final/cohort_v1/final_cohort_freeze_v1.json",
+    "cohort_freeze_sha256": "d47f1175d981c1a2fd708038861369d21164ea53d46945253779852200fb9b62",
+    "manifest_path": "artifacts/natural_ugr_v1/final/cohort_v1/final_manifest_v1.jsonl",
+    "manifest_sha256": "cb9bd03edb1788494d27c2a8f29e1a8a06f19138ce03c43bf867d09233727c83",
+    "n": 8000
+  },
+  "controller": {
+    "actions": [
+      0.0,
+      1.0,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "bundle_path": "outputs/phase2_natural_controller_k500/final_frozen_controller/aroma_natural_utility_controller_k500.joblib",
+    "bundle_sha256": "d9d8ba3a24814bf71b3f4039d1effa864b57754a00539f1260a1d077c03449f5",
+    "feature_count": 39,
+    "type": "AROMA natural K500 Proposal Controller"
+  },
+  "development_retuning_after_this_freeze": false,
+  "final_outcomes_observed_at_freeze": false,
+  "model": {
+    "attention_implementation": "eager",
+    "dtype": "bfloat16",
+    "id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5"
+  },
+  "qualification": {
+    "path": "artifacts/natural_ugr_v2/final/stage1/rtxpro6000_qualification_v1.json",
+    "sha256": "df26405931427cc28182bfcfa28b7ae021baea7c155040fb5ac92de061f29c3a",
+    "status": "PASS"
+  },
+  "runner": {
+    "path": "scripts/run_natural_ugr_v2_final_stage1.py",
+    "resume_policy": "technical interruption only",
+    "sha256": "b0a16392ea1543f09f1c919631f4558254503dbf1f3fbaa6257795548fffeadc"
+  },
+  "source_git_head": "311107d",
+  "stage2_population": {
+    "resampling": false,
+    "rule": "all and only final samples with selected_alpha > 1",
+    "top_up": false
+  },
+  "stage2_router_executed": false,
+  "status": "FROZEN BEFORE NATURAL UGR V2 FINAL STAGE-1 INFERENCE"
+}

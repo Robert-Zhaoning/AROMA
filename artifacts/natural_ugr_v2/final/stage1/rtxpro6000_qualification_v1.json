@@ -1,0 +1,59 @@
+{
+  "artifact": "RTX PRO 6000 Blackwell Natural Stage-1 qualification v1",
+  "status": "PASS",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "vram_mib": 97887,
+  "driver": "595.91.07",
+  "driver_cuda": "13.2",
+  "torch": "2.11.0+cu128",
+  "torch_cuda": "12.8",
+  "bf16_supported": true,
+  "archived_replay_samples": 5,
+  "baseline_prediction_matches": 5,
+  "controller_action_matches": 5,
+  "actions_tested": [
+    0.0,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "samples": [
+    {
+      "question_id": 923603034952,
+      "action": 0.0,
+      "baseline_prediction_match": true,
+      "action_match": true,
+      "selected_score_abs_difference": 0.0002374
+    },
+    {
+      "question_id": 30149352,
+      "action": 1.0,
+      "baseline_prediction_match": true,
+      "action_match": true,
+      "selected_score_abs_difference": 0.0001086
+    },
+    {
+      "question_id": 30147433,
+      "action": 1.5,
+      "baseline_prediction_match": true,
+      "action_match": true,
+      "selected_score_abs_difference": 0.001203
+    },
+    {
+      "question_id": 90001034563,
+      "action": 2.0,
+      "baseline_prediction_match": true,
+      "action_match": true,
+      "selected_score_abs_difference": 0.00007158
+    },
+    {
+      "question_id": 923312939315,
+      "action": 4.0,
+      "baseline_prediction_match": true,
+      "action_match": true,
+      "selected_score_abs_difference": 0.034405
+    }
+  ],
+  "interpretation": "Baseline predictions and frozen discrete controller actions reproduced exactly on all five archived replay samples. Platform-dependent controller-score drift was observed but did not alter any selected action."
+}
