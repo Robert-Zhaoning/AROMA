@@ -1,0 +1,67 @@
+{
+  "audit": {
+    "gradient_norm": {
+      "max": 0.032708298448085794,
+      "median": 0.005975095695404081,
+      "min": 8.279009124698315e-07
+    },
+    "h_norm": {
+      "max": 93.5312828111703,
+      "median": 64.34123081673378,
+      "min": 47.71385083687056
+    },
+    "mu": {
+      "max": 9.42062962494225,
+      "median": 3.3995257191291692,
+      "min": 1.000061881985068
+    },
+    "token_length": {
+      "max": 36,
+      "median": 24.0,
+      "min": 20
+    }
+  },
+  "current_parent_commit": "244cd2c8073f0ad882481668d4459aba3463a097",
+  "downstream_state_at_freeze": {
+    "candidate_outcomes_observed": false,
+    "candidate_sweep_run": false,
+    "feature_archive_run": false,
+    "mechanistic_finalization_run": false
+  },
+  "experiment": "natural_ugr_v1",
+  "formal_artifact_count": 7,
+  "formal_artifacts": {
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/cohort_uids.npy": "57789ec42c80b17f243a023cc7a90f148c6cbf61350b4fa4215091276940b0b2",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/gradient_matrix.npy": "711bf56cedbb8e6a07188afcb5ab82763dbf66db23d635c5789fe05a8c7d2c54",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/metadata.json": "514ec414a22a140394ee6fa963303d65aabb83efe4b1818c73f4bddfcb7e9c85",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/mu.npy": "8597fa0e3952760a171e6e6ee8bc4e9da7ecf5cf141f39531b45673db4685724",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/pooled_h_matrix.npy": "8dffc04870b32ac2efa26641e60e44863d0f900580d3995a32c8eb9653397ed4",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/sample_ids.npy": "1bc90ac85d50705408628ba9756f187c1e841bc3cc7552793c28dc4643791977",
+    "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/token_lengths.npy": "3eca8de0c7f09514c623511364dd58bd2d12ed1f110c195eb6b289638217fb4e"
+  },
+  "gradient_target": "exact historical UGR differentiable_mu",
+  "ground_truth_used": false,
+  "implementation_freeze_commit": "244cd2c",
+  "next_permitted_step": "Deterministic CPU-only mechanistic finalization using the frozen G/H/U4 inputs.",
+  "partial_checkpoint": {
+    "exists": true,
+    "formal_artifact": false,
+    "path": "outputs/natural_ugr_v1/development/stage2/gradient_collection_v1/partial_gradient_collection_v1.npz",
+    "policy": "Resume-only checkpoint. Explicitly excluded from the formal frozen artifact set.",
+    "staged_for_freeze": false
+  },
+  "population": {
+    "gradient_matrix_shape": [
+      292,
+      128
+    ],
+    "head_dim": 128,
+    "n": 292,
+    "pooled_h_matrix_shape": [
+      292,
+      128
+    ]
+  },
+  "stage": "F2C formal development raw-gradient freeze",
+  "status": "FROZEN AFTER FORMAL N=292 GRADIENT COLLECTION AND BEFORE MECHANISTIC FINALIZATION OR CANDIDATE OUTCOMES"
+}
