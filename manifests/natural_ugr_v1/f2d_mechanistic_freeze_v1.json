@@ -1,0 +1,52 @@
+{
+  "audit": {
+    "mn_norm_max": 1.0000000000000002,
+    "mn_norm_min": 0.9999999999999998,
+    "mn_shape": [
+      292,
+      128
+    ],
+    "sa_norm_max": 1.0000000000000002,
+    "sa_norm_min": 0.9999999999999998,
+    "sa_shape": [
+      292,
+      128
+    ],
+    "summary_shape": [
+      292,
+      20
+    ]
+  },
+  "candidate_outcomes_used": false,
+  "current_parent_commit": "6a41fa83df8a2361744d309ca3a5a6bb76efbb19",
+  "definitions": {
+    "activation_capture": "||P_U h||_2 / ||h||_2",
+    "cosine": "cos(P_U g, P_U h)",
+    "gradient_capture": "||P_U g||_2 / ||g||_2",
+    "log_transform": "base-10",
+    "mn_direction": "normalize(P_U h)",
+    "sa_direction": "normalize(P_U g)",
+    "sa_sensitivity": "||h||_2 * ||P_U g||_2"
+  },
+  "downstream_state_at_freeze": {
+    "candidate_outcomes_observed": false,
+    "candidate_sweep_run": false,
+    "feature_archive_run": false
+  },
+  "experiment": "natural_ugr_v1",
+  "formal_artifact_count": 4,
+  "formal_artifacts": {
+    "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/mechanistic_summary_v1.csv": "83538e2bb8971052d9aa9f13bfaec764e49e651baa8a99bcdbcee7c30ea59c3e",
+    "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/metadata.json": "0807c1226721391fb14ecbc5cd0be2f933fe8e9120807bf1c8376d8dae52ca1d",
+    "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/mn_directions.npy": "4b1ce8ea70a01659846ada3d95f1155334c0a65bd0aeb470e77a4f9f157ab5f9",
+    "outputs/natural_ugr_v1/development/stage2/mechanistic_collection_v1/sa_directions.npy": "7fdf6b5f51b12ffbc1e2b642260653eb3cf206d844808c461e26c892f11c21cf"
+  },
+  "ground_truth_used": false,
+  "head_dim": 128,
+  "next_permitted_step": "Construct the frozen 47-dimensional Natural-UGR Stage-2 sample feature archive.",
+  "population_n": 292,
+  "rank": 4,
+  "raw_gradient_freeze_commit": "6a41fa8",
+  "stage": "F2D deterministic mechanistic finalization freeze",
+  "status": "FROZEN AFTER MECHANISTIC FINALIZATION AND BEFORE 47-FEATURE ARCHIVE OR CANDIDATE OUTCOMES"
+}
