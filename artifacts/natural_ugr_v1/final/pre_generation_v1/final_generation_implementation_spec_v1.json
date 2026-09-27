@@ -1,0 +1,45 @@
+{
+  "artifact": "Natural UGR final cohort generation implementation v1",
+  "development_result_freeze_commit": "54f49bf",
+  "f1_protocol_commit": "b2b99d5",
+  "freshness": {
+    "pre_f1_image_ids": 8000,
+    "pre_f1_image_paths": 8000,
+    "pre_f1_pixel_sha256": 8000,
+    "pre_f1_question_ids": 8000,
+    "required_overlap": 0
+  },
+  "generator": {
+    "path": "scripts/build_natural_ugr_final_cohort_v1.py",
+    "sha256": "814a2317c7e4c95c99ca8859e168e2a63ab03cad85849d1dd6d4e34d2e2942bc"
+  },
+  "image_acquisition": "Reuse frozen Confirmation-v2 historical download_one/build_url implementation.",
+  "pixel_hash": "SHA256(Image.open(path).convert('RGB').tobytes())",
+  "scientific_state": {
+    "final_image_downloaded": false,
+    "final_outcome_observed": false,
+    "final_sample_identity_generated": false,
+    "stage1_inference_run": false
+  },
+  "selected_restricted_comparator": "whole_restricted",
+  "selection": {
+    "answer_used_for_ordering": false,
+    "answer_validity": "After metadata/pixel eligibility, require integer answer in [0,15]; hard fail rather than skip/top-up.",
+    "global_sort": [
+      "selection_hash",
+      "question_id"
+    ],
+    "hash_formula": "SHA256(salt|subset|question_id|image_id|image)",
+    "no_resampling_after_stage1": true,
+    "no_upward_top_up": true,
+    "one_question_per_image": true,
+    "salt": "AROMA_NATURAL_UGR_FINAL_V1_20260926",
+    "seed": 20260926
+  },
+  "status": "FROZEN BEFORE ANY NATURAL-UGR FINAL SAMPLE IDENTITY IS GENERATED",
+  "target": {
+    "complex": 4000,
+    "simple": 4000,
+    "total": 8000
+  }
+}

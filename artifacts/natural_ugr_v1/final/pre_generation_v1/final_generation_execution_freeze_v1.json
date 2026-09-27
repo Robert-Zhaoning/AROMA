@@ -1,0 +1,69 @@
+{
+  "artifact": "Natural UGR final generation execution freeze v1",
+  "final_outcome_observed": false,
+  "final_sample_identity_generated": false,
+  "generator_path": "scripts/build_natural_ugr_final_cohort_v1.py",
+  "generator_sha256": "814a2317c7e4c95c99ca8859e168e2a63ab03cad85849d1dd6d4e34d2e2942bc",
+  "input_files": {
+    "confirmation_v2_inventory": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/confirmation_v2_image_inventory.csv",
+      "sha256": "475e28e0ebb7934d49d2062734b164ff04f4f04461d61de9ee4315f96182f0b2"
+    },
+    "confirmation_v2_manifest": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/confirmation_v2_manifest.jsonl",
+      "sha256": "cf42a6c4b07f21d72c88d302815fd1419dd912431b203ff9f8cc53f3fc05ae0d"
+    },
+    "development_result_freeze": {
+      "path": "artifacts/natural_ugr_v1/development/router_analysis_v1/results_v1/router_results_freeze_v1.json",
+      "sha256": "516013c611d29bae65cabca6ffa3419fb551d85ffb7c0741c63a60d3dade878d"
+    },
+    "historical_builder": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/reference/build_tallyqa_natural_confirmation_v2.py",
+      "sha256": "71b937feecb4f9c4501b342e6f578446a2f623ea07b51f2410d7e71183e5ce33"
+    },
+    "historical_downloader": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/reference/download_tallyqa_natural_confirmation_v2_images.py",
+      "sha256": "5b2490885e35bd64daf790528ddd3992bc8348f9b0efcaffd7b9d6cce7fb57cc"
+    },
+    "historical_image_auditor": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/reference/audit_tallyqa_natural_confirmation_v2_images.py",
+      "sha256": "047ab558609b866b7d63a141ddd6e28e6bc9ce36377060be436ac4e1f3bd7d74"
+    },
+    "implementation_spec": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/final_generation_implementation_spec_v1.json",
+      "sha256": "3fcf7942e14d10512be87e7bc7847c35c21560fda0e1a627aa759dce37e85dcc"
+    },
+    "k500_calibration": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/k500_calibration_manifest.csv",
+      "sha256": "67dfdafa36c66a1299be7adea0d1232269e1b557607314972ed2b298312dc49a"
+    },
+    "natural_ood_inventory": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/natural_ood_image_inventory.csv",
+      "sha256": "976a4f209d13d32ba5a412f7a943b4c798797a2c5cb45d561f7c182812a7f635"
+    },
+    "natural_ood_manifest": {
+      "path": "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/natural_ood_manifest.jsonl",
+      "sha256": "068a489a02d499da6eb0b837a81c8817583b64b51c23f944c77645420fe2c32c"
+    },
+    "official_tallyqa": {
+      "path": "external/tallyqa/qa/test.json",
+      "sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2"
+    },
+    "protocol": {
+      "path": "manifests/natural_ugr_v1/protocol_v1.json",
+      "sha256": "1daedfee079bc81f5c6171be6af9f4d84175ed50eaec8043b9e3217a16e73d47"
+    }
+  },
+  "next_allowed_step": "Run the frozen generator exactly once to create the untouched N=8000 source cohort.",
+  "pre_f1_image_ids": 8000,
+  "pre_f1_pixel_sha256": 8000,
+  "pre_f1_question_ids": 8000,
+  "selected_restricted_comparator": "whole_restricted",
+  "selection_salt": "AROMA_NATURAL_UGR_FINAL_V1_20260926",
+  "selection_seed": 20260926,
+  "stage1_inference_run": false,
+  "status": "FROZEN BEFORE FINAL COHORT GENERATION",
+  "target_complex_n": 4000,
+  "target_simple_n": 4000,
+  "target_total_n": 8000
+}
