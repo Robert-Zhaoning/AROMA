@@ -1,0 +1,53 @@
+{
+  "action_manifest_sha256": "909577217bc38825eab33f03f1ce5633dab61815bbd83468a30dc4bac6e52021",
+  "attention_implementation": "eager",
+  "betas": [
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5
+  ],
+  "direction_activation": "P h / ||P h||",
+  "direction_gradient": "P g_shift / ||P g_shift||",
+  "dtype": "float32",
+  "g_shift_definition": "sum over token-position gradients because the intervention adds one shared delta to every token position",
+  "head": 13,
+  "head_slice": [
+    1664,
+    1792
+  ],
+  "layer": 18,
+  "metadata_sha256": "372e65825384be973c745f1d2f193eb8744beec8dc9ef198138ace4b9e90a392",
+  "model_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+  "model_revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "n_selected": 160,
+  "name": "AROMA Principled E1 Continuous Response v1",
+  "numerals": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "population": "proc_count_sa_dev_v1 selected_alpha > 1",
+  "question": "Inspect the image carefully.\n\nHow many red circles are visible?\n\nReturn the number only.",
+  "shift_budget": "beta * (alpha_prop - 1) * ||h||",
+  "status": "development-only mechanistic experiment; no final-set evaluation",
+  "u4_gram_max_error": 1.766514601264646e-08,
+  "u4_path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+  "u4_sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+}
