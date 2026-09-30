@@ -1,0 +1,63 @@
+{
+  "name": "Deployable MEA v2",
+  "status": "frozen retrospective final-population confirmation",
+  "population": {
+    "n": 631,
+    "frozen_apply_n": 52,
+    "frozen_noop_n": 579
+  },
+  "identity_baseline": {
+    "correct": 201,
+    "n": 631,
+    "accuracy": 0.3185419968304279
+  },
+  "old_frozen_unified": {
+    "correct": 223,
+    "n": 631,
+    "accuracy": 0.35340729001584786,
+    "delta_pp_vs_identity": 3.4865293185419977,
+    "repairs": 26,
+    "breaks": 4,
+    "mcnemar_exact_p": 5.9476122260093696e-05
+  },
+  "runnerup_mea_v2": {
+    "correct": 234,
+    "n": 631,
+    "accuracy": 0.37083993660855785,
+    "delta_pp_vs_identity": 5.229793977812997,
+    "repairs": 38,
+    "breaks": 5,
+    "mcnemar_exact_p": 2.4995097192004323e-07
+  },
+  "v2_vs_old_unified": {
+    "v2_only_correct": 15,
+    "old_only_correct": 4,
+    "delta_pp": 1.7432646592709988,
+    "paired_exact_p": 0.0192108154296875
+  },
+  "controller_diagnostics": {
+    "apply_n": 52,
+    "target_equals_gt": 37,
+    "target_equals_gt_rate": 0.7115384615384616,
+    "target_reached": 50,
+    "target_reachability": 0.9615384615384616,
+    "correct_target_n": 37,
+    "correct_target_reached": 37,
+    "correct_target_reachability": 1.0,
+    "pg_abstain": 0,
+    "median_iterations": 7.0,
+    "mean_iterations": 7.365384615384615
+  },
+  "target_policy": {
+    "version": "deployable-mea-target-v2",
+    "rule": "highest frozen baseline numeral probability among all non-baseline numerals",
+    "ground_truth_used_for_targeting": false,
+    "development_unified_apply_n": 30,
+    "development_target_equals_gt": 24,
+    "development_target_accuracy": 0.8,
+    "development_old_repairs": 16,
+    "development_runnerup_matches_gt_among_old_repairs": 15,
+    "development_repair_target_coverage": 0.9375
+  },
+  "evaluation_note": "The final population had already been inspected during the v1 failure diagnosis. The runner-up target rule was subsequently validated on the development OOF population and frozen before this v2 controller run; therefore this result is retrospective confirmation, not an untouched holdout."
+}
