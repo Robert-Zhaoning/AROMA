@@ -1,0 +1,39 @@
+{
+  "name": "MEA Ablation v1",
+  "parent_tag": "aroma-principled-mea-v2",
+  "question": "Does iterative re-linearization improve targeted reachability beyond a frozen initial control direction under matched intervention budgets?",
+
+  "population": {
+    "source": "aroma_principled/results/mea_v1/horizon20.jsonl",
+    "n": 112,
+    "target": "ground-truth numeral",
+    "baseline_condition": "baseline prediction incorrect"
+  },
+
+  "iterative_mea": {
+    "result_source": "horizon20.jsonl",
+    "direction": "recompute projected current margin gradient every iteration",
+    "success_rate": 0.8125
+  },
+
+  "frozen_direction": {
+    "initial_competitor": "highest-logit non-target numeral at baseline",
+    "initial_gradient": "g0 = d(logit(c0)-logit(t))/d(delta_h)",
+    "direction": "d0 = -P g0 / ||P g0||",
+    "recompute_direction": false,
+    "step_norms": "exactly match the realized MEA step_norm sequence for the same sample",
+    "maximum_steps": "same number of realized steps as the corresponding MEA trajectory",
+    "success_condition": "target numeral becomes numeral argmax"
+  },
+
+  "primary_comparison": {
+    "metric": "paired target-argmax success rate",
+    "statistical_test": "exact McNemar test",
+    "budget_matching": "same per-sample realized path-length budget"
+  },
+
+  "interpretation": {
+    "tests": "benefit of iterative direction re-linearization under matched intervention norm",
+    "does_not_test": "deployable target selection"
+  }
+}
