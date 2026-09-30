@@ -1,0 +1,50 @@
+{
+  "name": "Deployable MEA Target Policy v2",
+  "version": "deployable-mea-target-v2",
+
+  "gate": {
+    "source": "frozen unified hierarchical router",
+    "noop_rule": "unified_method == IDENTITY",
+    "apply_rule": "unified_method != IDENTITY",
+    "retrained": false
+  },
+
+  "target_rule": {
+    "applies_only_when_gate_is_apply": true,
+    "numeral_universe": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "exclude": "baseline prediction",
+    "selection": "highest frozen baseline numeral probability among all non-baseline numerals",
+    "tie_break": "smallest numeral among equal-probability maxima",
+    "ground_truth_used": false
+  },
+
+  "development_validation": {
+    "population_n": 292,
+    "unified_apply_n": 30,
+    "runnerup_target_equals_gt": 24,
+    "runnerup_target_equals_gt_rate": 0.80,
+    "old_repairs": 16,
+    "runnerup_target_equals_gt_among_old_repairs": 15,
+    "repair_target_coverage": 0.9375
+  },
+
+  "controller": {
+    "method": "MEA",
+    "max_iterations": 20,
+    "beta_trust": 0.10,
+    "bf16_boundary_tie_amendment": true
+  },
+
+  "evaluation": {
+    "noop": "retain frozen baseline prediction",
+    "apply": "execute MEA toward runner-up target",
+    "primary": "end-to-end accuracy delta versus frozen identity baseline",
+    "secondary": [
+      "repairs",
+      "breaks",
+      "target reachability",
+      "iterations"
+    ],
+    "final_status": "retrospective confirmation; final population was previously inspected during v1 diagnosis"
+  }
+}
