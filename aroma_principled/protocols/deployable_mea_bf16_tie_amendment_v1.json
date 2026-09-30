@@ -1,0 +1,11 @@
+{
+  "name": "Deployable MEA BF16 Tie Amendment v1",
+  "parent_protocol": "deployable_mea_execution_v1_protocol.json",
+  "reason": "BF16 numeral logits can quantize a competitor-target boundary to an exact zero margin while deterministic argmax still selects the non-target numeral.",
+  "trigger": "prediction != deploy_target AND margin == 0.0",
+  "action": "take one trust-region-boundary step: -tau * Pg / ||Pg||",
+  "ground_truth_used": false,
+  "target_rule_changed": false,
+  "trust_region_changed": false,
+  "max_iterations_changed": false
+}
