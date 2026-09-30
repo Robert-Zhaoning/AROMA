@@ -1,0 +1,110 @@
+{
+  "name": "Deployable MEA Execution v1",
+  "version": "deployable-mea-execution-v1",
+
+  "parent_target_protocol":
+    "deployable_mea_target_v1_protocol.json",
+
+  "population": {
+    "source":
+      "manifests/natural_ugr_v2/final_stage2_population_v1.csv",
+    "n_total": 631,
+    "targetable": 623,
+    "natural_abstain": 8
+  },
+
+  "model": {
+    "id":
+      "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision":
+      "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "dtype": "bfloat16",
+    "attention_implementation": "eager"
+  },
+
+  "input_semantics": {
+    "question":
+      "preserve original TallyQA question verbatim",
+    "suffix":
+      "Return the number only.",
+    "add_generation_prompt": true,
+    "add_special_tokens": false
+  },
+
+  "prediction_semantics": {
+    "numeral_universe":
+      [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "prediction":
+      "argmax numeral logit over 0..15"
+  },
+
+  "actuator": {
+    "layer": 18,
+    "head": 13,
+    "head_dim": 128,
+    "hidden_slice": [1664,1792],
+    "site":
+      "cross_attn.o_proj input",
+    "subspace_path":
+      "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+    "subspace_sha256":
+      "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+  },
+
+  "target_construction": {
+    "rule":
+      "argmax baseline numeral probability among numerals greater than baseline prediction",
+    "ground_truth_used": false,
+    "tie_break":
+      "smallest numeral among equal-probability maxima"
+  },
+
+  "mea_controller": {
+    "margin":
+      "logit(current highest non-target numeral) - logit(deploy target)",
+    "projected_gradient":
+      "P * gradient of current margin",
+    "direction":
+      "-Pg_m / ||Pg_m||",
+    "reference_budget":
+      "B_i = abs(selected_alpha - 1) * ||h_i||",
+    "beta_trust": 0.10,
+    "per_iteration_max_norm":
+      "tau_i = 0.10 * B_i",
+    "minimal_effort":
+      "epsilon_star = abs(m_i) / ||Pg_m||",
+    "step_rule":
+      "use minimal-effort step when epsilon_star <= tau_i; otherwise clip to tau_i",
+    "recompute_each_iteration": true,
+    "max_iterations": 20,
+    "pg_norm_floor": 1e-12
+  },
+
+  "stopping": {
+    "success":
+      "deploy target becomes numeral argmax",
+    "abstain":
+      "no upward target exists or projected gradient norm is below floor",
+    "unresolved":
+      "target not reached after 20 iterations"
+  },
+
+  "evaluation": {
+    "ground_truth_role":
+      "evaluation only",
+    "primary_endpoint":
+      "end-to-end counting accuracy versus frozen baseline",
+    "paired_metrics": [
+      "repair",
+      "break",
+      "net accuracy delta"
+    ],
+    "controller_metrics": [
+      "target reachability",
+      "iterations to target",
+      "path length",
+      "abstention",
+      "unresolved rate"
+    ]
+  }
+}
