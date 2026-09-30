@@ -1,0 +1,58 @@
+{
+  "name": "Deployable MEA Target Construction v1",
+  "version": "deployable-mea-target-v1",
+  "parent_controller_tag": "aroma-principled-mea-activation-ablation-v1",
+  "population": {
+    "source": "manifests/natural_ugr_v2/final_stage2_population_v1.csv",
+    "n": 631,
+    "semantics": "Frozen Natural UGR v2 Stage-2 upward proposal population"
+  },
+  "target_rule": {
+    "baseline": "baseline_prediction",
+    "numeral_universe": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "candidate_set": "all numerals n such that n > baseline_prediction",
+    "score": "feature__baseline_numprob_n",
+    "selection": "candidate with maximum frozen baseline numeral probability",
+    "tie_break": "smallest candidate numeral among equal-probability maxima",
+    "ground_truth_used": false
+  },
+  "abstention": {
+    "condition": "no numeral exists above baseline_prediction",
+    "expected_from_preflight": 8
+  },
+  "preflight": {
+    "targetable": 623,
+    "shift_plus_1": 487,
+    "shift_leq_3": 584,
+    "shift_leq_6": 619,
+    "median_target_shift": 1.0,
+    "max_target_shift": 12.0
+  },
+  "evaluation_rule": {
+    "ground_truth_role": "evaluation only; never used for target construction",
+    "primary_future_endpoint": "end-to-end counting accuracy versus frozen baseline",
+    "secondary_future_endpoints": [
+      "repair",
+      "break",
+      "target reachability",
+      "abstention"
+    ]
+  }
+}
