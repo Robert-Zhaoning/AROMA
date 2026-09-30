@@ -1,0 +1,46 @@
+{
+  "name": "MEA Activation Ablation v1",
+  "parent_tag": "aroma-principled-mea-ablation-v1",
+
+  "question": "Does target-specific projected margin-gradient control outperform iterative activation-aligned causal-subspace control under matched intervention budgets?",
+
+  "population": {
+    "source": "aroma_principled/results/mea_v1/horizon20.jsonl",
+    "n": 112,
+    "cohort": "baseline-incorrect upward-development samples",
+    "target": "ground-truth numeral"
+  },
+
+  "iterative_mea": {
+    "result_source": "horizon20.jsonl",
+    "direction": "-P g_m / ||P g_m||",
+    "recompute_each_iteration": true,
+    "success_rate": 0.8125
+  },
+
+  "activation_control": {
+    "direction": "P h / ||P h||",
+    "direction_semantics": "positive activation-aligned direction for upward control",
+    "recompute_each_iteration": true,
+    "step_norms": "exactly match the realized MEA step_norm sequence for the same sample",
+    "maximum_steps": "same number of realized MEA steps for the same sample",
+    "success_condition": "target numeral becomes numeral argmax"
+  },
+
+  "budget_matching": {
+    "sample_matching": true,
+    "target_matching": true,
+    "per_step_norm_matching": true,
+    "path_length_matching": true
+  },
+
+  "primary_comparison": {
+    "metric": "paired target-argmax success rate",
+    "statistical_test": "exact McNemar test"
+  },
+
+  "interpretation": {
+    "tests": "value of target-specific projected margin-gradient geometry beyond generic activation-aligned iterative causal control",
+    "does_not_test": "deployable target selection"
+  }
+}
