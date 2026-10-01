@@ -1,0 +1,22 @@
+{
+  "experiment": "prospective_mea_v2_confirmation_stage2_policy_plan_v1",
+  "status": "FROZEN_BEFORE_MEA_EXECUTION",
+  "population_n": 630,
+  "population_sha256": "5ecc6f243a11bd3d962c7b3991be6d5a20c4c14413294e4b4b40cfb6bf154539",
+  "feature_matrix_sha256": "0d683e5a39aaa0758aaf136000b32ee04197855a6400f18beba564440aa29f2a",
+  "feature_names_sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+  "unified_router_bundle_sha256": "57da4a76c461e06bdcac19ea21e305e1c61d60949294db140b6c369cadefeb53",
+  "gate_path_in_bundle": "root.gate_model",
+  "gate_threshold": 0.5,
+  "historical_gate_probability_max_abs_error": 4.440892098500626e-16,
+  "historical_gate_apply_disagreements": 0,
+  "prospective_apply_n": 63,
+  "prospective_identity_n": 567,
+  "target_policy": "highest archived baseline numeral probability among 0..15 excluding archived baseline_prediction; ties to smaller numeral",
+  "ground_truth_used_for_gate": false,
+  "ground_truth_used_for_target": false,
+  "candidate_outcomes_used": false,
+  "candidate_sweep_executed": false,
+  "development_retuned": false,
+  "plan_sha256": "9fb39d184f754d21c976a2b6ee5e5a6d0638f4b3d366ead9b5f3f6c892dd47b0"
+}
