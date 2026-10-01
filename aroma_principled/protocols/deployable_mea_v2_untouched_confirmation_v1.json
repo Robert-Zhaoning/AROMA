@@ -1,0 +1,89 @@
+{
+  "name": "AROMA Deployable MEA v2 Untouched Natural Confirmation",
+  "version": "v1",
+  "status": "FINAL_FROZEN_AFTER_PRE_INFERENCE_PIXEL_DEDUP",
+  "cohort": {
+    "source": "external/tallyqa/qa/test.json",
+    "manifest": "manifests/prospective_mea_v2_confirmation_v1/manifest_v1.jsonl",
+    "reserve": "manifests/prospective_mea_v2_confirmation_v1/reserve_v1.jsonl",
+    "n": 7992,
+    "simple_n": 3996,
+    "complex_n": 3996,
+    "selection_seed": 20261001,
+    "numeral_support": [
+      0,
+      15
+    ],
+    "question_overlap_with_all_prior_runs": 0,
+    "image_id_overlap_with_all_prior_runs": 0,
+    "pixel_hash_rule": "must be zero before inference; if collision is found, replace deterministically from reserve within the same simple/complex subset",
+    "pixel_hash_overlap_with_prior_data": 0,
+    "within_cohort_pixel_duplicates": 0,
+    "pre_inference_amendment": "manifests/prospective_mea_v2_confirmation_v1/pre_inference_pixel_dedup_amendment_v1.json",
+    "final_manifest_sha256": "1aab82b48064ac085d55cfc21cfe182bdc722ff082f10f54be7b3d1e637286e2",
+    "final_image_inventory_sha256": "99aaee8ffd3cf0bd2b23e853d17430539c07540e44d2da892095f3c17305cc3a"
+  },
+  "frozen_model": {
+    "name": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "revision": "9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+    "dtype": "bfloat16",
+    "attention_impl": "eager"
+  },
+  "frozen_actuator": {
+    "layer": 18,
+    "head": 13,
+    "head_dim": 128,
+    "hidden_slice": [
+      1664,
+      1792
+    ]
+  },
+  "frozen_subspace": {
+    "path": "outputs/aroma2/csa_gate_a_v3/U4_primary.npy",
+    "rank": 4,
+    "sha256": "af50da2cf49268cc55dc33d44dad50c0cd5a4fa29cda6cad3c01cc0b4ae63f14"
+  },
+  "frozen_deployment": {
+    "stage1": "existing frozen natural Proposal Controller",
+    "gate": "existing frozen hierarchical Unified APPLY/NOOP gate",
+    "target_policy": "argmax baseline numeral probability over n != baseline top-1; ties choose smallest numeral",
+    "target_policy_ground_truth_free": true,
+    "target_policy_freeze_commit": "3c065cb",
+    "mea": {
+      "max_iterations": 20,
+      "trust_fraction": 0.1,
+      "gradient_floor": 1e-12,
+      "bf16_boundary_tie_step": true
+    },
+    "mea_result_freeze_commit": "31f7047"
+  },
+  "primary_endpoint": {
+    "population": "Stage-2 population emitted by frozen Stage-1",
+    "reference": "old frozen hierarchical Unified",
+    "alternative": "same frozen APPLY/NOOP gate + runner-up target + frozen MEA v2",
+    "metric": "paired exact-count accuracy",
+    "test": "two-sided exact McNemar",
+    "tuning_after_inference": false
+  },
+  "secondary_endpoints": [
+    "identity accuracy",
+    "repairs",
+    "breaks",
+    "APPLY count",
+    "runner-up target accuracy",
+    "assigned-target reachability",
+    "correct-target reachability",
+    "MEA iterations",
+    "projected-gradient abstentions"
+  ],
+  "anti_tuning": [
+    "No change to Stage-1.",
+    "No change to frozen Unified gate.",
+    "No change to target rule.",
+    "No change to L18H13 or U4.",
+    "No change to trust fraction.",
+    "No change to 20-step horizon.",
+    "No subset-based primary-result selection.",
+    "Ground truth is evaluation-only."
+  ]
+}

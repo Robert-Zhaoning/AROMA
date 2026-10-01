@@ -1,0 +1,42 @@
+{
+  "source": "external/tallyqa/qa/test.json",
+  "source_rows": 38589,
+  "source_sha256": "cd51c8a4d5a6deb0f5423c3ae2e16e71198867d41da3b662c77631b7d26678a2",
+  "selection_seed": 20261001,
+  "numeral_support": [
+    0,
+    15
+  ],
+  "historical_exclusion_files": [
+    "artifacts/natural_ugr_v1/final/cohort_v1/final_manifest_v1.jsonl",
+    "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/confirmation_v2_manifest.jsonl",
+    "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/k500_calibration_manifest.csv",
+    "artifacts/natural_ugr_v1/final/pre_generation_v1/exclusions/natural_ood_manifest.jsonl",
+    "artifacts/natural_ugr_v2/final/stage1/results/stage1_action_manifest_v1.csv",
+    "artifacts/natural_ugr_v2/final/stage1/results/upward_population_v1.csv",
+    "data/tallyqa_natural_ood_v1/manifest.jsonl",
+    "manifests/natural_ugr_v1/development_population_v1.csv",
+    "manifests/natural_ugr_v2/final_stage2_population_v1.csv",
+    "outputs/aroma2/tallyqa_natural_mncsa_v1/partial_results.csv",
+    "outputs/aroma2/tallyqa_natural_mncsa_v1/tallyqa_natural_mncsa_results.csv",
+    "outputs/tallyqa_natural_confirmation_v2/final_frozen_controller/tallyqa_final_results.csv",
+    "outputs/tallyqa_natural_confirmation_v2/manifest.jsonl",
+    "outputs/tallyqa_natural_ood_v1/final_frozen_controller/tallyqa_final_results.csv"
+  ],
+  "historical_unique_question_ids": 16000,
+  "historical_unique_image_ids": 16000,
+  "fresh_pool_total": 12689,
+  "fresh_simple": 8505,
+  "fresh_complex": 4184,
+  "final_n": 7992,
+  "final_simple": 3996,
+  "final_complex": 3996,
+  "reserve_n": 2000,
+  "question_overlap": 0,
+  "image_id_overlap": 0,
+  "pixel_hash_overlap": 0,
+  "pre_inference_pixel_dedup_amendment": "manifests/prospective_mea_v2_confirmation_v1/pre_inference_pixel_dedup_amendment_v1.json",
+  "within_final_pixel_duplicates": 0,
+  "final_manifest_sha256": "1aab82b48064ac085d55cfc21cfe182bdc722ff082f10f54be7b3d1e637286e2",
+  "final_image_inventory_sha256": "99aaee8ffd3cf0bd2b23e853d17430539c07540e44d2da892095f3c17305cc3a"
+}

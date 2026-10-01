@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "final_n": 7992,
+  "simple": 3996,
+  "complex": 3996,
+  "historical_pixel_overlap": 0,
+  "within_cohort_pixel_duplicates": 0,
+  "candidate_unique_pixels": 7992,
+  "pixel_hash_definition": "SHA256(width x height | RGB | decoded RGB bytes)"
+}

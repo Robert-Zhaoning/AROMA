@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_ANY_MODEL_INFERENCE",
+  "n": 7992,
+  "simple": 3996,
+  "complex": 3996,
+  "question_prior_overlap": 0,
+  "image_id_prior_overlap": 0,
+  "pixel_prior_overlap": 0,
+  "within_cohort_pixel_duplicates": 0,
+  "manifest_sha256": "1aab82b48064ac085d55cfc21cfe182bdc722ff082f10f54be7b3d1e637286e2",
+  "inventory_sha256": "99aaee8ffd3cf0bd2b23e853d17430539c07540e44d2da892095f3c17305cc3a",
+  "audit_sha256": "b1fa3bd6722fb9ee52a58678e3a46ed307ca68326f9183d8bf3c9eb2bf33cc28",
+  "amendment_sha256": "a3a1192a9ca3b55ababe871664cf1d3a00bdf6891e23c8cb8d61ecb640dc64bb",
+  "provenance_sha256": "f0348315c4fc9eec4e718ad33cd053358aa52d3c2cbcb6f484c3de3eae4a8448",
+  "protocol_sha256": "9411fdfbc27506cf7e8d1299a35ccf26a1ca2170121609883e7ffaf084b5d269",
+  "model_inference_started": false
+}

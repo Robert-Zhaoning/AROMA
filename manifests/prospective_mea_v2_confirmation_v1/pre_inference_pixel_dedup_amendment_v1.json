@@ -1,0 +1,32 @@
+{
+  "name": "pre-inference pixel-dedup amendment",
+  "status": "FROZEN_BEFORE_ANY_MODEL_INFERENCE",
+  "reason": "Initial deterministic 8000-row selection contained repeated decoded pixel content. No historical pixel leakage was observed. Before any model inference, final and reserve candidates were deduplicated by decoded RGB pixel SHA256 while preserving a balanced simple/complex cohort.",
+  "selection_information_used": [
+    "question/image metadata",
+    "simple/complex subset",
+    "decoded image pixels",
+    "deterministic seed/order"
+  ],
+  "selection_information_not_used": [
+    "model predictions",
+    "router outcomes",
+    "MEA outcomes",
+    "correctness",
+    "ground-truth-dependent utility"
+  ],
+  "initial_n": 8000,
+  "initial_simple": 4000,
+  "initial_complex": 4000,
+  "candidate_n": 9184,
+  "candidate_unique_pixels": 7992,
+  "historical_collision_candidate_rows": 0,
+  "simple_only_unique_pixels": 3944,
+  "complex_only_unique_pixels": 3358,
+  "cross_subset_shared_pixels": 690,
+  "final_per_subset": 3996,
+  "final_n": 7992,
+  "final_historical_pixel_overlap": 0,
+  "final_within_cohort_pixel_duplicates": 0,
+  "pixel_hash_definition": "SHA256(width x height | RGB | decoded RGB bytes)"
+}
