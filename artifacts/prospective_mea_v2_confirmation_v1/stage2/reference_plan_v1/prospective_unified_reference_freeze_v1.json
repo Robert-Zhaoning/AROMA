@@ -1,0 +1,33 @@
+{
+  "experiment": "prospective_mea_v2_unified_reference_plan_v1",
+  "status": "FROZEN_BEFORE_REFERENCE_OR_MEA_OUTCOMES",
+  "population_n": 630,
+  "apply_n": 63,
+  "identity_n": 567,
+  "population_sha256": "5ecc6f243a11bd3d962c7b3991be6d5a20c4c14413294e4b4b40cfb6bf154539",
+  "feature_matrix_sha256": "0d683e5a39aaa0758aaf136000b32ee04197855a6400f18beba564440aa29f2a",
+  "feature_names_sha256": "8a592f39a135ddd670665192a85957e5af73841820645b7b45461deb16deb2c1",
+  "unified_bundle_sha256": "57da4a76c461e06bdcac19ea21e305e1c61d60949294db140b6c369cadefeb53",
+  "mea_policy_plan_sha256": "9fb39d184f754d21c976a2b6ee5e5a6d0638f4b3d366ead9b5f3f6c892dd47b0",
+  "historical_gate_max_abs_error": 1.1102230246251565e-16,
+  "historical_gate_disagreements": 0,
+  "historical_method_disagreements": 0,
+  "historical_gain_disagreements": 0,
+  "reference_method_distribution_apply": {
+    "MN": 20,
+    "SA": 5,
+    "WHOLE": 38
+  },
+  "reference_gain_distribution_apply": {
+    "0.5": 1,
+    "1.0": 1,
+    "2.0": 1,
+    "2.25": 1,
+    "3.5": 1,
+    "4.0": 58
+  },
+  "ground_truth_used": false,
+  "candidate_outcomes_used": false,
+  "prospective_candidate_sweep_executed": false,
+  "reference_plan_sha256": "6b1bb147126ccda478dd651b5a10e66a56f1f5cd66be96b6d753f174a95e6179"
+}
