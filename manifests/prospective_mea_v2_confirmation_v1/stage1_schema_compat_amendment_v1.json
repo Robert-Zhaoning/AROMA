@@ -1,0 +1,38 @@
+{
+  "name": "prospective Stage-1 runner schema compatibility amendment",
+  "status": "RECORDED_BEFORE_ANY_SUCCESSFUL SAMPLE OUTCOME",
+  "canonical_manifest": "manifests/prospective_mea_v2_confirmation_v1/manifest_v1.jsonl",
+  "canonical_manifest_sha256": "1aab82b48064ac085d55cfc21cfe182bdc722ff082f10f54be7b3d1e637286e2",
+  "runner_compat_manifest": "manifests/prospective_mea_v2_confirmation_v1/runner_compat_manifest_v1.jsonl",
+  "runner_compat_manifest_sha256": "f5e876f83b5d3889b2e7757cd7130f14b7a085ee10349647dcc4c45db7c9c984",
+  "frozen_runner": "scripts/run_natural_ugr_v2_final_stage1.py",
+  "runner_direct_sample_keys": [
+    "answer",
+    "data_source",
+    "image",
+    "image_id",
+    "issimple",
+    "manifest_index",
+    "question",
+    "question_id",
+    "subset"
+  ],
+  "missing_required_before_alias": [
+    "answer"
+  ],
+  "compatibility_alias": {
+    "answer": "ground_truth"
+  },
+  "selection_hash_required": false,
+  "selection_rank_required": false,
+  "sample_selection_changed": false,
+  "sample_order_changed": false,
+  "images_changed": false,
+  "labels_changed": false,
+  "policy_changed": false,
+  "controller_changed": false,
+  "failed_attempt_sample_outcomes": 0,
+  "failed_attempt_artifacts_archived": [
+    "artifacts/prospective_mea_v2_confirmation_v1/stage1/failed_attempt_answer_schema_v1/stage1_run_started_v1.json"
+  ]
+}
