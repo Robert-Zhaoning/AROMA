@@ -1,0 +1,24 @@
+========================================================================================
+PROSPECTIVE MEA-v2 FINAL ANALYSIS
+========================================================================================
+Identity: 197/630 = 31.270%
+Old Unified: 217/630 = 34.444%
+Runner-up + MEA-v2: 244/630 = 38.730%
+
+MEA-v2 minus Old Unified: +4.286 pp
+paired discordance: 29:2 (MEA-only : Unified-only)
+two-sided exact McNemar p: 4.628673195838928e-07
+
+Reference repairs/breaks: 23 / 3
+MEA repairs/breaks: 51 / 4
+
+Runner-up target correct: 51/63 = 80.95%
+Assigned targets reached: 61/63 = 96.83%
+Correct targets reached: 51/51 = 100.00%
+MEA iterations median/mean: 9.000 / 8.238
+PG abstentions: 0
+Live baseline drift on APPLY: 0
+
+summary: /workspace/AromaExperiments/artifacts/prospective_mea_v2_confirmation_v1/stage2/outcomes_v1/prospective_summary_v1.json
+paired: /workspace/AromaExperiments/artifacts/prospective_mea_v2_confirmation_v1/stage2/outcomes_v1/prospective_paired_outcomes_v1.csv
+summary SHA256: a41f756ccbdaf76555eb6b487e1bf1a17fb2f86c377f532928b8bfd0f6d03861

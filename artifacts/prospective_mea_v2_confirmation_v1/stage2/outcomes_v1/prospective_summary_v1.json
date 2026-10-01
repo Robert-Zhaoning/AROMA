@@ -1,0 +1,52 @@
+{
+  "experiment": "prospective_mea_v2_untouched_confirmation_v1",
+  "evidence_class": "prospective_untouched_confirmation",
+  "population_n": 630,
+  "apply_n": 63,
+  "identity_n": 567,
+  "identity": {
+    "correct": 197,
+    "accuracy": 0.3126984126984127
+  },
+  "old_frozen_unified": {
+    "correct": 217,
+    "accuracy": 0.34444444444444444,
+    "gain_vs_identity_pp": 3.1746031746031744,
+    "repairs_vs_identity": 23,
+    "breaks_vs_identity": 3
+  },
+  "runner_up_plus_mea_v2": {
+    "correct": 244,
+    "accuracy": 0.3873015873015873,
+    "gain_vs_identity_pp": 7.4603174603174605,
+    "repairs_vs_identity": 51,
+    "breaks_vs_identity": 4
+  },
+  "primary_endpoint_mea_vs_old_unified": {
+    "difference_correct": 27,
+    "difference_pp": 4.285714285714286,
+    "mea_only_correct": 29,
+    "old_unified_only_correct": 2,
+    "discordant_n": 31,
+    "two_sided_exact_mcnemar_p": 4.628673195838928e-07
+  },
+  "secondary": {
+    "runner_up_target_correct_n": 51,
+    "runner_up_target_accuracy": 0.8095238095238095,
+    "assigned_target_reached_n": 61,
+    "assigned_target_reachability": 0.9682539682539683,
+    "correct_target_reached_n": 51,
+    "correct_target_reachability": 1.0,
+    "median_mea_iterations": 9.0,
+    "mean_mea_iterations": 8.238095238095237,
+    "projected_gradient_abstentions": 0,
+    "live_baseline_drift_on_apply": 0
+  },
+  "provenance": {
+    "raw_outcome_sha256": "558fd80b4c4c2045b8f2869415d2d5ae041280f3ab6fc63c723e249f7688d6cb",
+    "execution_freeze_sha256": "d01dfe83dfbc98ff403a79eaceebf8943324dc10996b64662a03e7f7052ecb55",
+    "policy_plan_sha256": "9fb39d184f754d21c976a2b6ee5e5a6d0638f4b3d366ead9b5f3f6c892dd47b0",
+    "reference_plan_sha256": "6b1bb147126ccda478dd651b5a10e66a56f1f5cd66be96b6d753f174a95e6179",
+    "protocol_sha256": "9411fdfbc27506cf7e8d1299a35ccf26a1ca2170121609883e7ffaf084b5d269"
+  }
+}
