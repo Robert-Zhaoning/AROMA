@@ -1,0 +1,24 @@
+{
+  "experiment": "prospective_mea_v2_stage2_population_materialization_v1",
+  "status": "MATERIALIZED_BEFORE_STAGE2_INFERENCE",
+  "source_stage1_population": "artifacts/prospective_mea_v2_confirmation_v1/stage1/results/upward_population_v1.csv",
+  "source_stage1_population_sha256": "693697b8b1c083d857938f3afd6181b0d39c745e45b240483a8361fc93e954cd",
+  "canonical_cohort": "manifests/prospective_mea_v2_confirmation_v1/manifest_v1.jsonl",
+  "canonical_cohort_sha256": "1aab82b48064ac085d55cfc21cfe182bdc722ff082f10f54be7b3d1e637286e2",
+  "join_key": "manifest_index",
+  "identity_checks": [
+    "question_id",
+    "image",
+    "image_id",
+    "subset"
+  ],
+  "added_field": "natural_ugr_uid",
+  "population_n": 630,
+  "selected_alpha_rule": "> 1.0",
+  "sample_selection_changed": false,
+  "sample_order_changed": false,
+  "ground_truth_used_for_selection": false,
+  "model_outcome_used": false,
+  "derived_population": "manifests/prospective_mea_v2_confirmation_v1/final_stage2_population_v1.csv",
+  "derived_population_sha256": "5ecc6f243a11bd3d962c7b3991be6d5a20c4c14413294e4b4b40cfb6bf154539"
+}
